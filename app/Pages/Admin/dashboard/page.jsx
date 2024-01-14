@@ -124,12 +124,12 @@ const page = () => {
       <div className="flex flex-col gap-5 py-4 px-5 bg-orange-200">
         <header className="text-[1.5em] text-center font-bold">ADMIN</header>
         <div className="xl:h-[11rem] lg:h-[9.7rem] xl:w-[11rem] lg:w-[9.7rem] mx-auto relative object-cover">
-          {currentUser.avatar && (
+          {currentUser && currentUser.avatar && (
             <img
               src={currentUser.avatar}
               alt="no profile"
               layout="fill"
-              objectfit="contain"
+              objectFit="contain"
               className="rounded-full"
             />
           )}
@@ -137,11 +137,11 @@ const page = () => {
         <div className="grid gap-3 mt-3">
           <div className="grid">
             <span className="font-bold">Admin Name:</span>
-            <span>{currentUser.name}</span>
+            <span>{currentUser && currentUser.name}</span>
           </div>
           <div className="grid">
             <span className="font-bold">Email ID:</span>
-            <span>{currentUser.email}</span>
+            <span>{currentUser && currentUser.email}</span>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@ const page = () => {
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
                 Number of
                 <br />
-                Contact querries
+                Contact queries
               </span>
               <span className="text-[4em] font-bold">
                 <animated.span className="text-6xl text-white bg-transparent rounded-full p-4">
