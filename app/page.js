@@ -37,21 +37,21 @@ const Page = () => {
 
   const content = {
         english: {
-      title: 'Shri Basaveshwara Temple',
+      title: 'Shree Basaveshwara Temple ',
       text: 'According to Skanda Purana, it is believed that Lord SriSubrahmanya Swami performed penance on Lord Shiva at this site...',
       readMore: 'Read more.........',
-      title1: 'Shri Basaveshwara Temple',
-    text1: 'It is believed that visiting Lord Kukke Subrahmanya and thenseeking darshan of Lord Sri Basaveshwara (Nandishwara) while offering prayers brings complete fulfillment for devotees wishes...',
+      title1: 'How to Reach?',
+    text1: 'By bus: Plenty of buses travel to and from Kukke Subrahmanya, connecting Bisle, Dharmasthala, Kadaba, Uppinangady, Mangaluru, and other parts of Karnataka. Alight at Kulkunda junction and walk approximately 350 meters to reach the temple.',
     readMore1: 'Read more.........',
     title2:'News and Updates',
     text2:''
     },
     kannada: {
-      title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವಸ್ಥಾನ',
+      title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ',
       text: 'ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ...',
       readMore: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ.........',
 
-      title1: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವಸ್ಥಾನ',
+      title1: 'ದೇವಸ್ಥಾನ',
       text1: 'ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ಸಮೀಪದ ಹಸಿರು ಸಿರಿಯಕುಮಾರ ಪರ್ವತದ ತಪ್ಪಲಿನ ಕುಮಾರಧಾರ ನದಿಯ ತಟದ ಪೌರಾಣಿಕ ಹಾಗೂ ಐತಿಹಾಸಿಕಹಿನ್ನಲೆ ಇರುವ ಕುಲ್ಕುಂದ ಬಸವನ ಮೂಲ ಎಂಬ ಸ್ಥಳವು ಅನೇಕ ವರ್ಷಗಳಿಂದ ಸಾವಿರಾರುಜನರ ಶ್ರದ್ಧಾ ಕೇಂದ್ರವಾಗಿ ಜಾನುವಾರು ಜಾತ್ರೆಯ ರೂಪದಲ್ಲಿ ವಿನಿಮಯಮಾರಾಟವಾಗುತ್ತಿದ್ದುದನ್ನು ಕಂಡು ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ಶಿವನಕುರಿತು ತಪಸ್ಸು ಮಾಡಿದ ಅವಾಗ, ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದೀ ಸ್ವರೂಪದಲ್ಲಿಪ್ರತ್ಯಕ್ಷನಾಗಿ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಗೆ ನಂದಿ ವಿದ್ಯೆಯೇ ಮೊದಲಾಗಿಶಸ್ತ್ರ ವಿದ್ಯೆಯನ್ನು ಬೋಧಿಸಿದರು ಎಂದು ಪುರಾಣದಲ್ಲಿ ತಿಳಿಯಪಡುತ್ತದೆ...',
       readMore1: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ.........',
     },
@@ -118,17 +118,12 @@ const Page = () => {
         <div className='w-full'>
           <div className='bg-ora p-5 rounded-md hover:scale-105'>
             <div className='bg-orange-100 border-2 border-orange-500 p-6 rounded-lg shadow-md'width="1000px">
-              <h1 className='text-black-500 text-2xl font-semibold underline'align="center">News and Updates</h1>
+              <h1 className='text-black-500 text-2xl font-semibold 'align="center">News and Updates</h1>
               <MarqueeComponent />
             </div>
           </div>
         </div>
       </div>
-    
-
-
-      
-
       <div className="flex justify-center md:justify-end md:pr-8 pt-2 absolute top-10 right-0 m-4">
         {/* <select
           className="border p-1"
@@ -148,7 +143,7 @@ const Page = () => {
         </button>
       </div>
 
-      <h1 className='text-center bold text-5xl text-black-400 underline mt-10 mb-5'>ABOUT THE OWNERS</h1>
+      <h1 className='text-center bold text-5xl text-black-400  mt-10 mb-5'>TRUSTEES</h1>
       <div className='flex flex-col md:flex-row md:p-10'>
         <Owner />
       </div>

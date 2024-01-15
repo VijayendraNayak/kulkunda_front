@@ -1,49 +1,167 @@
-"use client";
+// UserHeader.jsx
 
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+// ... (your imports)
 
-const page = () => {
-  const router = useRouter();
-  const [formdata, setFormdata] = useState([]);
+const UserHeader = ({ loading }) => {
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [navbar, setNavbar] = useState(false);
+  const { currentUser } = useSelector((state) => state.user);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+
+    if (!loading) {
+      setIsNavVisible(
+        currentScrollPos < prevScrollPos || currentScrollPos < 100
+      );
+    }
+    setPrevScrollPos(currentScrollPos);
+  };
+
   useEffect(() => {
-    
-    const fetchdata = async () => {
-      const res = await fetch("/api/gallery/noofimg");
-      const data = await res.json();
-      if (data.success === false) {
-        console.log(data.message);
-        return;
-      }
-      setFormdata(data.gallery);
+    window.addEventListener("scroll", handleScroll);
+    setNavbar(false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-    fetchdata();
-  }, []);
+  }, [prevScrollPos, loading]);
+
+  const togglenavbar = () => {
+    setNavbar(!navbar);
+    console.log(navbar);
+  };
 
   return (
-    <div className="container mx-auto py-20 px-10">
-      <div className="font-semibold text-6xl text-orange-500 text-center pb-10">
-        Gallery
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {formdata.map((image) => (
+    <header
+      className={`bg-orange-100 fixed top-0 left-0 w-full z-10 transition-transform duration-300 transform ${
+        isNavVisible ? "translateY(0)" : "-translate-y-full"
+      }`}
+    >
+      <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
+        <Link href="/">
           <div
-            key={image._id}
-            className="relative overflow-hidden rounded-lg shadow-md aspect-w-1 aspect-h-1 hover:opacity-80"
+            className={`font-bold gap-1 text-sm sm:text-xl sm:flex ${
+              navbar ? "hidden" : "flex"
+            }`}
           >
-            <img
-              src={image.avatar}
-              alt={image.title}
-              className="object-cover w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75"
-            />
-            <div className="p-4">
-              <p className="text-lg font-semibold">{image.title}</p>
-            </div>
+            <span className="text-orange-300 text-2xl">Kulkunda Shree </span>
+            <span className="text-orange-500 text-2xl">Basaveshwara Temple</span>
           </div>
-        ))}
+        </Link>
+        <ul className="lg:flex md:flex gap-6 lg:items-center font-semibold">
+          <Link href="/">
+            <li className="hover:underline text-orange-700 hidden sm:flex">
+              Home
+            </li>
+          </Link>
+          <Link href="/Pages/seva">
+            <li className="hover:underline text-orange-700 hidden sm:flex">
+              Seva
+            </li>
+          </Link>
+          <Link href="/Pages/aboutus">
+            <li className="hover:underline text-orange-700 hidden sm:flex">
+              About
+            </li>
+          </Link>
+          <Link href="/Pages/contactus">
+            <li className="hover:underline text-orange-700 hidden sm:flex">
+              Contact
+            </li>
+          </Link>
+          <Link href="/Pages/gallery">
+            <li className="hover:underline text-orange-700 hidden sm:flex">
+              Gallery
+            </li>
+          </Link>
+          {/* <Link href="/Pages/News">
+            <li className="hover:underline text-orange-700 hidden sm:flex">
+              News&Updates
+            </li>
+          </Link> */}
+          {currentUser ? (
+            <Link href="/Pages/profile">
+              <img
+                className="rounded-full w-10 h-10 hidden sm:flex"
+                src={currentUser.avatar}
+                alt="profile"
+              />
+            </Link>
+          ) : (
+            <Link href="/Pages/login">
+              <li className="hover:underline text-orange-700 hidden sm:flex">
+                Sign in
+              </li>
+            </Link>
+          )}
+        </ul>
+        <button
+          className="sm:hidden text-orange-700 focus:outline-none"
+          onClick={togglenavbar}
+        >
+          {navbar ? " " : "☰"}
+        </button>
+        {navbar && (
+          <div className="w-full flex flex-col gap-6">
+            <Link href="/">
+              <h1 className="font-bold text-sm sm:text-xl sm:hidden">
+                <span className="text-orange-300">Kulkunda</span>
+                <span className="text-orange-500">Basaveshwara</span>
+              </h1>
+            </Link>
+            <ul className="flex-col items-center gap-6 font-semibold">
+              <Link href="/">
+                <li className="hover:underline text-orange-700 sm:hidden">
+                  Home
+                </li>
+              </Link>
+              <Link href="/Pages/seva">
+                <li className="hover:underline text-orange-700 sm:hidden">
+                  Seva
+                </li>
+              </Link>
+              <Link href="/Pages/aboutus">
+                <li className="hover:underline text-orange-700 sm:hidden">
+                  About
+                </li>
+              </Link>
+              <Link href="/Pages/contactus">
+                <li className="hover:underline text-orange-700 sm:hidden">
+                  Contact
+                </li>
+              </Link>
+              <Link href="/Pages/gallery">
+                <li className="hover:underline text-orange-700 hidden sm:flex">
+                  Gallery
+                </li>
+              </Link>
+              <Link href="/Pages/News">
+                <li className="hover:underline text-orange-700 hidden sm:flex">
+                  News&Updates
+                </li>
+              </Link>
+              {currentUser ? (
+                <Link href="/Pages/profile">
+                  <img
+                    className="rounded-full w-10 h-10 hidden sm:flex"
+                    src={currentUser.avatar}
+                    alt="profile"
+                  />
+                </Link>
+              ) : (
+                <Link href="/Pages/login">
+                  <li className="hover:underline text-orange-700 hidden sm:flex">
+                    Sign in
+                  </li>
+                </Link>
+              )}
+            </ul>
+          </div>
+        )}
       </div>
-    </div>
+    </header>
   );
 };
 
-export default page;
+export default dynamic(() => Promise.resolve(UserHeader), { ssr: false });

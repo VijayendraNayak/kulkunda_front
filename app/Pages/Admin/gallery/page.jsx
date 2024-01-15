@@ -1,86 +1,156 @@
+// "use client";
+
+// import React, { useEffect, useState } from "react";
+// import { useRouter } from "next/navigation";
+// import Image from 'next/image';
+// import pallakki from "/app/assets/image/Pallakki.jpg"
+
+// const page = () => {
+//   const router = useRouter();
+//   const [formdata, setFormdata] = useState([]);
+//   useEffect(() => {
+    
+//     const fetchdata = async () => {
+//       const res = await fetch("/api/gallery/noofimg");
+//       const data = await res.json();
+//       if (data.success === false) {
+//         console.log(data.message);
+//         return;
+//       }
+//       setFormdata(data.gallery);
+//     };
+//     fetchdata();
+//   }, []);
+
+//   return (
+//     <div className="container mx-auto py-20 px-10">
+//       <div className="font-semibold text-6xl text-orange-500 text-center pb-10">
+//         Gallery
+//       </div>
+//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+//         {formdata.map((image) => (
+//           <div
+//             key={image._id}
+//             className="relative overflow-hidden rounded-lg shadow-md aspect-w-1 aspect-h-1 hover:opacity-80"
+//           >
+//             <img
+//               src={image.pallakki}
+//               alt={image.title}
+//               className="object-cover w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75"
+//             />
+//             <div className="p-4">
+//               <p className="text-lg font-semibold">{image.title}</p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default page;
+
 "use client";
-import { useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
+import Temple13 from "/app/assets/image/temple13.jpg"
+import Temple14 from "/app/assets/image/temple14.jpg"
+import Temple15 from "/app/assets/image/temple15.jpg"
+import Image from 'next/image';
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const page = () => {
-  const [length, setLength] = useState(0);
   const router = useRouter();
+  const [formdata, setFormdata] = useState([]);
   useEffect(() => {
-    const auth = () => {
-      const isLoggedIn = !!localStorage.getItem("userToken");
-      const userRole = localStorage.getItem("userRole");
-      const isAdmin =
-        userRole === "admin" && userRole !== null && userRole !== undefined;
-      if (!isLoggedIn) {
-        router.replace("/Pages/login");
-      }
-      if (!isAdmin) {
-        router.replace("/Pages/login");
-        console.log("The user should be admin to access this page");
-      }
-    };
-    const checkcookie=async()=>{
-      const res=await fetch("/api/user/checkcookies")
-      const data=await res.json()
-      if (data.success===false){
-        console.log(data.message)
-        router.replace("/Pages/login")
-        return
-      }
-    }
+    
     const fetchdata = async () => {
-      const res = await fetch("/api/gallery/noofimg");
+      const res = await fetch("/api/gallery/admin/noofimg");
       const data = await res.json();
-      const len = data.length;
-      setLength(len);
+      if (data.success === false) {
+        console.log(data.message);
+        return;
+      }
+      setFormdata(data.gallery);
     };
-    auth();
     fetchdata();
-    checkcookie();
   }, []);
-
-  const numberAnimation = useSpring({
-    from: { number: 0 },
-    to: { number: length },
-    config: { duration: 1000 },
-  });
-  const handleclick=()=>{
-    router.replace("/Pages/Admin/viewgallery")
-  }
-  const handlecreateclick=()=>{
-    router.replace("/Pages/Admin/addimage")
-  }
-
   return (
-    <div className="pt-24 pb-20">
-      <div className="flex flex-col">
-        <div className="flex justify-center items-center py-16 gap-4">
-          <animated.span className="text-8xl text-white bg-orange-500 rounded-full p-8">
-            {numberAnimation.number.to((val) => Math.floor(val))}
-          </animated.span>
-          <p className="text-6xl font-bold text-orange-500">Number of Images</p>
-        </div>
-        <div className="text-orange-500 text-5xl font-semibold flex justify-center underline pb-20">
-          Functions
-        </div>
-        <div className="flex gap-4 justify-around px-12">
-          <button
-            type="button"
-            className="bg-orange-500 text-2xl font-semibold text-white p-4 rounded-lg hover:opacity-75 hover:scale-105"
-            onClick={handleclick}
-          >
-            Edit the Gallery
-          </button>
-          <button
-            type="button"
-            className="bg-orange-500 text-2xl font-semibold text-white p-4 rounded-lg hover:opacity-75 hover:scale-105"
-            onClick={handlecreateclick}
-          >
-            Upload Images
-          </button>
+    <div className="container mx-auto py-20 px-10" height={300} width={500}>
+      <div className="font-semibold text-5xl text-orange-500 text-center pb-10">
+        Gallery
+      </div>
+      <div className='d-block h-full w-full' align="center"   >
+       
+       
+        <div className='w-full'>
+          <div className='bg-ora p-5 rounded-md hover:scale-105'>
+            <div className='bg-orange-100 border-2 border-orange-500 p-6 rounded-lg shadow-md'>
+            <div className=' flex w-full lg:w-1/3 md:w-1/2 mb-5 md:mb-5 lg:mb-5 gap-10 ' align="center">
+        <div class='gap-10'>
+       <Image
+         src={Temple13}
+         className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full'
+         alt="third background image"
+         width={500}
+         height={250}
+       />
+      </div>
+    <div class='gap-10'>
+    <Image
+      src={Temple14}
+      className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full h-full'
+      alt="third background image"
+      width={500}
+      height={250}
+    />
+    </div>
+    <div class='gap-10'>
+    <Image
+      src={Temple15}
+      className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full h-full'
+      alt="third background image"
+      width={500}
+      height={250}
+    />
+    </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div className="container mx-auto py-20 px-10">
+      <div className="font-semibold text-5xl text-orange-500 text-center pb-10">
+      <div className='bg-orange-100 border-2 border-orange-500 p-6 rounded-lg shadow-md'>
+      <div className='flex w-full items-center justify-center mb-5 md:mb-5 lg:mb-5 gap-10 text-center'>
+   Videos
+</div>
+
+<div className="flex items-center justify-center">
+   <iframe width="935" height="526" src="https://www.youtube.com/embed/2wf_JJPvOE0" title="ಈ ದೇಗುಲದ ಬಸವನ ಹಣೆ ಮೇಲಿದೆ &quot;ಶಿವಲಿಂಗ&quot;..!! ಬಹು ಅಪರೂಪದ ಸಾನಿಧ್ಯ &quot;ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯ&quot; ಪಕ್ಕದಲ್ಲಿ..!! ♥💫" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+      </div>
+      
+     
+      
+  </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {formdata.map((image) => (
+          <div
+            key={image._id}
+            className="relative overflow-hidden rounded-lg shadow-md aspect-w-1 aspect-h-1 hover:opacity-80"
+          >
+            <img
+              src={image.avatar}
+              alt={image.title}
+              className="object-cover w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75"
+            />
+            <div className="p-4">
+              <p className="text-lg font-semibold">{image.title}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
     </div>
   );
 };

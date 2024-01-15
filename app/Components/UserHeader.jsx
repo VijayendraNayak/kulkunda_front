@@ -50,7 +50,7 @@ const UserHeader = ({ loading }) => {
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-2xl">Kulkunda</span>
+            <span className="text-orange-300 text-2xl">Kulkunda Shree</span>
             <span className="text-orange-500 text-2xl">Basaveshwara</span>
           </div>
         </Link>
@@ -80,11 +80,11 @@ const UserHeader = ({ loading }) => {
               Gallery
             </li>
           </Link>
-          <Link href="/Pages/News">
+          {/* <Link href="/Pages/News">
             <li className="hover:underline text-orange-700 hidden sm:flex">
               News&Updates
             </li>
-          </Link>
+          </Link> */}
           {currentUser ? (
             <Link href="/Pages/profile">
               <img
@@ -111,7 +111,7 @@ const UserHeader = ({ loading }) => {
           <div className="w-full flex flex-col gap-4">
             <Link href="/">
               <h1 className="font-bold text-lg sm:text-xl sm:hidden">
-                <span className="text-orange-300">Kulkunda</span>
+                <span className="text-orange-300">Kulkunda Shree</span>
                 <span className="text-orange-500">Basaveshwara</span>
               </h1>
             </Link>
@@ -169,4 +169,4 @@ const UserHeader = ({ loading }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(UserHeader), { ssr: false });
+export default UserHeader;

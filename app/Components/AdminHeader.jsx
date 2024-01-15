@@ -54,7 +54,7 @@ const UserHeader = ({ loading }) => {
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-2xl">Kulkunda</span>
+            <span className="text-orange-300 text-2xl">Kulkunda Shree</span>
             <span className="text-orange-500 text-2xl">Basaveshwara</span>
           </div>
         </Link>
@@ -107,7 +107,7 @@ const UserHeader = ({ loading }) => {
           <div className="w-full flex flex-col gap-6">
             <Link href="/Pages/Admin/dashboard">
               <h1 className="font-bold text-sm sm:text-xl sm:hidden gap-1">
-                <span className="text-orange-300">Kulkunda</span>
+                <span className="text-orange-300">Kulkunda Shree</span>
                 <span className="text-orange-500">Basaveshwara</span>
               </h1>
             </Link>
@@ -157,4 +157,4 @@ const UserHeader = ({ loading }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(UserHeader), { ssr: false });
+export default UserHeader;
