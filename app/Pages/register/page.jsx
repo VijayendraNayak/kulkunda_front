@@ -15,7 +15,6 @@ import {
 import dynamic from "next/dynamic";
 import Loader from "../../Components/Loader";
 
-
 const Register = () => {
   const [formdata, setFormdata] = useState({});
   const [password, showPassword] = useState(true);
@@ -31,7 +30,6 @@ const Register = () => {
   const togglepassword = () => {
     showPassword(!password);
   };
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,8 +95,7 @@ const Register = () => {
               placeholder="Phone number"
               className="border p-3 rounded-lg bg-white hover:shadow-lg hover:scale-105"
               id="phonenumber"
-              value={phoneNumber ? `+${phoneNumber}` : " "}
-              disabled
+              onChange={handleChange}
             />
             <input
               type="email"
@@ -148,7 +145,7 @@ const Register = () => {
           </button>
           <div className="flex justify-end">
             <Link href="/Pages/login">
-              <span className="text-green-500 font-bold cursor-pointer hover:scale-110 hover:underline">
+              <span className="text-blue-500 font-bold cursor-pointer hover:scale-110 hover:underline">
                 Have an Account?
               </span>
             </Link>
@@ -162,4 +159,4 @@ const Register = () => {
   );
 };
 
-export default dynamic (() => Promise.resolve(Register), {ssr: false})
+export default dynamic(() => Promise.resolve(Register), { ssr: false });

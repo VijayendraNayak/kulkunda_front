@@ -169,14 +169,14 @@ const Login = () => {
           >
             <FcGoogle /> Login with Google
           </button>
-          <div className="flex justify-around">
-            <Link href="/Pages/passwordotp">
+          <div className="flex justify-end">
+            {/* <Link href="/Pages/passwordotp">
               <p className="text-red-500 font-bold cursor-pointer hover:scale-110 hover:underline">
                 forgot password?
               </p>
-            </Link>
-            <Link href="/Pages/verifyotp">
-              <p className="text-green-500 font-bold cursor-pointer hover:scale-110 hover:underline">
+            </Link> */}
+            <Link href="/Pages/register">
+              <p className="text-blue-500 font-bold cursor-pointer hover:scale-110 hover:underline">
                 New User?
               </p>
             </Link>
