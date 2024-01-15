@@ -1,4 +1,11 @@
 "use client";
+import Image from 'next/image';
+import Temple6 from "/app/assets/image/temple6.jpg"
+import Temple7 from "/app/assets/image/temple7.jpg"
+import Temple9 from "/app/assets/image/temple9.jpg"
+import Temple10 from "/app/assets/image/temple10.jpg"
+import Temple12 from "/app/assets/image/temple12.jpg"
+import Temple5 from "/app/assets/image/temple5.jpg"
 import { useState } from "react";
 import Loader from "../../Components/Loader"
 const page = () => {
@@ -8,7 +15,7 @@ const page = () => {
   const handleonclick = () => {
     setLoader(true);
     if (lang === "english") {
-      setLang("kannada");
+      setLang("kannada"); 
       setLoader(false);
     } else {
       setLang("english");
@@ -39,7 +46,7 @@ const page = () => {
         {/* Section 1 */}
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center ">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               Historical Significance
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -51,23 +58,27 @@ const page = () => {
             </p>
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
-              alt="image here"
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple6}
+              height={300}
+              width={200}
+              alt="Image here"
             />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple7}
               alt="image here"
+              height={300}
+              width={200}
             />
           </div>
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               Restoration and Worship
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -79,36 +90,42 @@ const page = () => {
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
-              Historical Significance
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              How to Reach..
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              According to 'Skanda Purana,' it is believed that Lord Sri
-              Subrahmanya Swami performed penance on Lord Shiva at this site.
-              The area witnessed a bustling 15-day cattle fair during Kartika
-              masa (around November), gradually evolving into a place primarily
-              dedicated to worship.
+              
+            <p>By train:  
+            If arriving by train, travel to Subrahmanya Road, accessible from Karwar, Mangaluru, Bengaluru, Hassan, Hubballi, and Vijayapura. KSRTC buses from Subrahmanya Road station or auto rickshaws can take you to Kulkunda   . </p>     
+
+              <p>By flight:
+            The nearest airport is Mangaluru International Airport, 108 km away. Flights from Bengaluru, Hyderabad, Chennai, Mumbai, Pune, Delhi, and Gulf cities operate to Mangaluru. From Mangaluru, you can reach Kulkunda by road or train.</p>
             </p>
+            
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple12}
               alt="image here"
+              height={300}
+              width={200}
             />
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple9}
               alt="image here"
+              height={300}
+              width={200}
             />
           </div>
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               Cultural Traditions
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -122,7 +139,7 @@ const page = () => {
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full h-60 rounded-3xl p-2">
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               Historical Figures and Influence
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -135,24 +152,28 @@ const page = () => {
             </p>
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple10}
               alt="image here"
+              height={300}
+              width={200}
             />
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple5}
               alt="image here"
+              height={300}
+              width={200}
             />
           </div>
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               Spiritual Significance
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -174,7 +195,7 @@ const page = () => {
       >
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full  rounded-3xl p-2">
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center ">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -188,23 +209,27 @@ const page = () => {
             </p>
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple7}
               alt="image here"
+              height={300}
+              width={200}
             />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full  rounded-3xl p-2">
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple6}
               alt="image here"
+              height={150}
+              width={300}
             />
           </div>
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಪೌರಾಣಿಕ ಹಿನ್ನೆಲೆ
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -217,10 +242,34 @@ const page = () => {
             </p>
           </div>
         </div>
+        <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full  rounded-3xl p-2">
+          <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            ಹೇಗೆ ಹೋಗಬಹುದು?
+            </span>
+            <p className="text-sm md:text-base lg:text-lg text-center">
+              
+            <p>ರೈಲು ಮಾರ್ಗದಲ್ಲಿ:
+ರೈಲುದಾರರಾಗಿ ಬರುವಾಗ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್‌ಗೆ ಹೋಗಲು ಕಾರ್ವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ ಹೊಂದಿಕೊಳ್ಳಬಹುದು. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ಸ್ಥಾನದಿಂದ ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯ ಗೆ ಕೆಳಗೆ ಹೋಗಲು ಕೆಎಸ್ಆರ್ಟಿಸಿ ಬಸ್ಸುಗಳು ಅಥವಾ ಆಟೊ ರಿಕ್ಷಾಗಳು ನಿಮ್ಮನ್ನು ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯಗೆ ಕರೆಸಬಹುದು.</p>
+
+<p>ವಿಮಾನ ಮಾರ್ಗದಲ್ಲಿ:
+ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು ದೂರದ ಸರಸ್ವತೀ ಆಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣವೇ ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು. ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ, ಮುಂಬಯಿ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಖಾಡಿ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನ ಸೇವೆಗಳು ನಡೆಯುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ ನೀವು ಕುಲ್ಕುಂಡಕ್ಕೆ ರಸ್ತೆ ಅಥವಾ ರೈಲು ಮಾರ್ಗದಿಂದ ಹೋಗಬಹುದು.</p>
+            </p>
+          </div>
+          <div className="w-full md:w-1/4 p-1 rounded-lg">
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple12}
+              alt="image here"
+              height={300}
+              width={200}
+            />
+          </div>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full  rounded-3xl p-2">
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -238,9 +287,9 @@ const page = () => {
             </p>
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple7}
               alt="image here"
             />
           </div>
@@ -248,14 +297,14 @@ const page = () => {
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full rounded-3xl p-2">
           <div className="w-full md:w-1/4 p-1 rounded-lg">
-            <img
-              className="w-full h-full object-cover"
-              src=""
+            <Image
+              className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
+              src={Temple10}
               alt="image here"
             />
           </div>
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
