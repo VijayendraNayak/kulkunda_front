@@ -137,26 +137,26 @@ const UserHeader = ({ loading }) => {
                 </li>
               </Link>
               <Link href="/Pages/gallery">
-                <li className="hover:underline text-orange-700 hidden sm:flex">
+                <li className="hover:underline text-orange-700 sm:hidden">
                   Gallery
                 </li>
               </Link>
               <Link href="/Pages/News">
-                <li className="hover:underline text-orange-700 hidden sm:flex">
+                <li className="hover:underline text-orange-700 sm:hidden">
                   News&Updates
                 </li>
               </Link>
               {currentUser ? (
                 <Link href="/Pages/profile">
                   <img
-                    className=" rounded-full w-10 h-10 hidden sm:flex"
+                    className=" rounded-full w-10 h-10  sm:hidden"
                     src={currentUser.avatar}
                     alt="profile"
                   />
                 </Link>
               ) : (
                 <Link href="/Pages/login">
-                  <li className="hover:underline text-orange-700 hidden sm:flex">
+                  <li className="hover:underline text-orange-700 sm:hidden ">
                     Sign in
                   </li>
                 </Link>
