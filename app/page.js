@@ -87,34 +87,35 @@ const Page = () => {
         </div>
       </div>
 
-      <div className='flex-1 md:ml-5 lg:ml-10s flex relative'>
-  {/* Left half - Content */}
-  <div className='flex-1 md:ml-10 lg:ml-5'>
+      <div className='flex-1 flex-col md:flex-row md:ml-5 lg:ml-10s flex relative'>
+        {/* Left half - Content */}
+        <div className='flex-1 md:ml-5 lg:ml-5'>
           <div className='bg-ora p-5 rounded-md hover:scale-105'>
             <div className='bg-orange-100 border-2 border-orange-500 p-8 rounded-lg shadow-md'>
               <h3 className='text-xl font-semibold mb-2'>{currentContent.title1}</h3>
-              <p className='text-gray-700 line-clamp-3 md:line-clamp-5'>{currentContent.text1}</p>
-              <Link href="/Pages/aboutus">
+                <p className='text-gray-700 line-clamp-3 md:line-clamp-5'>{currentContent.text1}</p>
+                <Link href="/Pages/aboutus">
                 <p className='text-red-500'>{currentContent.readMore1}</p>
-        </Link>
+                </Link>
+              </div>
+            </div>
+        </div>
+        
+        <div className='w-full lg:w-1/3 md:w-1/2 mb-5 md:mb-5 lg:mb-5'>
+          {/* Third Image (Temple2) */}
+          <div className='hidden md:block'>
+            <Image
+              src={Temple2}
+              className='mx-auto d-block rounded-lg border-2 border-orange-500'
+              alt="third background image"
+              width={300}
+              height={250}
+            />
+          </div>
+        </div>
       </div>
-    </div>
- </div>
-  
-  <div className='w-full lg:w-1/3 md:w-1/2 mb-5 md:mb-5 lg:mb-5'>
-    {/* Third Image (Temple2) */}
-    <Image
-      src={Temple2}
-      className='mx-auto d-block rounded-lg border-2 border-orange-500'
-      alt="third background image"
-      width={300}
-      height={250}
-    />
-  </div>
-</div>
-<div className='d-block ' align="center" >
-       
-       
+
+      <div className='d-block ' align="center">       
         <div className='w-full'>
           <div className='bg-ora p-5 rounded-md hover:scale-105'>
             <div className='bg-orange-100 border-2 border-orange-500 p-6 rounded-lg shadow-md'width="1000px">

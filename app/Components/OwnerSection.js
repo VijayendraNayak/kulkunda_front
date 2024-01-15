@@ -46,10 +46,10 @@ const OwnerSection = () => {
           <Image
             src={owner.src}
             alt={owner.name}
-            width={150}
-            height={150}
+            width={180}
+            height={180}
             objectFit="cover"
-            className="rounded-full ml-20"
+            className="rounded-full ml-10"
           />
           <h3
             style={{
