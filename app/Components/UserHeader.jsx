@@ -54,7 +54,7 @@ const UserHeader = ({ loading }) => {
             <span className="text-orange-500 text-2xl">Basaveshwara</span>
           </div>
         </Link>
-        <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
+        <ul className={` lg:flex md:flex gap-6 lg:items-center font-semibold`}>
           <Link href="/">
             <li className="hover:underline text-orange-700 hidden sm:flex">
               Home
@@ -108,14 +108,14 @@ const UserHeader = ({ loading }) => {
           {navbar ? " " : "☰"}
         </button>
         {navbar && (
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-full flex flex-col gap-4">
             <Link href="/">
-              <h1 className="font-bold text-sm sm:text-xl sm:hidden">
+              <h1 className="font-bold text-lg sm:text-xl sm:hidden">
                 <span className="text-orange-300">Kulkunda</span>
                 <span className="text-orange-500">Basaveshwara</span>
               </h1>
             </Link>
-            <ul className={`flex-col items-center gap-6 font-semibold`}>
+            <ul className={` flex flex-col justify-start  gap-2 font-semibold`}>
               <Link href="/">
                 <li className="hover:underline text-orange-700 sm:hidden">
                   Home
@@ -156,7 +156,7 @@ const UserHeader = ({ loading }) => {
                 </Link>
               ) : (
                 <Link href="/Pages/login">
-                  <li className="hover:underline text-orange-700 sm:hidden ">
+                  <li className="hover:underline font-semibold bg-red-500 text-white bg-redsm:hidden p-3 text-center ">
                     Sign in
                   </li>
                 </Link>
