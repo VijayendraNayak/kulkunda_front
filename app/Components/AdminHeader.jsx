@@ -54,8 +54,8 @@ const UserHeader = ({ loading }) => {
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-2xl">Kulkunda</span>
-            <span className="text-orange-500 text-2xl">Basaveshwara</span>
+            <span className="text-orange-300 text-2xl">Kulkunda Shree </span>
+            <span className="text-orange-500 text-2xl">Basaveshwara Temple</span>
           </div>
         </Link>
         <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
