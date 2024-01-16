@@ -38,7 +38,7 @@ const Page = () => {
   const content = {
         english: {
       title: 'Shree Basaveshwara Temple ',
-      text: 'According to Skanda Purana, it is believed that Lord SriSubrahmanya Swami performed penance on Lord Shiva at this site...',
+      text: 'According to Skanda Purana, it is believed that Lord Shri Subrahmanya Swami performed penance on Lord Shiva at this site...',
       readMore: 'Read more.........',
       title1: 'How to Reach?',
     text1: 'By bus: Plenty of buses travel to and from Kukke Subrahmanya, connecting Bisle, Dharmasthala, Kadaba, Uppinangady, Mangaluru, and other parts of Karnataka. Alight at Kulkunda junction and walk approximately 350 meters to reach the temple.',

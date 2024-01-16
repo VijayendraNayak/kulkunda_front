@@ -52,7 +52,7 @@ const page = () => {
               Historical Significance
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              According to 'Skanda Purana,' it is believed that Lord Sri
+              According to 'Skanda Purana,' it is believed that Lord Shri
               Subrahmanya Swami performed penance on Lord Shiva at this site.
               The area witnessed a bustling 15-day cattle fair during Kartika
               masa (around November), gradually evolving into a place primarily
