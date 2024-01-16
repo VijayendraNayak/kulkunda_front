@@ -149,7 +149,7 @@ const Page = () => {
         </button>
       </div>
 
-      <h1 className='text-center bold text-5xl text-black-400  mt-10 mb-5'>TRUSTIES</h1>
+      <h1 className='text-center bold text-5xl text-black-400  mt-10 mb-5'>TRUSTEES</h1>
       <div className='flex flex-col md:flex-row md:p-10'>
         <Owner />
       </div>
