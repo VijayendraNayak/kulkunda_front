@@ -44,12 +44,12 @@ const UserHeader = ({ loading }) => {
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div
-            className={`font-bold gap-1 text-md sm:text-md sm:flex ${
+            className={`font-bold gap-1 text-sm sm:text-md sm:flex ${
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-2xl">Kulkunda Shree</span>
-            <span className="text-orange-500 text-2xl">Basaveshwara</span>
+            <span className="text-orange-300 text-md">Kulkunda Shree</span>
+            <span className="text-orange-500 text-md">Basaveshwara</span>
           </div>
         </Link>
         <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
@@ -104,7 +104,7 @@ const UserHeader = ({ loading }) => {
         {navbar && (
           <div className="w-full flex flex-col gap-4">
             <Link href="/">
-              <h1 className="font-bold text-sm md:hidden">
+              <h1 className="font-bold text-sm">
                 <span className="text-orange-300">Kulkunda Shree</span>
                 <span className="text-orange-500">Basaveshwara</span>
               </h1>
@@ -150,7 +150,7 @@ const UserHeader = ({ loading }) => {
                 </Link>
               ) : (
                 <Link href="/Pages/login">
-                  <li className="hover:underline text-white-700 bg-red-500 rounded-lg p-3 sm:hidden">
+                  <li className="hover:underline text-white bg-red-500 rounded-lg p-3 sm:hidden">
                     Sign in
                   </li>
                 </Link>
