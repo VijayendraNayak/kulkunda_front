@@ -44,7 +44,7 @@ const UserHeader = ({ loading }) => {
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div
-            className={`font-bold gap-1 text-md sm:text-xl sm:flex ${
+            className={`font-bold gap-1 text-md sm:text-md sm:flex ${
               navbar ? "hidden" : "flex"
             }`}
           >
