@@ -32,7 +32,6 @@ const UserHeader = ({ loading }) => {
 
   const togglenavbar = () => {
     setNavbar(!navbar);
-    console.log(navbar);
   };
 
   return (
@@ -48,8 +47,8 @@ const UserHeader = ({ loading }) => {
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-md">Kulkunda Shree</span>
-            <span className="text-orange-500 text-md">Basaveshwara</span>
+            <span className="text-orange-300 text-[15px] sm:text-[25px]">Kulkunda Shree</span>
+            <span className="text-orange-500 text-[15px] sm:text-[25px]">Basaveshwara</span>
           </div>
         </Link>
         <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
@@ -105,8 +104,8 @@ const UserHeader = ({ loading }) => {
           <div className="w-full flex flex-col gap-4">
             <Link href="/">
               <h1 className="font-bold text-sm">
-                <span className="text-orange-300">Kulkunda Shree</span>
-                <span className="text-orange-500">Basaveshwara</span>
+                <span className="text-orange-300 text-md">Kulkunda Shree</span>
+                <span className="text-orange-500 text-md">Basaveshwara</span>
               </h1>
             </Link>
             <ul className={`flex flex-col gap-3 font-semibold`}>
