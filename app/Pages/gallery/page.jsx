@@ -1,6 +1,6 @@
 "use client";
 import Temple2 from "/app/assets/image/temple13.jpg"
-import Temple from "/app/assets/image/Temple.jpg"
+import Temple from "/app/assets/image/temple.jpg"
 import Temple3 from "/app/assets/image/temple14.jpg"
 import Temple4 from "/app/assets/image/temple15.jpg"
 import Temple6 from "/app/assets/image/temple6.jpg"
