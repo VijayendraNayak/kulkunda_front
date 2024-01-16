@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import dynamic from "next/dynamic";
@@ -9,7 +8,6 @@ import dynamic from "next/dynamic";
 const UserHeader = ({ loading }) => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [searchstate, setSearchstate] = useState(" ");
   const [navbar, setNavbar] = useState(false);
   const { currentUser } = useSelector((state) => state.user);
 
@@ -46,11 +44,11 @@ const UserHeader = ({ loading }) => {
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div
-            className={`font-bold gap-1 text-sm sm:text-xl sm:flex ${
+            className={`font-bold gap-1 text-md sm:text-xl sm:flex ${
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-2xl">Kulkunda</span>
+            <span className="text-orange-300 text-2xl">Kulkunda Shree</span>
             <span className="text-orange-500 text-2xl">Basaveshwara</span>
           </div>
         </Link>
@@ -104,14 +102,14 @@ const UserHeader = ({ loading }) => {
           {navbar ? " " : "☰"}
         </button>
         {navbar && (
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-full flex flex-col gap-4">
             <Link href="/">
-              <h1 className="font-bold text-sm sm:text-xl sm:hidden">
-                <span className="text-orange-300">Kulkunda</span>
+              <h1 className="font-bold text-sm md:hidden">
+                <span className="text-orange-300">Kulkunda Shree</span>
                 <span className="text-orange-500">Basaveshwara</span>
               </h1>
             </Link>
-            <ul className={`flex-col items-center gap-6 font-semibold`}>
+            <ul className={`flex flex-col gap-3 font-semibold`}>
               <Link href="/">
                 <li className="hover:underline text-orange-700 sm:hidden">
                   Home
@@ -133,7 +131,7 @@ const UserHeader = ({ loading }) => {
                 </li>
               </Link>
               <Link href="/Pages/gallery">
-                <li className="hover:underline text-orange-700 hidden sm:flex">
+                <li className="hover:underline text-orange-700 sm:hidden">
                   Gallery
                 </li>
               </Link>
@@ -145,14 +143,14 @@ const UserHeader = ({ loading }) => {
               {currentUser ? (
                 <Link href="/Pages/profile">
                   <img
-                    className=" rounded-full w-10 h-10 hidden sm:flex"
+                    className=" rounded-full w-10 h-10  sm:hidden"
                     src={currentUser.avatar}
                     alt="profile"
                   />
                 </Link>
               ) : (
                 <Link href="/Pages/login">
-                  <li className="hover:underline text-orange-700 hidden sm:flex">
+                  <li className="hover:underline text-white-700 bg-red-500 rounded-lg p-3 sm:hidden">
                     Sign in
                   </li>
                 </Link>

@@ -1,13 +1,15 @@
 "use client";
-import Image from 'next/image';
-import Temple6 from "/app/assets/image/temple6.jpg"
-import Temple7 from "/app/assets/image/temple7.jpg"
-import Temple9 from "/app/assets/image/temple9.jpg"
-import Temple10 from "/app/assets/image/temple10.jpg"
-import Temple12 from "/app/assets/image/temple12.jpg"
-import Temple5 from "/app/assets/image/temple5.jpg"
+import Image from "next/image";
+import Temple6 from "/app/assets/image/temple6.jpg";
+import Temple7 from "/app/assets/image/temple7.jpg";
+import Temple9 from "/app/assets/image/temple9.jpg";
+import Temple10 from "/app/assets/image/temple10.jpg";
+import Temple12 from "/app/assets/image/temple12.jpg";
+import Temple5 from "/app/assets/image/temple5.jpg";
 import { useState } from "react";
-import Loader from "../../Components/Loader"
+import Loader from "../../Components/Loader";
+import dynamic from "next/dynamic";
+
 const page = () => {
   const [lang, setLang] = useState("english");
   const [loader, setLoader] = useState(false);
@@ -15,7 +17,7 @@ const page = () => {
   const handleonclick = () => {
     setLoader(true);
     if (lang === "english") {
-      setLang("kannada"); 
+      setLang("kannada");
       setLoader(false);
     } else {
       setLang("english");
@@ -24,7 +26,7 @@ const page = () => {
   };
   return (
     <div className="pt-10 pb-10 lg:pt-20 ">
-      {loader && <Loader/>}
+      {loader && <Loader />}
       <div className="flex justify-between items-center pb-5">
         <p className="text-3xl lg:text-5xl text-center font-semibold text-orange-500 p-4">
           About Us
@@ -89,21 +91,25 @@ const page = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
+          <div className="w-full h-full md:w-3/4 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               How to Reach..
             </span>
-            <p className="text-sm md:text-base lg:text-lg text-center">
-              
-            <p>By train:  
-            If arriving by train, travel to Subrahmanya Road, accessible from Karwar, Mangaluru, Bengaluru, Hassan, Hubballi, and Vijayapura. KSRTC buses from Subrahmanya Road station or auto rickshaws can take you to Kulkunda   . </p>     
-
-              <p>By flight:
-            The nearest airport is Mangaluru International Airport, 108 km away. Flights from Bengaluru, Hyderabad, Chennai, Mumbai, Pune, Delhi, and Gulf cities operate to Mangaluru. From Mangaluru, you can reach Kulkunda by road or train.</p>
-            
-            <p>By Bus:
-              The nearest bus station is Mangalore.
-            </p>
+            <p className="text-sm md:text-base lg:text-lg text-center h-full">
+              <span>
+                By train: If arriving by train, travel to Subrahmanya Road,
+                accessible from Karwar, Mangaluru, Bengaluru, Hassan, Hubballi,
+                and Vijayapura. KSRTC buses from Subrahmanya Road station or
+                auto rickshaws can take you to Kulkunda .{" "}
+              </span>
+              <span>
+                By flight: The nearest airport is Mangaluru International
+                Airport, 108 km away. Flights from Bengaluru, Hyderabad,
+                Chennai, Mumbai, Pune, Delhi, and Gulf cities operate to
+                Mangaluru. From Mangaluru, you can reach Kulkunda by road or
+                train.
+              </span>
+              <span>By Bus: The nearest bus station is Mangalore.</span>
             </p>
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
@@ -236,7 +242,12 @@ const page = () => {
               ಪೌರಾಣಿಕ ಹಿನ್ನೆಲೆ
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇ ಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ, ಮರುಜೀವ ಪಡೆದು ಯುದ್ಧಕ್ಕೆ ಬರುತ್ತಿದ್ದುದನ್ನು ಕಂಡು ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ಶಿವನ ಕುರಿತು ತಪಸ್ಸು ಮಾಡಿದ ಅವಾಗ, ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದೀ ಸ್ವರೂಪದಲ್ಲಿ ಪ್ರತ್ಯಕ್ಷನಾಗಿ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಗೆ ನಂದಿ ವಿದ್ಯೆಯೇ ಮೊದಲಾಗಿ ಶಸ್ತ್ರ ವಿದ್ಯೆಯನ್ನು ಬೋಧಿಸಿದರು ಎಂದು ಪುರಾಣದಲ್ಲಿ ತಿಳಿಯಪಡುತ್ತದೆ.
+              ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇ
+              ಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ, ಮರುಜೀವ ಪಡೆದು
+              ಯುದ್ಧಕ್ಕೆ ಬರುತ್ತಿದ್ದುದನ್ನು ಕಂಡು ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ಶಿವನ
+              ಕುರಿತು ತಪಸ್ಸು ಮಾಡಿದ ಅವಾಗ, ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದೀ ಸ್ವರೂಪದಲ್ಲಿ
+              ಪ್ರತ್ಯಕ್ಷನಾಗಿ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಗೆ ನಂದಿ ವಿದ್ಯೆಯೇ ಮೊದಲಾಗಿ
+              ಶಸ್ತ್ರ ವಿದ್ಯೆಯನ್ನು ಬೋಧಿಸಿದರು ಎಂದು ಪುರಾಣದಲ್ಲಿ ತಿಳಿಯಪಡುತ್ತದೆ.
             </p>
           </div>
         </div>
@@ -247,20 +258,22 @@ const page = () => {
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
               <p>
-                ರೈಲು ಮಾರ್ಗದಲ್ಲಿ:
-                ರೈಲುದಾರರಾಗಿ ಬರುವಾಗ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್‌ಗೆ ಹೋಗಲು ಕಾರ್ವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ ಹೊಂದಿಕೊಳ್ಳಬಹುದು.
-                ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ಸ್ಥಾನದಿಂದ ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯ ಗೆ ಕೆಳಗೆ ಹೋಗಲು ಕೆಎಸ್ಆರ್ಟಿಸಿ ಬಸ್ಸುಗಳು ಅಥವಾ ಆಟೊ ರಿಕ್ಷಾಗಳು ನಿಮ್ಮನ್ನು ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯಗೆ ಕರೆಸಬಹುದು.
+                ರೈಲು ಮಾರ್ಗದಲ್ಲಿ: ರೈಲುದಾರರಾಗಿ ಬರುವಾಗ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್‌ಗೆ ಹೋಗಲು
+                ಕಾರ್ವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ
+                ಹೊಂದಿಕೊಳ್ಳಬಹುದು. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ಸ್ಥಾನದಿಂದ ಕುಲ್ಕುಂಡ,
+                ಸುಬ್ರಹ್ಮಣ್ಯ ಗೆ ಕೆಳಗೆ ಹೋಗಲು ಕೆಎಸ್ಆರ್ಟಿಸಿ ಬಸ್ಸುಗಳು ಅಥವಾ ಆಟೊ
+                ರಿಕ್ಷಾಗಳು ನಿಮ್ಮನ್ನು ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯಗೆ ಕರೆಸಬಹುದು.
               </p>
 
               <p>
-                ವಿಮಾನ ಮಾರ್ಗದಲ್ಲಿ:
-                ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು ದೂರದ ಸರಸ್ವತೀ ಆಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣವೇ ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು. ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ, ಮುಂಬಯಿ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಖಾಡಿ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನ ಸೇವೆಗಳು ನಡೆಯುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ ನೀವು ಕುಲ್ಕುಂಡಕ್ಕೆ ರಸ್ತೆ ಅಥವಾ ರೈಲು ಮಾರ್ಗದಿಂದ ಹೋಗಬಹುದು.
+                ವಿಮಾನ ಮಾರ್ಗದಲ್ಲಿ: ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು ದೂರದ ಸರಸ್ವತೀ ಆಂತರಾಷ್ಟ್ರೀಯ
+                ವಿಮಾನ ನಿಲ್ದಾಣವೇ ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು. ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ,
+                ಮುಂಬಯಿ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಖಾಡಿ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನ ಸೇವೆಗಳು
+                ನಡೆಯುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ ನೀವು ಕುಲ್ಕುಂಡಕ್ಕೆ ರಸ್ತೆ ಅಥವಾ ರೈಲು
+                ಮಾರ್ಗದಿಂದ ಹೋಗಬಹುದು.
               </p>
 
-              <p>
-                By bus:
-                ಬಸ್ಸಿನ ಮೂಲಕ ಹೋಗಲು ಇಲ್ಲಿ ಬರೆಯಿರಿ.
-              </p>
+              <p>By bus: ಬಸ್ಸಿನ ಮೂಲಕ ಹೋಗಲು ಇಲ್ಲಿ ಬರೆಯಿರಿ.</p>
             </p>
           </div>
           <div className="w-full md:w-1/4 p-1 rounded-lg">
@@ -273,7 +286,6 @@ const page = () => {
             />
           </div>
         </div>
-
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-auto rounded-3xl p-2">
           <div className="w-full md:w-1/4 p-1 rounded-lg">
@@ -304,7 +316,6 @@ const page = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-auto rounded-3xl p-2">
-
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
@@ -338,7 +349,7 @@ const page = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-2 border-2 border-orange-500 bg-orange-100 w-full md:h-60 rounded-3xl p-2">
-        <div className="w-full md:w-1/4 p-1 rounded-lg">
+          <div className="w-full md:w-1/4 p-1 rounded-lg">
             <Image
               className="w-full h-full object-cover rounded-lg border-2 border-orange-500"
               src={Temple5}
@@ -347,18 +358,19 @@ const page = () => {
           </div>
           <div className="w-full md:w-3/4 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-            ಆಧ್ಯಾತ್ಮಿಕ ಮಹತ್ವ
+              ಆಧ್ಯಾತ್ಮಿಕ ಮಹತ್ವ
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-            ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯ ದೇವರನ್ನು ಭೇಟಿಯಾಗಿ ನಂದೀಶ್ವರ (ಶ್ರೀ ಬಸವೇಶ್ವರ) ದರ್ಶನ ಬೇಡಿಕೊಂಡು,ಪ್ರಾರ್ಥನೆ ಸಲ್ಲಿಸುವುದು ಭಕ್ತರ ಇಚ್ಛೆಗೆ ಪೂರ್ತಿ ಭರಿಸುತ್ತದೆ. ಶ್ರದ್ಧಾಭಕ್ತರು ಬಸವೇಶ್ವರನುಬಸವನ್ಮೂಲದಲ್ಲಿ ನೆಲೆಸಿರುವುದನ್ನು ನಂಬಿದ್ದಾರೆ ಮತ್ತು ಅವರ ಈಶ್ವರನು ಭಕ್ತರ ಸಾಚಾ ಇಚ್ಛೆಗಳನ್ನು ಪೂರೈಸುತ್ತಾನೆ.
+              ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯ ದೇವರನ್ನು ಭೇಟಿಯಾಗಿ ನಂದೀಶ್ವರ (ಶ್ರೀ ಬಸವೇಶ್ವರ)
+              ದರ್ಶನ ಬೇಡಿಕೊಂಡು,ಪ್ರಾರ್ಥನೆ ಸಲ್ಲಿಸುವುದು ಭಕ್ತರ ಇಚ್ಛೆಗೆ ಪೂರ್ತಿ
+              ಭರಿಸುತ್ತದೆ. ಶ್ರದ್ಧಾಭಕ್ತರು ಬಸವೇಶ್ವರನುಬಸವನ್ಮೂಲದಲ್ಲಿ ನೆಲೆಸಿರುವುದನ್ನು
+              ನಂಬಿದ್ದಾರೆ ಮತ್ತು ಅವರ ಈಶ್ವರನು ಭಕ್ತರ ಸಾಚಾ ಇಚ್ಛೆಗಳನ್ನು ಪೂರೈಸುತ್ತಾನೆ.
             </p>
           </div>
-          
         </div>
       </div>
-      
     </div>
   );
 };
 
-export default page;
+export default dynamic(() => Promise.resolve(page), { ssr: false });
