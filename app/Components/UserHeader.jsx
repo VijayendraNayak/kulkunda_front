@@ -48,7 +48,7 @@ const UserHeader = ({ loading }) => {
             }`}
           >
             <span className="text-orange-300 text-md sm:text-xl">Kulkunda Shree</span>
-            <span className="text-orange-500 text-md sm:text-xl">Basaveshwara</span>
+            <span className="text-orange-500 text-md sm:text-xl">Basaveshwara Temple</span>
           </div>
         </Link>
         <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
@@ -105,7 +105,7 @@ const UserHeader = ({ loading }) => {
             <Link href="/">
               <h1 className="font-bold text-sm">
                 <span className="text-orange-300 text-md">Kulkunda Shree</span>
-                <span className="text-orange-500 text-md">Basaveshwara</span>
+                <span className="text-orange-500 text-md">Basaveshwara Temple</span>
               </h1>
             </Link>
             <ul className={`flex flex-col gap-3 font-semibold`}>
