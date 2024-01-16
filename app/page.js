@@ -37,7 +37,7 @@ const Page = () => {
 
   const content = {
         english: {
-      title: 'Shri Basaveshwara Temple ',
+      title: 'Shree Basaveshwara Temple ',
       text: 'According to Skanda Purana, it is believed that Lord SriSubrahmanya Swami performed penance on Lord Shiva at this site...',
       readMore: 'Read more.........',
       title1: 'How to Reach?',
