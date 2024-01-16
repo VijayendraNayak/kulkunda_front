@@ -107,8 +107,8 @@ const UserHeader = ({ loading }) => {
           <div className="w-full flex flex-col gap-6">
             <Link href="/Pages/Admin/dashboard">
               <h1 className="font-bold text-sm sm:text-xl sm:hidden gap-1">
-                <span className="text-orange-300">Kulkunda</span>
-                <span className="text-orange-500">Basaveshwara</span>
+                <span className="text-orange-300">Kulkunda Shree </span>
+                <span className="text-orange-500">Basaveshwara Temple</span>
               </h1>
             </Link>
             <ul className={`flex-col items-center gap-6 font-semibold`}>

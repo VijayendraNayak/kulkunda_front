@@ -37,8 +37,8 @@ const Page = () => {
 
   const content = {
         english: {
-      title: 'Shri Basaveshwara Temple ',
-      text: 'According to Skanda Purana, it is believed that Lord SriSubrahmanya Swami performed penance on Lord Shiva at this site...',
+      title: 'Shree Basaveshwara Temple ',
+      text: 'According to Skanda Purana, it is believed that Lord Shri Subrahmanya Swami performed penance on Lord Shiva at this site...',
       readMore: 'Read more.........',
       title1: 'How to Reach?',
     text1: 'By bus: Plenty of buses travel to and from Kukke Subrahmanya, connecting Bisle, Dharmasthala, Kadaba, Uppinangady, Mangaluru, and other parts of Karnataka. Alight at Kulkunda junction and walk approximately 350 meters to reach the temple.',
@@ -149,7 +149,7 @@ const Page = () => {
         </button>
       </div>
 
-      <h1 className='text-center bold text-5xl text-black-400  mt-10 mb-5'>TRUSTIES</h1>
+      <h1 className='text-center bold text-5xl text-black-400  mt-10 mb-5'>TRUSTEES</h1>
       <div className='flex flex-col md:flex-row md:p-10'>
         <Owner />
       </div>
