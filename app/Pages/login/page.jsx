@@ -137,7 +137,6 @@ const Login = () => {
               placeholder="Phone number"
               className="border p-3 rounded-lg hover:shadow-lg hover:scale-105"
               id="phonenumber"
-              defaultValue={91}
               onChange={handleChange}
             />
             <div className="relative">
