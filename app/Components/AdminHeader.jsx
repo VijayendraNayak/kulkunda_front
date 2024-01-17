@@ -55,7 +55,9 @@ const UserHeader = ({ loading }) => {
             }`}
           >
             <span className="text-orange-300 text-2xl">Kulkunda Shree </span>
-            <span className="text-orange-500 text-2xl">Basaveshwara Temple</span>
+            <span className="text-orange-500 text-2xl">
+              Basaveshwara Temple
+            </span>
           </div>
         </Link>
         <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
@@ -111,7 +113,7 @@ const UserHeader = ({ loading }) => {
                 <span className="text-orange-500">Basaveshwara Temple</span>
               </h1>
             </Link>
-            <ul className={`flex-col items-center gap-6 font-semibold`}>
+            <ul className={`flex flex-col gap-3 font-semibold`}>
               <Link href="/Pages/Admin/dashboard">
                 <li className="hover:underline text-orange-700 sm:hidden">
                   Dashboard
@@ -133,12 +135,12 @@ const UserHeader = ({ loading }) => {
                 </li>
               </Link>
               <Link href="/Pages/Admin/newsupdates">
-                <li className="hover:underline text-orange-700 hidden sm:flex">
+                <li className="hover:underline text-orange-700  sm:hidden">
                   NewsUpdates
                 </li>
               </Link>
               <Link href="/Pages/Admin/gallery">
-                <li className="hover:underline text-orange-700 hidden sm:flex">
+                <li className="hover:underline text-orange-700 sm:hidden">
                   Gallery
                 </li>
               </Link>
@@ -149,6 +151,12 @@ const UserHeader = ({ loading }) => {
                   alt="profile"
                 />
               </Link>
+              <button
+                className="text-orange-700 hover:text-orange-900 text-sm self-end"
+                onClick={togglenavbar}
+              >
+                &times; Close
+              </button>
             </ul>
           </div>
         )}

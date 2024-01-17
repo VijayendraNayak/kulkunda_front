@@ -47,8 +47,12 @@ const UserHeader = ({ loading }) => {
               navbar ? "hidden" : "flex"
             }`}
           >
-            <span className="text-orange-300 text-md sm:text-xl">Kulkunda Shree</span>
-            <span className="text-orange-500 text-md sm:text-xl">Basaveshwara Temple</span>
+            <span className="text-orange-300 text-md sm:text-xl">
+              Kulkunda Shree
+            </span>
+            <span className="text-orange-500 text-md sm:text-xl">
+              Basaveshwara Temple
+            </span>
           </div>
         </Link>
         <ul className={`lg:flex md:flex gap-6 lg:items-center font-semibold`}>
@@ -77,7 +81,7 @@ const UserHeader = ({ loading }) => {
               Gallery
             </li>
           </Link>
-          
+
           {currentUser ? (
             <Link href="/Pages/profile">
               <img
@@ -105,7 +109,9 @@ const UserHeader = ({ loading }) => {
             <Link href="/">
               <h1 className="font-bold text-sm">
                 <span className="text-orange-300 text-md">Kulkunda Shree</span>
-                <span className="text-orange-500 text-md">Basaveshwara Temple</span>
+                <span className="text-orange-500 text-md">
+                  Basaveshwara Temple
+                </span>
               </h1>
             </Link>
             <ul className={`flex flex-col gap-3 font-semibold`}>
@@ -154,6 +160,12 @@ const UserHeader = ({ loading }) => {
                   </li>
                 </Link>
               )}
+              <button
+                className="text-orange-700 hover:text-orange-900 text-sm self-end"
+                onClick={togglenavbar}
+              >
+                &times; Close
+              </button>
             </ul>
           </div>
         )}
