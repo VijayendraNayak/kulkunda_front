@@ -51,7 +51,7 @@ const SevaPage = () => {
       {
         loader && <Loader/>
       }
-      <p className="text-orange-500 text-6xl text-center font-semibold underline">
+      <p className="text-orange-500 lg:text-6xl text-3xl text-center font-semibold underline">
         Seva Served Here
       </p>
       <div className="flex justify-end pr-8 mb-4">
