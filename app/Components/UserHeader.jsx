@@ -36,7 +36,7 @@ const UserHeader = ({ loading }) => {
 
   return (
     <header
-      className={`bg-orange-100 fixed top-0 left-0 w-full z-10 transition-transform duration-300 transform ${
+      className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${
         isNavVisible ? "translateY(0)" : "-translate-y-full"
       }`}
     >
@@ -161,7 +161,7 @@ const UserHeader = ({ loading }) => {
                 </Link>
               )}
              <button
-                className="absolute top-0 right-0 mr-4 mt-4 text-white text-sm focus:outline-none transition-all duration-300 ease-in-out transform hover:scale-110 bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-opacity-75 backdrop-blur-md shadow-lg p-3 rounded-full"
+                className="absolute top-0 right-0 mr-3 mt-3 text-white text-sm focus:outline-none transition-all duration-300 ease-in-out transform hover:scale-110 bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-opacity-75 backdrop-blur-md shadow-lg p-3 rounded-full"
                 onClick={togglenavbar}
               >
                 <span className="mr-2">&times;</span> Close
