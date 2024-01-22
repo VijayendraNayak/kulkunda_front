@@ -74,8 +74,11 @@ const Page = () => {
       text1: '⦾  ಬಸ್ ಮಾರ್ಗದಲ್ಲಿ:ಹೆಚ್ಚಿನ ಬಸ್‌ಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಹೋಗಲು ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಾಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುತ್ತವೆ. ಕುಲ್ಕುಂಡ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿಯಿರಿ ಮತ್ತು ದೇವಸ್ಥಾನಕ್ಕೆ ಸೇರಲು ಸುಮಾರು 350 ಮೀಟರ್ ನಡೆಯಿರಿ.',
       readMore1: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ...',
       title3: 'ದರ್ಶನ ಸಮಯ:',
-      text3: '⦾ ಬೆಳಗ್ಗೆ 6 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆ ತನಕ ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆ ತನಕ'
-
+      text31: '⦾ ಬೆಳಗ್ಗೆ 6 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆ ತನಕ ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆ ತನಕ',
+      text32: 'ಬೆಳಗ್ಗೆ ಪೂಜೆ: 8 ಗಂಟೆಗೆ',
+      text33: 'ಮಧ್ಯಾಹ್ನ ಮಹಾಪೂಜೆ: ಮಧ್ಯಾಹ್ನ 12:15',
+      text34: 'ಸಂಜೆ ದರ್ಶನ ಸಮಯ: ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆಯ ತನಕ',
+      text35: 'ರಾತ್ರಿ ಪೂಜೆ: ಸಂಜೆ 6:30ಕ್ಕೆ',
     },
   };
 
@@ -123,10 +126,10 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>{currentContent.title}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100'>  {currentContent.text}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>{currentContent.title}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100'>  {currentContent.text}</p>
               <Link href="/Pages/aboutus">
-                <p className='text-yellow-100 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
+                <p className='text-orange-100 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
               </Link>
             </div>
           </div>
@@ -146,10 +149,10 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>{currentContent.title1}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100'>  {currentContent.text1}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>{currentContent.title1}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100'>  {currentContent.text1}</p>
               <Link href="/Pages/contactus">
-                <p className='text-yellow-100 font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
+                <p className='text-orange-100 font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
               </Link>
             </div>
           </div>
@@ -168,12 +171,12 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>  {currentContent.title3}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text31}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text32}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text33}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text34}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text35}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title3}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text31}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text32}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text33}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text34}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text35}</p>
             </div>
           </div>
         </div>
@@ -190,7 +193,7 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>  {currentContent.title2}</h3>
+              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title2}</h3>
               
             </div>
           </div>
