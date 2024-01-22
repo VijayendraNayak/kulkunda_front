@@ -51,11 +51,11 @@ const SevaPage = () => {
       {
         loader && <Loader/>
       }
-      <p className="text-orange-500 lg:text-6xl text-3xl text-center font-semibold underline">
+      <p className="text-black lg:text-6xl text-3xl text-center font-bold" style={{ textDecoration: 'none', fontFamily: 'Roboto' }}>
         Seva Served Here
       </p>
       <div className="flex justify-end pr-8 mb-4">
-        <label className="text-lg mr-2 font-serif">Select Language:</label>
+        <label className="hidden md:block text-lg mr-2 font-serif">Select Language:</label>
         <select
           className="border p-1 rounded-md bg-gradient-to-r from-orange-300 via-orange-500 to-orange-700 focus:outline-none focus:ring focus:border-blue-300"
           value={language}
