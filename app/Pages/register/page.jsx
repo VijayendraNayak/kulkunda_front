@@ -2,8 +2,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { IoIosEye } from "react-icons/io";
-import { IoIosEyeOff } from "react-icons/io";
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import RegisterImage from "/app/assets/image/temple.jpg";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,7 +26,8 @@ const Register = () => {
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.id]: e.target.value });
   };
-  const togglepassword = () => {
+
+  const togglePassword = () => {
     showPassword(!password);
   };
 
@@ -64,96 +64,93 @@ const Register = () => {
   }, [phoneNumber]);
 
   return (
-    <div className="pt-20 p-10 flex ">
+    <div className="pt-20 p-5 sm:p-10 flex flex-col items-center">
       {loading && <Loader />}
-      <div className="flex-1 relative">
+      <div className="w-full relative mb-6 sm:mb-0">
         <Image
           src={RegisterImage}
-          alt="regester background image"
-          layout="fill"
+          alt="register background image"
+          layout="responsive"
           objectFit="cover"
           objectPosition="left"
           priority
         />
-        {/* image here */}
       </div>
-      <div className="flex flex-col w-[700px] mx-auto justify-center border-2 p-6 border-orange-500 gap-4 bg-orange-100 rounded-lg ml-5 ">
-        <p className="text-4xl px-12 font-semibold text-center text-orange-500 ">
+      <div className="w-full sm:w-[700px] border-2 p-4 sm:p-6 border-orange-500 bg-orange-100 rounded-lg">
+        <p className="text-2xl sm:text-4xl font-semibold text-center text-orange-500 mb-4">
           Register
         </p>
-        <div className="flex flex-col ml-10 gap-4 justify-center bg-orange-100">
-          <form className="flex flex-col gap-4 ">
+        <form className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Username"
+            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none"
+            id="name"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Phone number"
+            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none"
+            id="phonenumber"
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none"
+            id="email"
+            onChange={handleChange}
+          />
+          <div className="relative">
             <input
-              type="text"
-              placeholder="Username"
-              className="border p-3 rounded-lg hover:shadow-lg hover:scale-105 "
-              id="name"
+              type={password ? "password" : "text"}
+              placeholder="Password"
+              className="border p-3 rounded-lg pr-10 w-full hover:shadow-lg focus:outline-none"
+              id="password"
               onChange={handleChange}
             />
+            <button
+              type="button"
+              onClick={togglePassword}
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 hover:shadow-lg focus:outline-none"
+            >
+              {password ? <IoIosEye /> : <IoIosEyeOff />}
+            </button>
+          </div>
+          <div className="relative">
             <input
-              type="text"
-              placeholder="Phone number"
-              className="border p-3 rounded-lg bg-white hover:shadow-lg hover:scale-105"
-              id="phonenumber"
+              type={password ? "password" : "text"}
+              placeholder="Confirm Password"
+              className="border p-3 rounded-lg pr-10 w-full hover:shadow-lg focus:outline-none"
+              id="confirmpassword"
               onChange={handleChange}
             />
-            <input
-              type="email"
-              placeholder="Email"
-              className="border p-3 rounded-lg hover:shadow-lg hover:scale-105"
-              id="email"
-              onChange={handleChange}
-            />
-            <div className="relative">
-              <input
-                type={password ? "password" : "text"}
-                placeholder="Password"
-                className="border p-3 rounded-lg pr-10 w-[245px] sm:w-[350px] hover:shadow-lg hover:scale-105"
-                id="password"
-                onChange={handleChange}
-              />
-              <button
-                type="button"
-                onClick={togglepassword}
-                className="absolute top-1/2 left-80 transform -translate-y-1/2 hover:shadow-lg hover:scale-105"
-              >
-                {password ? <IoIosEye /> : <IoIosEyeOff />}
-              </button>
-            </div>
-            <div className="relative">
-              <input
-                type={password ? "password" : "text"}
-                placeholder="Confirm Password"
-                className="border p-3 rounded-lg pr-10 w-[245px] sm:w-[350px] hover:shadow-lg hover:scale-105"
-                id="confirmpassword"
-                onChange={handleChange}
-              />
-              <button
-                type="button"
-                onClick={togglepassword}
-                className="absolute top-1/2 left-80 transform -translate-y-1/2 hover:shadow-lg hover:scale-105"
-              >
-                {password ? <IoIosEye /> : <IoIosEyeOff />}
-              </button>
-            </div>
-          </form>
+            <button
+              type="button"
+              onClick={togglePassword}
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 hover:shadow-lg focus:outline-none"
+            >
+              {password ? <IoIosEye /> : <IoIosEyeOff />}
+            </button>
+          </div>
           <button
-            className="bg-gradient-to-r from-yellow-500  to-orange-500 text-white p-3 font-semibold text-xl hover:shadow-lg hover:scale-105"
+            className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-3 font-semibold text-xl hover:shadow-lg focus:outline-none"
             onClick={handleSubmit}
           >
             {loading ? "Loading..." : "Register"}
           </button>
-          <div className="flex justify-end">
-            <Link href="/Pages/login">
-              <span className="text-blue-500 font-bold cursor-pointer hover:scale-110 hover:underline">
-                Have an Account?
-              </span>
-            </Link>
-          </div>
-          {error && (
-            <p className="text-red-500 text-center font-semibold">{error}</p>
-          )}
+        </form>
+        <div className="flex justify-end mt-4">
+          <Link href="/Pages/login">
+            <span className="text-blue-500 font-bold cursor-pointer hover:underline">
+              Have an Account?
+            </span>
+          </Link>
         </div>
+        {error && (
+          <p className="text-red-500 text-center font-semibold mt-4">{error}</p>
+        )}
       </div>
     </div>
   );
