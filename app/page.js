@@ -9,7 +9,7 @@ import Loader from "./Components/Loader";
 import Temple from "/app/assets/image/temple.jpg";
 import Temple13 from "/app/assets/image/temple13.jpg";
 import Temple2 from "/app/assets/image/temple3.jpg";
-import { CgEditBlackPoint } from "react-icons/cg";
+import Temple15 from "/app/assets/image/temple15.jpg";
 
 const Page = () => {
   const [lang, setLang] = useState('english');
@@ -57,9 +57,14 @@ const Page = () => {
       readMore1: 'Read more...',
       title2: 'News and Updates',
       text2: '',
-      title3:'Darshana Timings:',
-      text3:`⦾ Morning from 6 till 1 in the noon and Evening from 3 till 5`
-
+      title3: 'Darshana and Pooja Timings:',
+      text31: `
+      ⦾ Morning: 6AM-1PM
+      `,
+      text32: "⦾ Morning Pooja: 8AM",
+      text33: "⦾ Mahapooja: 12:15PM",
+      text34: "⦾ Evening: 3PM-7PM",
+      text35: "⦾ Evening Pooja: 6:30PM",
     },
     kannada: {
       title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ',
@@ -68,8 +73,8 @@ const Page = () => {
       title1: 'ಹೇಗೆ ಹೋಗಬಹುದು?',
       text1: '⦾  ಬಸ್ ಮಾರ್ಗದಲ್ಲಿ:ಹೆಚ್ಚಿನ ಬಸ್‌ಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಹೋಗಲು ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಾಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುತ್ತವೆ. ಕುಲ್ಕುಂಡ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿಯಿರಿ ಮತ್ತು ದೇವಸ್ಥಾನಕ್ಕೆ ಸೇರಲು ಸುಮಾರು 350 ಮೀಟರ್ ನಡೆಯಿರಿ.',
       readMore1: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ...',
-      title3:'ದರ್ಶನ ಸಮಯ:',
-      text3:'⦾ ಬೆಳಗ್ಗೆ 6 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆ ತನಕ ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆ ತನಕ'
+      title3: 'ದರ್ಶನ ಸಮಯ:',
+      text3: '⦾ ಬೆಳಗ್ಗೆ 6 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆ ತನಕ ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆ ತನಕ'
 
     },
   };
@@ -164,7 +169,29 @@ const Page = () => {
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-white'>  {currentContent.title3}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text3}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text31}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text32}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text33}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text34}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text35}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
+        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
+          {/* Image with text overlay */}
+          <div className='relative w-full bg-black'>
+            <Image
+              src={Temple15}
+              className='w-full  opacity-50'
+              alt="register background image"
+              width={300}
+              height={250}
+            />
+            <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
+              <h3 className='text-2xl font-semibold mb-2 text-white'>  {currentContent.title2}</h3>
+              
             </div>
           </div>
         </div>
