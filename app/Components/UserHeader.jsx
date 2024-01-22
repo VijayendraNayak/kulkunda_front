@@ -161,15 +161,11 @@ const UserHeader = ({ loading }) => {
                 </Link>
               )}
              <button
-  className="text-white text-sm self-end focus:outline-none transition-all duration-300 ease-in-out transform hover:scale-110 bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-opacity-75 backdrop-blur-md shadow-lg p-2 rounded-full"
-  onClick={togglenavbar}
->
-  <span className="mr-2">&times;</span> Close
-</button>
-
-
-
-
+                className="absolute top-0 right-0 mr-4 mt-4 text-white text-sm focus:outline-none transition-all duration-300 ease-in-out transform hover:scale-110 bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-opacity-75 backdrop-blur-md shadow-lg p-3 rounded-full"
+                onClick={togglenavbar}
+              >
+                <span className="mr-2">&times;</span> Close
+              </button>
             </ul>
           </div>
         )}

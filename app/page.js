@@ -114,7 +114,7 @@ const Page = () => {
       <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
         <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
           {/* Image with text overlay */}
-          <div className='relative w-full bg-black'>
+          <div className='relative w-full  bg-black'>
             <Image
               src={Temple}
               className='w-full  opacity-50'
@@ -123,10 +123,10 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-white'>{currentContent.title}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white'>  {currentContent.text}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>{currentContent.title}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100'>  {currentContent.text}</p>
               <Link href="/Pages/aboutus">
-                <p className='text-white font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
+                <p className='text-yellow-100 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
               </Link>
             </div>
           </div>
@@ -146,10 +146,10 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-white'>{currentContent.title1}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white'>  {currentContent.text1}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>{currentContent.title1}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100'>  {currentContent.text1}</p>
               <Link href="/Pages/contactus">
-                <p className='text-white font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
+                <p className='text-yellow-100 font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
               </Link>
             </div>
           </div>
@@ -168,12 +168,12 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-white'>  {currentContent.title3}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text31}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text32}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text33}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text34}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-white '>{currentContent.text35}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>  {currentContent.title3}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text31}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text32}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text33}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text34}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-100 '>{currentContent.text35}</p>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@ const Page = () => {
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-white'>  {currentContent.title2}</h3>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-100'>  {currentContent.title2}</h3>
               
             </div>
           </div>
