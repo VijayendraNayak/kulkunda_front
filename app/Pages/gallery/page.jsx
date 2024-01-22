@@ -46,7 +46,7 @@ const GalleryPage = () => {
           <div className='bg-ora p-5 rounded-md hover:scale-105'>
             <div className='bg-orange-100 border-2 border-orange-500 p-6 rounded-lg shadow-md'>
               <div className='flex w-full lg:w-1/3 md:w-1/2 mb-5 md:mb-5 lg:mb-5 gap-10 ' align="center">
-                <div className='gap-10' onClick={() => openSlideshow(0)}>
+                <div className='gap-10' >
                   <Image
                     src={Temple13}
                     className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full cursor-pointer'
@@ -55,7 +55,7 @@ const GalleryPage = () => {
                     height={250}
                   />
                 </div>
-                <div className='gap-10' onClick={() => openSlideshow(1)}>
+                <div className='gap-10' >
                   <Image
                     src={Temple14}
                     className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full h-full cursor-pointer'
@@ -64,7 +64,7 @@ const GalleryPage = () => {
                     height={250}
                   />
                 </div>
-                <div className='gap-10' onClick={() => openSlideshow(2)}>
+                <div className='gap-10'>
                   <Image
                     src={Temple15}
                     className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full h-full cursor-pointer'
