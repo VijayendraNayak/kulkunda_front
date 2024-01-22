@@ -160,12 +160,16 @@ const UserHeader = ({ loading }) => {
                   </li>
                 </Link>
               )}
-              <button
-                className="text-orange-700 hover:text-orange-900 text-sm self-end"
-                onClick={togglenavbar}
-              >
-                &times; Close
-              </button>
+             <button
+  className="text-white text-sm self-end focus:outline-none transition-all duration-300 ease-in-out transform hover:scale-110 bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-opacity-75 backdrop-blur-md shadow-lg p-2 rounded-full"
+  onClick={togglenavbar}
+>
+  <span className="mr-2">&times;</span> Close
+</button>
+
+
+
+
             </ul>
           </div>
         )}
