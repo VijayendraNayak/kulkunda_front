@@ -55,9 +55,9 @@ const SevaPage = () => {
         Seva Served Here
       </p>
       <div className="flex justify-end pr-8 mb-4">
-        <label className="text-lg mr-2">Select Language:</label>
+        <label className="text-lg mr-2 font-serif">Select Language:</label>
         <select
-          className="border p-1"
+          className="border p-1 rounded-md bg-gradient-to-r from-orange-300 via-orange-500 to-orange-700 focus:outline-none focus:ring focus:border-blue-300"
           value={language}
           onChange={(e) => handleLanguageChange(e.target.value)}
         >
