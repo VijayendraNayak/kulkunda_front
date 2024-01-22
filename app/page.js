@@ -93,13 +93,14 @@ const Page = () => {
       {loader && <Loader />}
 
       <div
-        className={`font-bold flex flex-col text-4xl sm:text-5xl sm:max-w-xl sm:mx-auto m-10 p-5 lg:text-center items-center ${isVisible ? 'animate-slide-in' : 'opacity-0'
+        className={`font-extrabold flex flex-col text-4xl sm:text-5xl sm:max-w-xl sm:mx-auto m-10 p-5 lg:text-center items-center ${isVisible ? 'animate-slide-in' : 'opacity-0'
           } animate-text`}
+        style={{ fontFamily: 'Poppins, sans-serif', color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}
       >
-        <span>
+        <span style={{ fontSize: '1.5rem', fontWeight: 'normal' }}>
           Welcome to
         </span>
-        <span className=' font-extrabold text-center'>
+        <span className='text-center'>
           Kulkunda Shree Basaveshwara Temple
         </span>
       </div>

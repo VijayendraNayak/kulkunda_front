@@ -38,7 +38,7 @@ const GalleryPage = () => {
 
   return (
     <div className="container mx-auto py-20 px-10">
-      <div className="font-semibold text-5xl text-orange-500 text-center pb-10">
+      <div className="font-semibold text-5xl text-black text-center pb-10">
         Gallery
       </div>
       <div className='d-block h-full w-full' align="center">
@@ -97,7 +97,7 @@ const GalleryPage = () => {
       )}
 
       <div className="container mx-auto py-20 px-10">
-        <div className="font-semibold text-5xl text-orange-500 text-center pb-10">
+        <div className="font-semibold text-5xl text-black text-center pb-10">
           Videos
         </div>
         <div className="flex items-center justify-center">
