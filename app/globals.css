@@ -1,6 +1,14 @@
+/* global.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  /* Gradient background using Tailwind CSS classes */
+  @apply bg-gradient-to-r from-yellow-100 to-orange-500;
+  /* Add any additional styles for the body element if needed */
+}
 
 .react-tel-input .form-control {
   @apply !w-full py-6 !text-base;
@@ -27,3 +35,32 @@
   }
 }
 
+/* Define gradient colors as Tailwind CSS classes */
+@layer utilities {
+  .from-yellow-100 {
+    background-color: #ffff66; /* Replace with the actual hex code for yellow-100 */
+  }
+
+  .to-orange-500 {
+    background-color: #ff4500; /* Replace with the actual hex code for orange-500 */
+  }
+
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, #ffff66, #ff4500); /* Replace with the actual hex codes */
+  }
+}
+/* Add this to your styles */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 1s ease-out;
+}

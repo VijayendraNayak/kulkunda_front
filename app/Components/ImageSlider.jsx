@@ -31,9 +31,8 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className='relative flex h-[calc(100vh-70px)] w-screen flex-col justify-center items-center'>
-      <div className='relative w-full h-[calc(100vh-70px)] flex items-center justify-center overflow-hidden'>
-        {/* Image Slider */}
+    <div className='relative flex h-[225px] sm:h-[400px] w-screen flex-col mt-12 sm:mt-26 sm:justify-center items-center'>
+      <div className='relative w-full h-[225px] sm:h-[400px] flex overflow-hidden'>
         <div className='relative w-full h-full'>
           <Image
             className='w-full h-full object-cover object-center'
