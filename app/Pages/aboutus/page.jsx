@@ -28,7 +28,7 @@ const page = () => {
     <div className="pt-10 pb-10 lg:pt-20 ">
       {loader && <Loader />}
       <div className="flex justify-between items-center pb-5">
-        <p className="text-3xl lg:text-5xl text-center font-semibold text-orange-500 p-4">
+        <p className="text-3xl lg:text-5xl text-center font-semibold text-orange-500 py-8">
           About Us
         </p>
         <button
