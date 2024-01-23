@@ -4,12 +4,15 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 const UserHeader = ({ loading }) => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [navbar, setNavbar] = useState(false);
   const { currentUser } = useSelector((state) => state.user);
+  const [selectedOption, setSelectedOption] = useState("");
+  const router = useRouter();
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
@@ -33,7 +36,17 @@ const UserHeader = ({ loading }) => {
   const togglenavbar = () => {
     setNavbar(!navbar);
   };
+  const handleOptionChange = (e) => {
+    const selectedValue = e.target.value;
+    setSelectedOption(selectedValue);
 
+    // Redirect based on the selected option
+    if (selectedValue === "sevaList") {
+      router.push("/Pages/seva");
+    } else if (selectedValue === "advancedSevaBookings") {
+      router.push("/Pages/advancedseva");
+    }
+  };
   return (
     <header
       className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${
@@ -61,11 +74,30 @@ const UserHeader = ({ loading }) => {
               Home
             </li>
           </Link>
-          <Link href="/Pages/seva">
-            <li className="hover:underline text-orange-700 hidden sm:flex">
-              Seva
-            </li>
-          </Link>
+          <select
+            value={selectedOption}
+            onChange={handleOptionChange}
+            className="bg-transparent text-orange-700 font-semibold hover:none"
+          >
+            <option
+              value=""
+              className="hover:underline text-orange-700 hidden sm:flex p-3"
+            >
+              Select an option
+            </option>
+            <option
+              value="sevaList"
+              className="hover:underline text-orange-700 hidden sm:flex p-3"
+            >
+              Seva list
+            </option>
+            <option
+              value="advancedSevaBookings"
+              className="hover:underline text-orange-700 hidden sm:flex p-3"
+            >
+              Advanced seva bookings
+            </option>
+          </select>
           <Link href="/Pages/aboutus">
             <li className="hover:underline text-orange-700 hidden sm:flex">
               About
@@ -122,7 +154,12 @@ const UserHeader = ({ loading }) => {
               </Link>
               <Link href="/Pages/seva">
                 <li className="hover:underline text-orange-700 sm:hidden">
-                  Seva
+                  Seva list
+                </li>
+              </Link>
+              <Link href="/Pages/advancedseva">
+                <li className="hover:underline text-orange-700 sm:hidden">
+                  Advanced Seva bookings
                 </li>
               </Link>
               <Link href="/Pages/aboutus">
@@ -160,7 +197,7 @@ const UserHeader = ({ loading }) => {
                   </li>
                 </Link>
               )}
-             <button
+              <button
                 className="absolute top-0 right-0 mr-3 mt-3 text-white text-sm focus:outline-none transition-all duration-300 ease-in-out transform hover:scale-110 bg-red-500 bg-opacity-75 backdrop-blur-md shadow-lg p-3 rounded-full"
                 onClick={togglenavbar}
               >

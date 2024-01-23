@@ -76,7 +76,7 @@ const SevaPage = () => {
             formdata.map((seva) => (
               <div
                 key={seva._id}
-                className="flex justify-between w-full h-28 border-2 border-orange-400 mb-8 rounded-lg bg-orange-100 cursor-pointer relative  hover:scale-105" // Updated this line
+                className="flex text-center justify-center w-full h-28 border-2 border-orange-400 mb-8 rounded-lg bg-orange-100 cursor-pointer relative  hover:scale-105" // Updated this line
               >
                 <div className="flex flex-col">
                   <div className="font-semibold text-xl p-4">
@@ -90,12 +90,6 @@ const SevaPage = () => {
                     ₹{seva.price}/-
                   </div>
                 </div>
-                <button
-                  className="bg-orange-500 text-white text-center font-semibold rounded-lg p-4 px-8 my-auto  mr-8" // Updated this line
-                  onClick={() => handleBookSeva(seva.sevanamee)}
-                >
-                  Book
-                </button>
               </div>
             ))}
         </div>

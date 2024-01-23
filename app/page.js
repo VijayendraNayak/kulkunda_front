@@ -32,7 +32,6 @@ const Page = () => {
           },
         });
         const data = await res.json();
-        console.log(data)
         setNewsUpdatesList(data.allNews);
         setFound(true);
       } catch (error) {
@@ -44,7 +43,6 @@ const Page = () => {
     };
     fetchNewsUpdates();
   }, [])
-  console.log(found)
 
   useEffect(() => {
     const handleScroll = () => {
