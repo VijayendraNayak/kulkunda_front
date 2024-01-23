@@ -66,7 +66,7 @@ const Register = () => {
   return (
     <div className="pt-20 p-5 sm:p-10 flex flex-col items-center">
       {loading && <Loader />}
-      <div className="flex-1 relative mb-6 ">
+      <div className="flex-1 relative mb-6 hidden sm:flex">
         <Image
           src={RegisterImage}
           alt="register background image"

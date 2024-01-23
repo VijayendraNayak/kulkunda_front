@@ -79,10 +79,10 @@ setLoader(false)
   //you can apply the background image to any of the perticular div by just calling style={pic1 or pic2 or pic3 } just replace the url link witht he actual link of the file
 
   return (
-    <div className="flex flex-col md:flex-row items-start justify-center min-h-screen bg-gray-100 text-gray-800">
+    <div className="flex flex-col md:flex-row items-start justify-center min-h-screen text-gray-800">
       {/* Contact Information and Map */}
       {loader && <Loader />}
-      <div className="w-full md:w-3/4 p-8 mb-8 md:mb-0 bg-white rounded-lg shadow-lg mt-5">
+      <div className="w-full md:w-3/4 p-8 mb-8 md:mb-0 rounded-lg shadow-lg mt-5">
         <div className="bg-orange-100 mt-10 p-8 rounded-lg">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Contact Information
