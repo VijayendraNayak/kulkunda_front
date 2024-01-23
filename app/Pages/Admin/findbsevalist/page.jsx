@@ -33,7 +33,7 @@ useEffect(() => {
     try {
       setLoader(true);
       const response = await fetch(`/api/seva/admin/delete/${sevaId}`, {
-        method: 'DELETE',
+        method: 'POST',
       });
       if (!response.ok) {
         throw new Error('Failed to delete booked seva');
@@ -59,11 +59,11 @@ useEffect(() => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {bookedSevas.map((seva) => (
           <div key={seva._id} className="bg-white rounded-lg shadow-md p-4">
-            <p className="text-lg font-semibold mb-2">Seva Name: {seva.sevaName}</p>
+            <p className="text-lg font-semibold mb-2">Seva Name: {seva.sevaname}</p>
             <p className="text-gray-600 mb-2">User ID: {seva.userId}</p>
-            <p className="text-gray-600 mb-2">User Name: {seva.userName}</p>
-            <p className="text-gray-600 mb-2">Phone Number: {seva.phoneNumber}</p>
-            <p className="text-gray-600 mb-2">Seva Date: {seva.sevaDate}</p>
+            <p className="text-gray-600 mb-2">User Name: {seva.username}</p>
+            <p className="text-gray-600 mb-2">Phone Number: {seva.phonenumber}</p>
+            <p className="text-gray-600 mb-2">Seva Date: {seva.sevadate}</p>
             <button
               onClick={() => handleDelete(seva._id)}
               className="text-white bg-red-600 border-0 py-2 px-4 rounded-md mt-4"
