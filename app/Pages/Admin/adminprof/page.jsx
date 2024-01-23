@@ -138,7 +138,7 @@ const Profile = () => {
   };
 
   return (
-    <div className=" flex sm:flex-row flex-col pt-28 p-10 justify-center">
+    <div className=" bg-white flex sm:flex-row flex-col pt-28 p-10 justify-center">
       {(loading||loader) && <Loader />}
         <div className="flex flex-col lg:flex-row gap-4 items-center ">
           <div className="">

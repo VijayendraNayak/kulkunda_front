@@ -87,7 +87,7 @@ const FindUser = () => {
   };
 
   return (
-    <div className="pt-28 h-screen">
+    <div className="pt-28 h-screen bg-white">
       <form className="flex items-center justify-between max-w-lg mx-auto bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4 rounded-full">
         <select
           value={searchCategory}

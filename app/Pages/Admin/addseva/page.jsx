@@ -73,7 +73,7 @@ const Addseva = () => {
   };
 
   return (
-    <div className="pt-28 pb-10">
+    <div className="pt-28 pb-10 bg-white">
       <div className="h-screen">
         {loader && <Loader/>}
         <div className="flex justify-center gap-4 flex-col">

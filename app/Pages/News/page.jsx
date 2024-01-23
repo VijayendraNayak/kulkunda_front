@@ -40,7 +40,7 @@ const FindNewsUpdates = () => {
 
     fetchNewsUpdates();
   }, [searchCategory]); // Added searchCategory as a dependency to re-run when it changes
-
+console.log(newsUpdatesList)
   // Handle input changes for search parameters
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);

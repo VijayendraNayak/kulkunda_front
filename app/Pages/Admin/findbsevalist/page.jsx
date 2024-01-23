@@ -48,7 +48,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="pt-24 pb-20 flex flex-col">
+    <div className="pt-24 pb-20 flex flex-col bg-white">
       {loader && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
 

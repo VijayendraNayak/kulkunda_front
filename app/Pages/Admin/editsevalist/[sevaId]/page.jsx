@@ -91,7 +91,7 @@ const EditSevaPage = () => {
   };
 
   return (
-    <div className="container mx-auto my-8">
+    <div className="container mx-auto my-8 bg-white">
       <h1 className="text-3xl font-bold mb-6">Edit Seva</h1>
 
       {isLoading ? (

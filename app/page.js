@@ -1,4 +1,3 @@
-
 "use client"
 // Import necessary modules
 import React, { useState, useEffect } from 'react';
@@ -15,13 +14,36 @@ const Page = () => {
   const [lang, setLang] = useState('english');
   const [loader, setLoader] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
+  const [newsUpdatesList, setNewsUpdatesList] = useState([]);
+  const [found, setFound] = useState(false);
 
   const handleLanguageChange = () => {
     setLoader(true);
     setLang((prevLang) => (prevLang === 'english' ? 'kannada' : 'english'));
     setLoader(false);
   };
+  useEffect(() => {
+    const fetchNewsUpdates = async () => {
+      try {
+        const res = await fetch("/api/newsupdate/allnews", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await res.json();
+        setNewsUpdatesList(data.allNews);
+        setFound(true);
+      } catch (error) {
+        console.error(
+          "Error during fetching news updates:",
+          error.message || "Unknown error"
+        );
+      }
+    };
+    fetchNewsUpdates();
+  }, [])
+  console.log(newsUpdatesList)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +58,6 @@ const Page = () => {
         setIsVisible(elementVisible);
       }
     };
-
     // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
 
@@ -44,6 +65,7 @@ const Page = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+
   }, []);
 
 
@@ -195,8 +217,11 @@ const Page = () => {
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title2}</h3>
-              
-            </div>
+              <p className='text-xl font-semibold mb-2 text-orange-100'>⦾ {found && newsUpdatesList[0].headline}</p>
+              <p className='text-sm font-semibold mb-2 text-orange-100 line-clamp-3'>
+                {found && newsUpdatesList[0].description}
+              </p>           
+               </div>
           </div>
         </div>
       </div>

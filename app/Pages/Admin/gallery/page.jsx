@@ -53,7 +53,7 @@ const page = () => {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 bg-white">
       <div className="flex flex-col">
         <div className="flex justify-center items-center py-16 gap-4">
           <animated.span className="text-8xl text-white bg-orange-500 rounded-full p-8">

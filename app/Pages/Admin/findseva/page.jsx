@@ -47,7 +47,7 @@ const FindUser = () => {
     setRemove(true);
   };
   return (
-    <div className="pt-28 h-screen">
+    <div className="pt-28 h-screen bg-white">
       <div className="">
         <form className=" flex p-3 bg-orange-200 rounded-full items-center justify-between max-w-lg mx-auto ">
           <input

@@ -109,7 +109,7 @@ const AdminContactPage = () => {
   };
 
   return (
-    <div className="pt-24 pb-20 flex flex-col">
+    <div className="pt-24 pb-20 flex flex-col bg-white">
       <div>
         {loader && <Loader/>}
         <div className="flex flex-col">

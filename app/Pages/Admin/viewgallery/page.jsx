@@ -60,7 +60,7 @@ const page = () => {
   };
 
   return (
-    <div className="container mx-auto py-20 px-10">
+    <div className="container mx-auto py-20 px-10 bg-white">
       <div className="font-semibold text-6xl text-orange-500 text-center pb-10">
         Gallery
       </div>

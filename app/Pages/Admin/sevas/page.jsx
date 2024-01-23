@@ -75,7 +75,7 @@ const page = () => {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 bg-white">
       <div className="flex flex-row">
         <div className="flex-1 border-r border-orange-500">
           <div className="flex flex-col">

@@ -119,7 +119,7 @@ const page = () => {
     config: { duration: 1000 },
   });
   return (
-    <div className="grid xl:grid-cols-[17.5rem_1fr] lg:grid-cols-[15rem_1fr] h-[calc(100vh-5rem)] overflow-y-scroll pt-16">
+    <div className="grid bg-white xl:grid-cols-[17.5rem_1fr] lg:grid-cols-[15rem_1fr] h-[calc(100vh-5rem)] overflow-y-scroll pt-16">
       {loader && <Loader />}
       <div className="flex flex-col gap-5 py-4 px-5 bg-orange-200">
         <header className="text-[1.5em] text-center font-bold">ADMIN</header>
