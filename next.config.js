@@ -1,6 +1,9 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = {
+  images: {
+    domains: ['firebasestorage.googleapis.com'],
+  },
   async rewrites() {
     return [
       {
@@ -15,7 +18,7 @@ module.exports = {
       app.use(
         '/api',
         createProxyMiddleware({
-          target: 'http://localhost:4000', // Replace with your backend server's address
+          target: 'http://seva.basavanamoolatemple.in', // Replace with your backend server's address
           changeOrigin: true,
           pathRewrite: { '^/api': '' },
         })

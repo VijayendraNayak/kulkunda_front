@@ -32,6 +32,7 @@ const Page = () => {
           },
         });
         const data = await res.json();
+        console.log(data)
         setNewsUpdatesList(data.allNews);
         setFound(true);
       } catch (error) {
@@ -43,7 +44,7 @@ const Page = () => {
     };
     fetchNewsUpdates();
   }, [])
-  console.log(newsUpdatesList)
+  console.log(found)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -217,11 +218,11 @@ const Page = () => {
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title2}</h3>
-              <p className='text-xl font-semibold mb-2 text-orange-100'>⦾ {found && newsUpdatesList[0].headline}</p>
+              <p className='text-xl font-semibold mb-2 text-orange-100'>⦾ {found && newsUpdatesList.length>0 && newsUpdatesList[0].headline}</p>
               <p className='text-sm font-semibold mb-2 text-orange-100 line-clamp-3'>
-                {found && newsUpdatesList[0].description}
-              </p>           
-               </div>
+                {found && newsUpdatesList.length>0 && newsUpdatesList[0].description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
