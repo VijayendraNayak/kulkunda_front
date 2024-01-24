@@ -77,7 +77,8 @@ const UserHeader = ({ loading }) => {
           <select
             value={selectedOption}
             onChange={handleOptionChange}
-            className="bg-transparent text-orange-700 font-semibold hover:none"
+            className="bg-transparent text-orange-700 hidden sm:flex
+             font-semibold hover:none"
           >
             <option
               value=""

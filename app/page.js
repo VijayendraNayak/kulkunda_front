@@ -130,7 +130,7 @@ const Page = () => {
       <div className="flex  justify-end px-4 mt-5">
         <button
           type="button"
-          className="border-2 font-bold text-white bg-black px-12 py-3 rounded-lg hover:text-black hover:bg-white"
+          className="border-2 font-bold bg-gradient-to-r from-yellow-100 to-orange-500 p-3 rounded-lg px-5  border-black font-serif"
           onClick={handleLanguageChange}
         >
           {lang === "english" ? "ಕನ್ನಡ" : "English"}
@@ -142,16 +142,16 @@ const Page = () => {
           <div className='relative w-full  bg-black'>
             <Image
               src={Temple}
-              className='w-full  opacity-50'
+              className='w-full opacity-40'
               alt="register background image"
               width={300}
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>{currentContent.title}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100'>  {currentContent.text}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300'>  {currentContent.text}</p>
               <Link href="/Pages/aboutus">
-                <p className='text-orange-100 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
+                <p className='text-yellow-300 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
               </Link>
             </div>
           </div>
@@ -165,16 +165,16 @@ const Page = () => {
           <div className='relative w-full bg-black'>
             <Image
               src={Temple2}
-              className='w-full  opacity-50'
+              className='w-full  opacity-40'
               alt="register background image"
               width={300}
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>{currentContent.title1}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100'>  {currentContent.text1}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title1}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300'>  {currentContent.text1}</p>
               <Link href="/Pages/contactus">
-                <p className='text-orange-100 font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
+                <p className='text-yellow-300 font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
               </Link>
             </div>
           </div>
@@ -187,18 +187,18 @@ const Page = () => {
           <div className='relative w-full bg-black'>
             <Image
               src={Temple13}
-              className='w-full  opacity-50'
+              className='w-full  opacity-40'
               alt="register background image"
               width={300}
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title3}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text31}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text32}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text33}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text34}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text35}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>  {currentContent.title3}</h3>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text31}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text32}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text33}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text34}</p>
+              <p className=' line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text35}</p>
             </div>
           </div>
         </div>
@@ -209,15 +209,15 @@ const Page = () => {
           <div className='relative w-full bg-black'>
             <Image
               src={Temple15}
-              className='w-full  opacity-50'
+              className='w-full  opacity-40'
               alt="register background image"
               width={300}
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title2}</h3>
-              <p className='text-xl font-semibold mb-2 text-orange-100'>⦾ {found && newsUpdatesList.length>0 && newsUpdatesList[0].headline}</p>
-              <p className='text-sm font-semibold mb-2 text-orange-100 line-clamp-3'>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>  {currentContent.title2}</h3>
+              <p className='text-xl font-semibold mb-2 text-yellow-300'>⦾ {found && newsUpdatesList.length>0 && newsUpdatesList[0].headline}</p>
+              <p className='text-sm font-semibold mb-2 text-yellow-300 line-clamp-3'>
                 {found && newsUpdatesList.length>0 && newsUpdatesList[0].description}
               </p>
             </div>
