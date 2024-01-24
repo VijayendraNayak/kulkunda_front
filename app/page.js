@@ -139,7 +139,7 @@ const Page = () => {
       <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
         <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
           {/* Image with text overlay */}
-          <div className='relative w-full  bg-black'>
+          <div className='relative w-full bg-black'>
             <Image
               src={Temple}
               className='w-full opacity-40'
