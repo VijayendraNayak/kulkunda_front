@@ -27,7 +27,7 @@ import dynamic from "next/dynamic";
 const Profile = () => {
   const { currentUser, loading, error } = useSelector((state) => state.user);
   const [sevas, setSevas] = useState([]);
-  const [formdata, setFormdata] = useState({});
+  const [formdata, setFormdata] = useState([]);
   const [file, setFile] = useState(null);
   const [userId, setUserId] = useState('');
   const dispatch = useDispatch();
@@ -46,24 +46,32 @@ const Profile = () => {
   }, [currentUser]);
 
   useEffect(() => {
-    // Fetch sevas for a specific user when the component mounts
+    // You can use userId here
+    console.log(userId);
+
+    // ... (other useEffect logic)
+  }, []);
+
+  useEffect(() => {
     const fetchUserSevas = async () => {
       try {
-        const response = await fetch(`/api/seva/user/${userId}`); // Adjust the API endpoint as needed
-        const data = await response.json();
-
-        if (response.ok) {
-          setSevas(data.sevas);
-        } else {
-          console.error('Error fetching sevas:', data.error);
+        const response = await fetch(`/api/seva/user/${userId}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch sevas');
         }
+  
+        const data = await response.json();
+        setSevas(data.sevas);
       } catch (error) {
-        console.error('Error fetching sevas:', error);
+        console.error('Error fetching sevas:', error.message);
       }
     };
-
-    fetchUserSevas();
-  }, [userId]); // Include userId in the dependency array to refetch when userId changes
+    const userId = currentUser?._id || '';
+    if (userId) {
+      fetchUserSevas();
+    }
+  }, []);
+  
 
   if (loading) {
     return <p>Loading...</p>;
@@ -157,7 +165,7 @@ const Profile = () => {
   };
 
   return (
-    <div className=" flex sm:flex-row flex-col pt-28 ">
+    <div className=" flex sm:flex-row flex-col pt-16 ">
       {(loading ||loader )&& <Loader/>}
       <div className="flex-1 p-10 ">
         <div className="flex flex-col lg:flex-row gap-4 items-center ">
@@ -214,25 +222,31 @@ const Profile = () => {
               <span>Change passoword?</span>
             </Link>
           </div>
+          </div>
+      {error && (
+          <p className="text-red-500 text-center font-semibold">{error}</p>
+        )}
+      </div>
+      <div className="p-10 w-full sm:w-1/2">
+        <h2 className="text-2xl font-semibold mb-4">Booked Sevas:</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
+          {sevas.map((seva) => (
+            <div
+              key={seva._id}
+              className="bg-white bg-opacity-50 p-4 rounded-md mb-4"
+            >
+              <div>
+                <p className="text-lg font-semibold mb-2">Seva Name: {seva.sevaname}</p>
+                <p className="text-gray-600 mb-2">User Name: {seva.username}</p>
+                <p className="text-gray-600 mb-2">Phone Number: {seva.phonenumber}</p>
+                <p className="text-gray-600">Seva Date: {seva.sevadate}</p>
+              </div>
+              {/* Add more details as needed */}
+            </div>
+          ))}
         </div>
       </div>
-      {error && (
-        <p className="text-red-500 text-center font-semibold">{error}</p>
-      )}
-    <h2>User Sevas:</h2>
-    <ul>
-      {sevas.map((seva) => (
-        <li key={seva._id}>
-          <p>Seva Name: {seva.sevaName}</p>
-          <p>User Name: {seva.userName}</p>
-          <p>Phone Number: {seva.phoneNumber}</p>
-          <p>Seva Date: {seva.sevaDate}</p>
-          {/* Add more details as needed */}
-        </li>
-      ))}
-    </ul>
-  </div>
+    </div>
   );
 };
-
 export default dynamic (() => Promise.resolve(Profile), {ssr: false})

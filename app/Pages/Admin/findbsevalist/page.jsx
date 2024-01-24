@@ -53,7 +53,7 @@ useEffect(() => {
       {error && <p>Error: {error}</p>}
 
       <h1 className="text-3xl font-bold mb-8 mt-12">
-        Booked Seva List (Admin Panel)
+        Booked Seva List 
       </h1>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
