@@ -240,6 +240,9 @@ const Profile = () => {
                 <p className="text-gray-600 mb-2">User Name: {seva.username}</p>
                 <p className="text-gray-600 mb-2">Phone Number: {seva.phonenumber}</p>
                 <p className="text-gray-600">Seva Date: {seva.sevadate}</p>
+                <p className="text-gray-600">Rashi: {seva.rashi}</p>
+                <p className="text-gray-600">Nakshatra: {seva.nakshatra}</p>
+                <p className="text-gray-600">Gotra: {seva.gotra}</p>
               </div>
               {/* Add more details as needed */}
             </div>

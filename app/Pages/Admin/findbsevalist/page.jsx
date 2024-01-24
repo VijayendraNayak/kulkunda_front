@@ -64,6 +64,9 @@ useEffect(() => {
             <p className="text-gray-600 mb-2">User Name: {seva.username}</p>
             <p className="text-gray-600 mb-2">Phone Number: {seva.phonenumber}</p>
             <p className="text-gray-600 mb-2">Seva Date: {seva.sevadate}</p>
+            <p className="text-gray-600 mb-2">Rashi: {seva.rashi}</p>
+            <p className="text-gray-600 mb-2">Nakshatra: {seva.nakshatra}</p>
+            <p className="text-gray-600 mb-2">Gotra: {seva.gotra}</p>
             <button
               onClick={() => handleDelete(seva._id)}
               className="text-white bg-red-600 border-0 py-2 px-4 rounded-md mt-4"
