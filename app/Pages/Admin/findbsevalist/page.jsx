@@ -15,7 +15,8 @@ const AdminSevaPage = () => {
         }
         const data = await response.json();
         setLoader(false);
-        setBookedSevas(data);
+        setBookedSevas(data.sevas);
+        console.log(bookedSevas)
       } catch (error) {
         console.error('Error fetching booked sevas:', error);
         setError('Failed to fetch booked sevas. Please try again.');
