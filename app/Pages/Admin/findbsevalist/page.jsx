@@ -34,8 +34,9 @@ useEffect(() => {
     try {
       setLoader(true);
       const response = await fetch(`/api/seva/admin/delete/${sevaId}`, {
-        method: 'POST',
+        method: 'DELETE',
       });
+      console.log(response)
       if (!response.ok) {
         throw new Error('Failed to delete booked seva');
       }
