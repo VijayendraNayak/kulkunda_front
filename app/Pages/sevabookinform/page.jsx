@@ -34,6 +34,14 @@ const SevaBookingForm = () => {
     };
     checkcookie();
   }, []);
+  const getCurrentDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, "0"); // Months are zero-based
+    const day = today.getDate().toString().padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  };
 
   const [formData, setFormData] = useState({
     sevaname: sevaName,
@@ -45,7 +53,7 @@ const SevaBookingForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-  console.log(formData)
+  console.log(formData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,8 +74,8 @@ const SevaBookingForm = () => {
         console.log(data.message);
         return;
       }
-      console.log("data submitted successfully")
-      console.log(data)
+      console.log("data submitted successfully");
+      console.log(data);
 
       setShowAlert(true);
 
@@ -168,6 +176,7 @@ const SevaBookingForm = () => {
                   name="sevadate"
                   id="sevadate"
                   value={formData.sevadate}
+                  min={getCurrentDate()} // Set the minimum date to the current date
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 hover:scale-105 hover:shadow-lg"
                   onChange={handleChange}
                 />
@@ -243,7 +252,7 @@ const SevaBookingForm = () => {
           </div>
         )}
       </div>
-      <div className="hidden md:block md:w-2/3 bg-cover bg-center relative">
+      <div className="hidden md:block md:w-2/3  center object-cover relative">
         <Image
           src={Temple}
           alt="right side"
@@ -252,7 +261,6 @@ const SevaBookingForm = () => {
           // width={1000}
           // height={1000}
           layout="fill"
-          objectPosition="right"
           priority
         />
       </div>

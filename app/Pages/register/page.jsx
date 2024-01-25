@@ -64,9 +64,9 @@ const Register = () => {
   }, [phoneNumber]);
 
   return (
-    <div className="pt-20 p-5 sm:p-10 flex flex-col items-center">
+    <div className=" my-20 sm:p-10 p-5 flex items-center gap-8">
       {loading && <Loader />}
-      <div className="flex-1 relative mb-6 hidden sm:flex">
+      <div className="flex-1 relative  hidden sm:flex">
         <Image
           src={RegisterImage}
           alt="register background image"
@@ -76,7 +76,7 @@ const Register = () => {
           priority
         />
       </div>
-      <div className="w-full sm:w-[700px] border-2 p-4 sm:p-6 border-orange-500 bg-orange-100 rounded-lg">
+      <div className=" flex-1 w-full sm:w-[700px] border-2 p-4 sm:p-6 border-orange-500 bg-orange-100 rounded-lg">
         <p className="text-2xl sm:text-4xl font-semibold text-center text-orange-500 mb-4">
           Register
         </p>

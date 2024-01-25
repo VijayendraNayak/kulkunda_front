@@ -122,9 +122,8 @@ const Page = () => {
       {/* Loader */}
       {loader && <Loader />}
       <div className='flex justify-center py-16 sm:py-12'>
-
       <button
-          className="flex justify-center items-center bg-gradient-to-r font-semibold from-orange-100 to-orange-500 p-4 rounded-lg px-20 border-2 border-black hover:scale-110"
+          className="flex justify-center items-center bg-gradient-to-r text-xl font-bold from-orange-100 to-orange-500 p-4 rounded-full px-20 border-2 border-black hover:scale-110"
           onClick={scrollToFeaturedProducts}
         >
           Scroll <MdOutlineMouse />
