@@ -53,7 +53,7 @@ useEffect(() => {
       {error && <p>Error: {error}</p>}
 
       <h1 className="text-3xl font-bold mb-8 mt-12">
-        Booked Seva List (Admin Panel)
+        Booked Seva List 
       </h1>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -64,6 +64,9 @@ useEffect(() => {
             <p className="text-gray-600 mb-2">User Name: {seva.username}</p>
             <p className="text-gray-600 mb-2">Phone Number: {seva.phonenumber}</p>
             <p className="text-gray-600 mb-2">Seva Date: {seva.sevadate}</p>
+            <p className="text-gray-600 mb-2">Rashi: {seva.rashi}</p>
+            <p className="text-gray-600 mb-2">Nakshatra: {seva.nakshatra}</p>
+            <p className="text-gray-600 mb-2">Gotra: {seva.gotra}</p>
             <button
               onClick={() => handleDelete(seva._id)}
               className="text-white bg-red-600 border-0 py-2 px-4 rounded-md mt-4"

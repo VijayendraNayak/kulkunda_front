@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/image';
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const GalleryPage = () => {
@@ -43,6 +43,7 @@ const GalleryPage = () => {
         Gallery
       </div>
 
+      {/* Display Images */}
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
         {mediaData.map((media, index) => (
           <div
@@ -67,20 +68,22 @@ const GalleryPage = () => {
       {slideshowOpen && selectedImageIndex !== null && mediaData[selectedImageIndex]?.avatar && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
           <div className="relative">
-            <button className="absolute top-2 right-2 text-white text-xl" onClick={closeSlideshow}>
+            <button
+              className="absolute top-2 right-2 text-white text-xl"
+              onClick={closeSlideshow}
+            >
               Close
             </button>
-            <div>
-            <Image
-              key={selectedImageIndex}
-              src={mediaData[selectedImageIndex].avatar[0]}
-              alt={`Image ${selectedImageIndex + 1}`}
-              className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full'
-              width={500}
-              height={500} />
-            {/* Set the size to a 1:1 ratio */}
-
-            </div>
+            {mediaData[selectedImageIndex].avatar.map((image, imageIndex) => (
+              <Image
+                key={imageIndex}
+                src={image}
+                alt={`Image ${selectedImageIndex + 1}-${imageIndex + 1}`}
+                className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full'
+                width={800}
+                height={400}
+              />
+            ))}
           </div>
         </div>
       )}
@@ -90,9 +93,7 @@ const GalleryPage = () => {
           Video
         </div>
         <div className="flex items-center justify-center">
-          <iframe
-            width="935"
-            height="526"
+          <iframe className="w-[1000px] h-[170px] md:h-[350px] lg:h-[600px] rounded-xl"
             src="https://www.youtube.com/embed/2wf_JJPvOE0"
             title="Example Video"
             frameBorder="0"

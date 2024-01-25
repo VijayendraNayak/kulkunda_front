@@ -5,10 +5,12 @@ import Link from 'next/link';
 import ImageSlider from './Components/ImageSlider';
 import Image from 'next/image';
 import Loader from "./Components/Loader";
-import Temple from "/app/assets/image/temple.jpg";
+import Temple from "/app/assets/image/temple20.png";
 import Temple13 from "/app/assets/image/temple13.jpg";
 import Temple2 from "/app/assets/image/temple3.jpg";
 import Temple15 from "/app/assets/image/temple15.jpg";
+import Temple12 from "/app/assets/image/temple12.jpg";
+
 
 const Page = () => {
   const [lang, setLang] = useState('english');
@@ -130,100 +132,101 @@ const Page = () => {
       <div className="flex  justify-end px-4 mt-5">
         <button
           type="button"
-          className="border-2 font-bold text-white bg-black px-12 py-3 rounded-lg hover:text-black hover:bg-white"
+          className="border-2 font-bold bg-gradient-to-r from-yellow-100 to-orange-500 p-3 rounded-lg px-5  border-black font-serif"
           onClick={handleLanguageChange}
         >
           {lang === "english" ? "ಕನ್ನಡ" : "English"}
         </button>
       </div>
       <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
-        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
-          {/* Image with text overlay */}
-          <div className='relative w-full  bg-black'>
-            <Image
-              src={Temple}
-              className='w-full  opacity-50'
-              alt="register background image"
-              width={300}
-              height={250}
-            />
-            <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>{currentContent.title}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100'>  {currentContent.text}</p>
-              <Link href="/Pages/aboutus">
-                <p className='text-orange-100 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
-              </Link>
-            </div>
+        <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-1 '>
+          <Image
+            src={Temple}
+            className='w-full'
+            alt="register background image"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-2'>
+          <div className='flex flex-col mt-10 p-5 h-full '>
+            <h3 className='text-2xl font-semibold mb-2 text-black-500'>{currentContent.title}</h3>
+            <p className='line-clamp-3 md:line-clamp-5 text-blck-500'>{currentContent.text}</p>
+            <Link href="/Pages/aboutus">
+              <p className='text-red-500 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
+            </Link>
           </div>
         </div>
         {/* ... Repeat the structure for the second content block */}
       </div>
 
-      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
-        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
-          {/* Image with text overlay */}
-          <div className='relative w-full bg-black'>
-            <Image
-              src={Temple2}
-              className='w-full  opacity-50'
-              alt="register background image"
-              width={300}
-              height={250}
-            />
-            <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>{currentContent.title1}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100'>  {currentContent.text1}</p>
-              <Link href="/Pages/contactus">
-                <p className='text-orange-100 font-bold py-1 text-[15px]'>{currentContent.readMore1}</p>
-              </Link>
-            </div>
+
+      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center items-center'>
+        <div className='relative w-full lg:w-1/2 md:w-full mb-5 md:mb-0'>
+          {/* Text in the left */}
+          <div className='relative w-full p-5'>
+            <h3 className='text-2xl font-semibold mb-2 text-black-500'>{currentContent.title1}</h3>
+            <p className='text-black-500'>{currentContent.text1}</p>
+            <Link href="/Pages/contactus">
+              <p className='text-red-500 font-bold py-1 text-sm'>{currentContent.readMore1}</p>
+            </Link>
           </div>
+        </div>
+        <div className='relative w-full lg:w-1/3 md:w-full p-2'>
+          {/* Image on the right */}
+          <Image
+            src={Temple12}
+            className='w-full rounded-3xl'
+            alt="register background image"
+            width={300}
+            height={250}
+          />
         </div>
       </div>
 
-      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
-        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
+      <div className='flex flex-col md:flex-row overflow-auto py-5 md:p-5 justify-center'>
+        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5 p-3 mr-20'>
           {/* Image with text overlay */}
           <div className='relative w-full bg-black'>
             <Image
               src={Temple13}
-              className='w-full  opacity-50'
+              className='w-full opacity-40'
               alt="register background image"
               width={300}
               height={250}
             />
-            <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title3}</h3>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text31}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text32}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text33}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text34}</p>
-              <p className=' line-clamp-3 md:line-clamp-5 text-orange-100 '>{currentContent.text35}</p>
+            <div className='absolute top-5 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title3}</h3>
+              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text31}</p>
+              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text32}</p>
+              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text33}</p>
+              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text34}</p>
+              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text35}</p>
             </div>
           </div>
         </div>
-      </div>
-      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
-        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5'>
+
+        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5 p-3 md:ml-20'>
           {/* Image with text overlay */}
           <div className='relative w-full bg-black'>
             <Image
               src={Temple15}
-              className='w-full  opacity-50'
+              className='w-full opacity-40'
               alt="register background image"
               width={300}
               height={250}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-orange-100'>  {currentContent.title2}</h3>
-              <p className='text-xl font-semibold mb-2 text-orange-100'>⦾ {found && newsUpdatesList.length>0 && newsUpdatesList[0].headline}</p>
-              <p className='text-sm font-semibold mb-2 text-orange-100 line-clamp-3'>
-                {found && newsUpdatesList.length>0 && newsUpdatesList[0].description}
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>  {currentContent.title2}</h3>
+              <p className='text-xl font-semibold mb-2 text-yellow-300'>⦾ {found && newsUpdatesList.length > 0 && newsUpdatesList[0].headline}</p>
+              <p className='text-sm font-semibold mb-2 text-yellow-300 line-clamp-3'>
+                {found && newsUpdatesList.length > 0 && newsUpdatesList[0].description}
               </p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
 
   );
