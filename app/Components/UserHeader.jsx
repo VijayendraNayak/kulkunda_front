@@ -154,7 +154,8 @@ const UserHeader = ({ loading }) => {
                 </li>
               </Link>
               <Link href="/Pages/seva">
-                <li className="hover:underline text-orange-700 sm:hidden">
+                <li className="hover:underline text-orange-700 sm:hidden"onClick={togglenavbar}>
+                  
                   Seva list
                 </li>
               </Link>

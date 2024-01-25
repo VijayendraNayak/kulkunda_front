@@ -1,5 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { setSevaName } from "../../Redux/Features/counter/sevaslice";
 import Image from "next/image";
 import Entrance from "/app/assets/image/entrance.jpg";
 import Loader from "../../Components/Loader";
@@ -8,7 +11,10 @@ import Loader from "../../Components/Loader";
 const SevaPage = () => {
   const [language, setLanguage] = useState("english");
   const [formdata, setFormdata] = useState(null);
+  const [sevaname, setSevaname] = useState(null);
   const [loader, setLoader] = useState(false);
+  const router = useRouter();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getdata = async () => {
@@ -34,15 +40,21 @@ const SevaPage = () => {
     setLanguage(selectedLanguage);
   };
 
+  const handleBookSeva = (name) => {
+    router.replace("/Pages/sevabookinform");
+    setSevaname(name);
+    dispatch(setSevaName(name));
+  };
+
   return (
     <div className="pt-20">
       {
         loader && <Loader/>
       }
-      <p className="text-black lg:text-6xl text-3xl text-center font-bold" >
+      <p className="text-black lg:text-6xl text-3xl text-center font-bold" style={{ textDecoration: 'none', fontFamily: 'Roboto' }}>
         Seva Served Here
       </p>
-      <div className="flex justify-end pr-8 mb-4  py-2">
+      <div className="flex justify-end pr-8 mb-4">
         <label className="hidden md:block text-lg mr-2 font-serif">Select Language:</label>
         <select
           className="border p-1 rounded-md bg-gradient-to-r from-orange-300 via-orange-500 to-orange-700 focus:outline-none focus:ring focus:border-blue-300"
@@ -58,7 +70,7 @@ const SevaPage = () => {
       <div className="flex flex-row">
         <div
           className="flex-1 p-2 px-8 overflow-y-auto"
-          // style={{ maxHeight: "500px" }}
+          style={{ maxHeight: "500px" }}
         >
           {formdata &&
             formdata.map((seva) => (
@@ -81,7 +93,7 @@ const SevaPage = () => {
               </div>
             ))}
         </div>
-        <div className="flex-1 hidden md:block fixed top-0 right-0 bottom-0 left-0 z-10" style={{ maxHeight: "500px" }}>
+        <div className="flex-1 relative hidden md:block">
           <Image
             src={Entrance}
             alt="entrance"
