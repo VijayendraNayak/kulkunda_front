@@ -1,6 +1,6 @@
 "use client"
 // Import necessary modules
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import Link from 'next/link';
 import ImageSlider from './Components/ImageSlider';
 import Image from 'next/image';
@@ -9,10 +9,12 @@ import Temple from "/app/assets/image/temple20.png";
 import Temple13 from "/app/assets/image/temple13.jpg";
 import Temple2 from "/app/assets/image/temple3.jpg";
 import Temple15 from "/app/assets/image/temple15.jpg";
+import { MdOutlineMouse } from "react-icons/md";
 import Temple12 from "/app/assets/image/temple12.jpg";
 
 
 const Page = () => {
+  const featuredProductsRef = useRef(null);
   const [lang, setLang] = useState('english');
   const [loader, setLoader] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -68,7 +70,12 @@ const Page = () => {
     };
 
   }, []);
-
+  const scrollToFeaturedProducts = () => {
+    featuredProductsRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const content = {
     english: {
@@ -92,10 +99,10 @@ const Page = () => {
     kannada: {
       title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ',
       text: '⦾ ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ...',
-      readMore: 'ಹೆಚ್ಚು ಓದಿ...',
+      readMore: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ...',
       title1: 'ಹೇಗೆ ಹೋಗಬಹುದು?',
       text1: '⦾  ಬಸ್ ಮಾರ್ಗದಲ್ಲಿ:ಹೆಚ್ಚಿನ ಬಸ್‌ಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಹೋಗಲು ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಾಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುತ್ತವೆ. ಕುಲ್ಕುಂಡ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿಯಿರಿ ಮತ್ತು ದೇವಸ್ಥಾನಕ್ಕೆ ಸೇರಲು ಸುಮಾರು 350 ಮೀಟರ್ ನಡೆಯಿರಿ.',
-      readMore1: 'ಹೆಚ್ಚು ಓದಿ...',
+      readMore1: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ...',
       title3: 'ದರ್ಶನ ಸಮಯ:',
       text31: '⦾ ಬೆಳಗ್ಗೆ 6 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆ ತನಕ ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆ ತನಕ',
       text32: 'ಬೆಳಗ್ಗೆ ಪೂಜೆ: 8 ಗಂಟೆಗೆ',
@@ -114,11 +121,20 @@ const Page = () => {
 
       {/* Loader */}
       {loader && <Loader />}
+      <div className='flex justify-center py-16 sm:py-12'>
 
+      <button
+          className="flex justify-center items-center bg-gradient-to-r font-semibold from-orange-100 to-orange-500 p-4 rounded-lg px-20 border-2 border-black hover:scale-110"
+          onClick={scrollToFeaturedProducts}
+        >
+          Scroll <MdOutlineMouse />
+        </button>
+      </div>
       <div
         className={`font-extrabold flex flex-col text-4xl sm:text-5xl sm:max-w-xl sm:mx-auto m-10 p-5 lg:text-center items-center ${isVisible ? 'animate-slide-in' : 'opacity-0'
           } animate-text`}
         style={{ fontFamily: 'Poppins, sans-serif', color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}
+        ref={featuredProductsRef}
       >
         <span style={{ fontSize: '1.5rem', fontWeight: 'normal' }}>
           Welcome to
