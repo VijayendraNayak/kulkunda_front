@@ -28,12 +28,12 @@ const page = () => {
     <div className="pt-10 pb-10 lg:pt-20 ">
       {loader && <Loader />}
       <div className="flex justify-between items-center pb-5">
-        <p className="text-3xl lg:text-5xl text-center font-semibold text-orange-500 py-8">
+        <p className="text-3xl lg:text-5xl text-center font-semibold text-black py-8 px-4">
           About Us
         </p>
         <button
           type="button"
-          className="border-2 border-orange-500 bg-orange-300 px-5 py-3 rounded-full ml-auto mr-10 hover:bg-orange-400"
+          className="border-2 border-orange-500 bg-orange-300 px-3 py-3 rounded-full ml-auto mr-10 hover:bg-orange-400"
           onClick={handleonclick}
         >
           {lang === "english" ? "ಕನ್ನಡ" : "English"}

@@ -84,7 +84,7 @@ const UserHeader = ({ loading }) => {
               value=""
               className="hover:underline text-orange-700 hidden sm:flex p-3"
             >
-              Select an option
+              Sevas
             </option>
             <option
               value="sevaList"
@@ -185,11 +185,14 @@ const UserHeader = ({ loading }) => {
               </Link> */}
               {currentUser ? (
                 <Link href="/Pages/profile">
-                  <img
-                    className=" rounded-full w-10 h-10  sm:hidden"
-                    src={currentUser.avatar}
-                    alt="profile"
-                  />
+                  <div className="flex gap-1 items-center">
+                    <img
+                      className=" rounded-full w-10 h-10  sm:hidden"
+                      src={currentUser.avatar}
+                      alt="profile"
+                    />
+                    <span className="hover:underline text-orange-700 sm:hidden">My Profile</span>
+                  </div>
                 </Link>
               ) : (
                 <Link href="/Pages/login">
