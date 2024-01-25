@@ -80,10 +80,11 @@ const GalleryPage = () => {
                 src={image}
                 alt={`Image ${selectedImageIndex + 1}-${imageIndex + 1}`}
                 className='mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full'
-                width={800}
-                height={400}
+                width={250}  // Set the width to 50% of the original size
+                height={250} // Set the height to 50% of the original size
               />
             ))}
+
           </div>
         </div>
       )}
