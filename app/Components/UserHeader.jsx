@@ -149,34 +149,33 @@ const UserHeader = ({ loading }) => {
             </Link>
             <ul className={`flex flex-col gap-3 font-semibold`}>
               <Link href="/">
-                <li className="hover:underline text-orange-700 sm:hidden">
+                <li className="hover:underline text-orange-700 sm:hidden" onClick={togglenavbar}>
                   Home
+                </li>
+              </Link>
+              <Link href="/Pages/aboutus">
+                <li className="hover:underline text-orange-700 sm:hidden" onClick={togglenavbar}>
+                  About Us
                 </li>
               </Link>
               <Link href="/Pages/seva">
                 <li className="hover:underline text-orange-700 sm:hidden"onClick={togglenavbar}>
-                  
                   Seva list
                 </li>
               </Link>
               <Link href="/Pages/advancedseva">
-                <li className="hover:underline text-orange-700 sm:hidden">
+                <li className="hover:underline text-orange-700 sm:hidden" onClick={togglenavbar}>
                   Advanced Seva bookings
                 </li>
               </Link>
-              <Link href="/Pages/aboutus">
-                <li className="hover:underline text-orange-700 sm:hidden">
-                  About
-                </li>
-              </Link>
               <Link href="/Pages/contactus">
-                <li className="hover:underline text-orange-700 sm:hidden">
-                  Contact
+                <li className="hover:underline text-orange-700 sm:hidden" onClick={togglenavbar}>
+                  Contact Us
                 </li>
               </Link>
               <Link href="/Pages/gallery">
-                <li className="hover:underline text-orange-700 sm:hidden">
-                  Gallery
+                <li className="hover:underline text-orange-700 sm:hidden" onClick={togglenavbar}>
+                  View Gallery
                 </li>
               </Link>
               {/* <Link href="/Pages/News">
@@ -192,12 +191,12 @@ const UserHeader = ({ loading }) => {
                       src={currentUser.avatar}
                       alt="profile"
                     />
-                    <span className="hover:underline text-orange-700 sm:hidden">My Profile</span>
+                    <span className="hover:underline text-orange-700 sm:hidden" onClick={togglenavbar}>My Profile</span>
                   </div>
                 </Link>
               ) : (
                 <Link href="/Pages/login">
-                  <li className="hover:underline text-white bg-red-500 rounded-lg p-3 sm:hidden">
+                  <li className="hover:underline text-white bg-red-500 rounded-lg p-3 sm:hidden" onClick={togglenavbar}>
                     Sign in
                   </li>
                 </Link>
