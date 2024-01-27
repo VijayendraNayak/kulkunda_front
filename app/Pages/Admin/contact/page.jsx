@@ -93,13 +93,6 @@ const AdminContactPage = () => {
         setLoader(false)
         console.log(data.message);
       }
-      // if (!response.ok) {
-      //   console.log(response)
-      //   throw new Error("Failed to delete contact form");
-      //   setLoader(false)
-      // }
-      // If deletion is successful, refetch the updated contact forms
-      setLoader(false)
       fetchData();
       setAlert("Contact deleted successfully");
       setTimeout(() => {
