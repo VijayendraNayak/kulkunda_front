@@ -85,7 +85,7 @@ const AdminContactPage = () => {
     try {
       setLoader(true)
       const res = await fetch(`/api/contact/delete/${contactId}`, {
-        method: "DELETE",
+        method: "POST",
       });
       const data=await res.json();
       console.log(data)
