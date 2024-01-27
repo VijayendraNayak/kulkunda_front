@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Loader from "../../../Components/Loader";
 
 const AdminSevaPage = () => {
   const [bookedSevas, setBookedSevas] = useState([]);
@@ -15,7 +16,7 @@ const AdminSevaPage = () => {
         }
         const data = await response.json();
         setLoader(false);
-        setBookedSevas(data);
+        setBookedSevas(data.sevas);
       } catch (error) {
         console.error('Error fetching booked sevas:', error);
         setError('Failed to fetch booked sevas. Please try again.');
@@ -32,15 +33,17 @@ useEffect(() => {
   const handleDelete = async (sevaId) => {
     try {
       setLoader(true);
+      console.log(sevaId);
       const response = await fetch(`/api/seva/admin/delete/${sevaId}`, {
-        method: 'POST',
+        method: 'DELETE',
       });
       if (!response.ok) {
         throw new Error('Failed to delete booked seva');
       }
       // If deletion is successful, refetch the updated booked sevas
-      setLoader(false);
+      
       fetchBookedSevas();
+      setLoader(false);
     } catch (error) {
       console.error('Error deleting booked seva:', error);
       setLoader(false);
@@ -49,7 +52,7 @@ useEffect(() => {
 
   return (
     <div className="pt-24 pb-20 flex flex-col bg-white">
-      {loader && <p>Loading...</p>}
+      {loader && <Loader/>}
       {error && <p>Error: {error}</p>}
 
       <h1 className="text-3xl font-bold mb-8 mt-12">

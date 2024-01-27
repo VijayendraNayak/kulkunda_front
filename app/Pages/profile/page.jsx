@@ -45,37 +45,31 @@ const Profile = () => {
     });
   }, [currentUser]);
 
-  useEffect(() => {
-    // You can use userId here
-    console.log(userId);
-
-    // ... (other useEffect logic)
-  }, []);
 
   useEffect(() => {
     const fetchUserSevas = async () => {
       try {
+        setLoader(true);
         const response = await fetch(`/api/seva/user/${userId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch sevas');
         }
   
         const data = await response.json();
+        setLoader(false);
         setSevas(data.sevas);
       } catch (error) {
         console.error('Error fetching sevas:', error.message);
+        setLoader(false);
       }
     };
     const userId = currentUser?._id || '';
     if (userId) {
+      setLoader(true);
       fetchUserSevas();
     }
   }, []);
   
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
   useEffect(() => {
     if (file) {

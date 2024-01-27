@@ -84,8 +84,8 @@ const AdminContactPage = () => {
   const handleDelete = async (contactId) => {
     try {
       setLoader(true)
-      const response = await fetch(`/api/contact/delete/${contactId}`, {
-        method: "DELETE",
+      const response = await fetch(`/api/contact/admin/delete/${contactId}`, {
+        method: "POST",
       });
       if (!response.ok) {
         throw new Error("Failed to delete contact form");
