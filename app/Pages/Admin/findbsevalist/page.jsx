@@ -17,6 +17,7 @@ const AdminSevaPage = () => {
         const data = await response.json();
         setLoader(false);
         setBookedSevas(data.sevas);
+        console.log(bookedSevas)
       } catch (error) {
         console.error('Error fetching booked sevas:', error);
         setError('Failed to fetch booked sevas. Please try again.');
@@ -36,7 +37,9 @@ useEffect(() => {
       console.log(sevaId);
       const response = await fetch(`/api/seva/admin/delete/${sevaId}`, {
         method: 'DELETE',
+        method: 'DELETE',
       });
+      console.log(response)
       if (!response.ok) {
         throw new Error('Failed to delete booked seva');
       }

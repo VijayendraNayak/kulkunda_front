@@ -10,7 +10,7 @@ import Temple13 from "/app/assets/image/temple13.jpg";
 import Temple2 from "/app/assets/image/temple3.jpg";
 import Temple15 from "/app/assets/image/temple15.jpg";
 import { MdOutlineMouse } from "react-icons/md";
-import Temple12 from "/app/assets/image/temple12.jpg";
+import Temple12 from "/app/assets/image/temple12.png";
 
 
 const Page = () => {
