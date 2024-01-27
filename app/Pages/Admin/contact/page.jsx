@@ -85,21 +85,13 @@ const AdminContactPage = () => {
     try {
       setLoader(true)
       const res = await fetch(`/api/contact/delete/${contactId}`, {
-        method: "POST",
+        method: "DELETE",
       });
       const data=await res.json();
-      console.log(data)
       if(data.success===false){
         setLoader(false)
-        console.log(data.message);
       }
-      // if (!response.ok) {
-      //   console.log(response)
-      //   throw new Error("Failed to delete contact form");
-      //   setLoader(false)
-      // }
-      // If deletion is successful, refetch the updated contact forms
-      fetchData();
+      window.location.reload()
       setAlert("Contact deleted successfully");
       setTimeout(() => {
         setAlert(null);
