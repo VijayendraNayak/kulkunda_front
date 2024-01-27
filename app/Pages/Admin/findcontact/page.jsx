@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 const page = () => {
+  const [contactid,setContactid]=useState()
   const [searchParams, setSearchParams] = useState({});
   const [formdata, setFormdata] = useState();
   const [found, setFound] = useState(false);
@@ -54,6 +55,7 @@ const page = () => {
   };
   const handledeleteclick = async (e) => {
     e.preventDefault();
+    console.log(contactid)
     const res = await fetch("/api/contact/admin/delete", {
       method: "POST",
       headers: {
@@ -162,7 +164,9 @@ const page = () => {
                       formdata.role === "admin" ? "hidden" : "flex"
                     }`}
                     type="button"
-                    onClick={handledeleteclick}
+                    onChange={(e) => {
+                      setContactid({ ...contactid, [e.target.id]: e.target.value });
+                    }}
                   >
                     Delete Querry
                   </button>
