@@ -48,7 +48,7 @@ const Register = () => {
         dispatch(registerFailure(data.message));
         return;
       }
-      router.replace("/Pages/login");
+      router.push("/Pages/login");
       dispatch(registerSuccess(data));
     } catch (error) {
       dispatch(registerFailure(error));

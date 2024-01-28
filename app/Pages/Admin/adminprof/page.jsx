@@ -55,10 +55,10 @@ const Profile = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
     };
@@ -67,7 +67,7 @@ const Profile = () => {
       const data=await res.json()
       if (data.success===false){
         console.log(data.message)
-        router.replace("/Pages/login")
+        router.push("/Pages/login")
         return
       }
     }
@@ -111,7 +111,7 @@ const Profile = () => {
       }
       dispatch(updateSuccess(data.user));
       console.log("here");
-      router.replace("/");
+      router.push("/");
     } catch (error) {
       dispatch(updateFailure(error));
     }
@@ -129,7 +129,7 @@ const Profile = () => {
         return;
       }
       dispatch(signoutSuccess(data));
-      router.replace("/Pages/login");
+      router.push("/Pages/login");
       localStorage.clear();
     } catch (error) {
       dispatch(signoutFailure(error));

@@ -24,10 +24,10 @@ const Addseva = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
     };
@@ -36,7 +36,7 @@ const Addseva = () => {
       const data=await res.json()
       if (data.success===false){
         console.log(data.message)
-        router.replace("/Pages/login")
+        router.push("/Pages/login")
         return
       }
     }

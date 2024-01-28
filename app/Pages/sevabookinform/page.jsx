@@ -17,7 +17,7 @@ const SevaBookingForm = () => {
     setLoader(true);
     const isLoggedIn = !!localStorage.getItem("userToken");
     if (!isLoggedIn) {
-      router.replace("/Pages/login");
+      router.push("/Pages/login");
     }
     setLoader(false);
     const checkcookie = async () => {
@@ -26,7 +26,7 @@ const SevaBookingForm = () => {
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         setLoader(false);
         return;
       }

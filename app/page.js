@@ -49,27 +49,37 @@ const Page = () => {
   }, [])
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Adjust the threshold based on your preference
-      const threshold = window.innerWidth * 0.7;
-
-      // Check if the element is within the viewport
-      const element = document.querySelector('.animate-text');
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const elementVisible = rect.left <= threshold;
-        setIsVisible(elementVisible);
-      }
-    };
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Remove the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-
+    // Check screen size and set isVisible accordingly
+    const isSmallScreen = window.innerWidth <= 600; // Adjust the breakpoint as needed
+  
+    if (isSmallScreen) {
+      setIsVisible(true);
+    } else {
+      // Add scroll event listener to trigger animation on scroll
+      const handleScroll = () => {
+        // Adjust the threshold based on your preference
+        const threshold = window.innerWidth * 0.7;
+  
+        // Check if the element is within the viewport
+        const element = document.querySelector('.animate-text');
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementVisible = rect.left <= threshold;
+          setIsVisible(elementVisible);
+          // Remove the scroll event listener once the animation is triggered
+          window.removeEventListener('scroll', handleScroll);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      // Remove the event listener when the component is unmounted
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
+  
   const scrollToFeaturedProducts = () => {
     featuredProductsRef.current.scrollIntoView({
       behavior: "smooth",
@@ -121,7 +131,7 @@ const Page = () => {
 
       {/* Loader */}
       {loader && <Loader />}
-      <div className='flex justify-center py-16 sm:py-12'>
+      <div className='hidden justify-center py-16 sm:py-12 sm:flex'>
       <button
           className="flex justify-center items-center bg-gradient-to-r text-xl font-bold from-orange-100 to-orange-500 p-4 rounded-full px-20 border-2 border-black hover:scale-110"
           onClick={scrollToFeaturedProducts}

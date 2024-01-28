@@ -79,10 +79,10 @@ const page = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
     };
