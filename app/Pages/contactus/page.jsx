@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Loader from "../../Components/Loader";
+import Image from "next/image";
+import Insta from "/app/assets/image/insta.png";
+import Face from "/app/assets/image/facebook.webp";
+import Yt from "/app/assets/image/yt.png";
 
 const Page = () => {
   const [formData, setFormData] = useState({
@@ -248,6 +252,29 @@ setLoader(false)
             <p className="text-center">Form submitted successfully!</p>
           </div>
         )}
+
+        <div className="w-full max-w-md p-8 bg-orange-100 rounded-lg shadow-lg mt-8">
+          <h2 className="text-3xl font-bold tracking-tight mb-6">
+            Social Links
+          </h2>
+          <div className="social-icons flex flex-row gap-4">
+            <div className="icon-container">
+              <a href="https://www.instagram.com/shreebasaveshwaratemple?igsh=Ymk0ZXhwZHV0a3lk" target="_blank" className="icon-link">
+                <Image src={Insta} width={100} />
+              </a>
+            </div>
+            <div className="icon-container">
+              <a href="https://www.facebook.com/profile.php?id=100090518155741" target="_blank" className="icon-link">
+                <Image src={Face} width={100} />
+              </a>
+            </div>
+            <div className="icon-container">
+              <a href="https://www.instagram.com/shreebasaveshwaratemple?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank" className="icon-link">
+                <Image src={Yt} width={100} height={300}/>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
