@@ -29,10 +29,10 @@ const Newsupdatesform = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
     };
@@ -41,7 +41,7 @@ const Newsupdatesform = () => {
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         return;
       }
     };
@@ -70,7 +70,7 @@ const Newsupdatesform = () => {
       }
       setFormdata(data);
       setCreate(true);
-      router.replace("/Pages/Admin/dashboard")
+      router.push("/Pages/Admin/dashboard")
     } catch (error) {
       console.log({ error });
     }

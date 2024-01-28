@@ -41,7 +41,7 @@ const SevaPage = () => {
   };
 
   const handleBookSeva = (name) => {
-    router.replace("/Pages/sevabookinform");
+    router.push("/Pages/sevabookinform");
     setSevaname(name);
     dispatch(setSevaName(name));
   };

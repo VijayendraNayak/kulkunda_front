@@ -29,14 +29,15 @@ const Profile = () => {
   const [sevas, setSevas] = useState([]);
   const [formdata, setFormdata] = useState([]);
   const [file, setFile] = useState(null);
-  const [userId, setUserId] = useState('');
+  const [userId, setUserId] = useState("");
   const dispatch = useDispatch();
   const fileref = useRef(null);
   const router = useRouter();
   const [loader, setLoader] = useState(false);
+  const [isFormModified, setIsFormModified] = useState(false);
 
   useEffect(() => {
-    const id = currentUser?.userId || '';
+    const id = currentUser?.userId || "";
     setUserId(id);
     setFormdata({
       name: currentUser?.name || "", // Use optional chaining here
@@ -45,81 +46,89 @@ const Profile = () => {
     });
   }, [currentUser]);
 
-
   useEffect(() => {
     const fetchUserSevas = async () => {
       try {
         setLoader(true);
         const response = await fetch(`/api/seva/user/${userId}`);
         if (!response.ok) {
-          throw new Error('Failed to fetch sevas');
+          throw new Error("Failed to fetch sevas");
         }
-  
+
         const data = await response.json();
         setLoader(false);
         setSevas(data.sevas);
       } catch (error) {
-        console.error('Error fetching sevas:', error.message);
+        console.error("Error fetching sevas:", error.message);
         setLoader(false);
       }
+      setIsFormModified(false);
     };
-    const userId = currentUser?._id || '';
+    const userId = currentUser?._id || "";
     if (userId) {
-      setLoader(true);
       fetchUserSevas();
     }
-  }, []);
-  
+  }, [userId]);
 
   useEffect(() => {
     if (file) {
+      setLoader(true);
       handlefileupload(file);
     }
   }, [file]);
 
   useEffect(() => {
-    setLoader(true)
-    const isLoggedIn = !!localStorage.getItem('userToken');
-    if(!isLoggedIn){router.replace("/Pages/login")}
-    setLoader(false)
-    const checkcookie=async()=>{
-      setLoader(true)
-      const res=await fetch("/api/user/checkcookies")
-      const data=await res.json()
-      if (data.success===false){
-        console.log(data.message)
-        router.replace("/Pages/login")
-        setLoader(false)
-        return
-      }
-      setLoader(false)
+    const isLoggedIn = !!localStorage.getItem("userToken");
+    if (!isLoggedIn) {
+      router.push("/Pages/login");
+    } else {
+      checkcookie();
     }
-    checkcookie()
-    setLoader(false)
   }, []);
-  
+
+  const checkcookie = async () => {
+    try {
+      setLoader(true);
+      const res = await fetch("/api/user/checkcookies");
+      const data = await res.json();
+      if (data.success === false) {
+        console.log(data.message);
+        router.push("/Pages/login");
+      }
+    } catch (error) {
+      console.error("Error checking cookie:", error);
+    } finally {
+      setLoader(false);
+    }
+  };
 
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.id]: e.target.value });
+    setIsFormModified(true);
   };
 
   const handlefileupload = async (file) => {
-    setLoader(true)
-    const storage = getStorage(app);
-    const filename = new Date().getTime() + file.name;
-    const storageref = ref(storage, filename);
-    const uploadTask = uploadBytesResumable(storageref, file);
+    try {
+      const storage = getStorage(app);
+      const filename = new Date().getTime() + file.name;
+      const storageref = ref(storage, filename);
+      const uploadTask = uploadBytesResumable(storageref, file);
 
-    uploadTask.on("state_changed", () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((DownloadURL) => {
-        setFormdata({ ...formdata, avatar: DownloadURL });
+      uploadTask.on("state_changed", () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((DownloadURL) => {
+          setFormdata({ ...formdata, avatar: DownloadURL });
+        });
       });
-    });
-    setLoader(false)
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    } finally {
+      setLoader(false);
+    }
   };
 
   const handleSubmit = async (e) => {
     try {
+      e.preventDefault();
       dispatch(updateStart());
       const res = await fetch(`/api/user/update`, {
         method: "PUT",
@@ -134,8 +143,7 @@ const Profile = () => {
         return;
       }
       dispatch(updateSuccess(data.user));
-      console.log("here");
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       dispatch(updateFailure(error));
     }
@@ -151,18 +159,20 @@ const Profile = () => {
         return;
       }
       dispatch(signoutSuccess(data));
-      router.replace("/Pages/login");
-      window.location.reload()
+      router.push("/Pages/login");
     } catch (error) {
       dispatch(signoutFailure(error));
     }
   };
 
   return (
-    <div className=" flex sm:flex-row flex-col pt-16 ">
-      {(loading ||loader )&& <Loader/>}
-      <div className="flex-1 p-10 ">
-        <div className="flex flex-col lg:flex-row gap-4 items-center ">
+    <div className="flex sm:flex-row flex-col pt-16">
+      {(loading || loader) && <Loader />}
+      <div className="flex-1 p-10">
+        <p className="text-sm text-gray-500 mb-2">
+          Click on the fields below to update your credentials:
+        </p>
+        <div className="flex flex-col lg:flex-row gap-4 items-center hover:cursor-pointer">
           <div className="">
             <input
               className="hidden"
@@ -172,52 +182,55 @@ const Profile = () => {
               onChange={(e) => setFile(e.target.files[0])}
             />
             <img
-              src={formdata?.avatar} // Use optional chaining here
+              src={formdata?.avatar}
               alt="profile image"
               className="w-44 h-60 rounded-lg no-repeat center object-cover"
               onClick={() => fileref.current.click()}
             />
           </div>
-          <div className=" flex flex-col gap-4">
-            <form className="flex flex-col gap-4 w-80">
-              <input
-                type="text"
-                placeholder="Username"
-                className="border p-3 rounded-lg"
-                id="name"
-                value={formdata?.name || ""} // Use optional chaining here
-                onChange={handleChange}
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="border p-3 rounded-lg"
-                id="email"
-                value={formdata?.email || ""} // Use optional chaining here
-                onChange={handleChange}
-              />
-            </form>
+          <div className="flex flex-col gap-4">
+            <div>
+              <form className="flex flex-col gap-4 w-80">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  className="border p-3 rounded-lg"
+                  id="name"
+                  value={formdata?.name || ""}
+                  onChange={handleChange}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="border p-3 rounded-lg"
+                  id="email"
+                  value={formdata?.email || ""}
+                  onChange={handleChange}
+                />
+              </form>
+            </div>
             <button
-              className="bg-green-500 text-white p-3 rounded-lg font-semibold text-xl"
+              className="bg-green-500 hover:bg-green-700 text-white p-3 rounded-lg font-semibold text-xl"
               onClick={handleSubmit}
+              disabled={!isFormModified}
             >
               {loading ? "Loading..." : "Update Profile"}
             </button>
             <button
-              className="bg-red-500 text-white flex flex-row p-3 justify-center items-center gap-2 rounded-lg font-semibold text-xl"
+              className="bg-red-500 hover:bg-red-700 text-white flex flex-row p-3 justify-center items-center gap-2 rounded-lg font-semibold text-xl"
               onClick={handlelogout}
             >
               <IoLogOutOutline /> Logout
             </button>
             <Link
-              className="text-blue-500 font-semibold ml-auto cursor-pointer hover:scale-110"
+              className="text-blue-500 font-semibold ml-auto cursor-pointer hover:scale-110 hidden"
               href="/Pages/changepass"
             >
-              <span>Change passoword?</span>
+              <span>Change password?</span>
             </Link>
           </div>
-          </div>
-      {error && (
+        </div>
+        {error && (
           <p className="text-red-500 text-center font-semibold">{error}</p>
         )}
       </div>
@@ -230,15 +243,18 @@ const Profile = () => {
               className="bg-white bg-opacity-50 p-4 rounded-md mb-4"
             >
               <div>
-                <p className="text-lg font-semibold mb-2">Seva Name: {seva.sevaname}</p>
+                <p className="text-lg font-semibold mb-2">
+                  Seva Name: {seva.sevaname}
+                </p>
                 <p className="text-gray-600 mb-2">User Name: {seva.username}</p>
-                <p className="text-gray-600 mb-2">Phone Number: {seva.phonenumber}</p>
+                <p className="text-gray-600 mb-2">
+                  Phone Number: {seva.phonenumber}
+                </p>
                 <p className="text-gray-600">Seva Date: {seva.sevadate}</p>
                 <p className="text-gray-600">Rashi: {seva.rashi}</p>
                 <p className="text-gray-600">Nakshatra: {seva.nakshatra}</p>
                 <p className="text-gray-600">Gotra: {seva.gotra}</p>
               </div>
-              {/* Add more details as needed */}
             </div>
           ))}
         </div>
@@ -246,4 +262,5 @@ const Profile = () => {
     </div>
   );
 };
-export default dynamic (() => Promise.resolve(Profile), {ssr: false})
+
+export default dynamic(() => Promise.resolve(Profile), { ssr: false });
