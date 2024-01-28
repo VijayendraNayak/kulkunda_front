@@ -125,7 +125,7 @@ const Page = () => {
   const currentContent = content[lang];
 
   return (
-    <div className='container mx-auto'>
+    <div className='relative mx-auto'>
       {/* ImageSlider component */}
       <ImageSlider />
 
