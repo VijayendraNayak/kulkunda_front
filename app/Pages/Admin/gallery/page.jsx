@@ -13,10 +13,10 @@ const page = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
     };
@@ -25,7 +25,7 @@ const page = () => {
       const data=await res.json()
       if (data.success===false){
         console.log(data.message)
-        router.replace("/Pages/login")
+        router.push("/Pages/login")
         return
       }
     }
@@ -46,10 +46,10 @@ const page = () => {
     config: { duration: 1000 },
   });
   const handleclick=()=>{
-    router.replace("/Pages/Admin/viewgallery")
+    router.push("/Pages/Admin/viewgallery")
   }
   const handlecreateclick=()=>{
-    router.replace("/Pages/Admin/addimage")
+    router.push("/Pages/Admin/addimage")
   }
 
   return (

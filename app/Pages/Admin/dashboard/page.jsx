@@ -25,10 +25,10 @@ const page = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
     };
@@ -37,7 +37,7 @@ const page = () => {
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         return;
       }
     };
@@ -153,8 +153,6 @@ const page = () => {
           <Link href="/Pages/Admin/users">
             <div className="flex flex-col items-center w-44 bg-blue-500 hover:bg-blue-700 text-white xl:p-4 lg:p-3 p-2 rounded-lg cursor-pointer">
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
-                Number of
-                <br />
                 Users
               </span>
               <span className="text-[4em] font-bold">
@@ -167,9 +165,7 @@ const page = () => {
           <Link href="/Pages/Admin/sevas">
             <div className="flex flex-col items-center w-44 bg-red-500 hover:bg-red-700 text-white xl:p-4 lg:p-3 p-2 rounded-lg cursor-pointer">
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
-                Number of booked
-                <br />
-                Sevas
+                Booked Sevas 
               </span>
               <span className="text-[4em] font-bold">
                 <animated.span className="text-6xl text-white bg-transparent rounded-full p-4">
@@ -181,9 +177,7 @@ const page = () => {
           <Link href="/Pages/Admin/sevas">
             <div className="flex flex-col items-center w-44 bg-yellow-500 hover:bg-yellow-700 text-white xl:p-4 lg:p-3 p-2 rounded-lg cursor-pointer">
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
-                Number of offered
-                <br />
-                Sevas
+                Sevas Offered
               </span>
               <span className="text-[4em] font-bold">
                 <animated.span className="text-6xl text-white bg-transparent rounded-full p-4">
@@ -195,8 +189,6 @@ const page = () => {
           <Link href="/Pages/Admin/contact">
             <div className="flex flex-col items-center w-44 bg-green-500 hover:bg-green-700 text-white xl:p-4 lg:p-3 p-2 rounded-lg cursor-pointer">
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
-                Number of
-                <br />
                 Contact queries
               </span>
               <span className="text-[4em] font-bold">
@@ -209,8 +201,6 @@ const page = () => {
           <Link href="/Pages/Admin/newsupdates">
             <div className="flex flex-col items-center w-44 bg-purple-500 hover:bg-purple-700 text-white xl:p-4 lg:p-3 p-2 rounded-lg cursor-pointer">
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
-                Number of
-                <br />
                 News & Updates
               </span>
               <span className="text-[4em] font-bold">
@@ -223,8 +213,6 @@ const page = () => {
           <Link href="/Pages/Admin/gallery">
             <div className="flex flex-col items-center w-44 bg-pink-500 hover:bg-pink-700 text-white xl:p-4 lg:p-3 p-2 rounded-lg cursor-pointer">
               <span className="text-center text-slate-100 xl:text-[1em] lg:text-[0.74em] sm:text-[0.75em] text-[0.9rem]">
-                Number of
-                <br />
                 Images
               </span>
               <span className="text-[4em] font-bold">

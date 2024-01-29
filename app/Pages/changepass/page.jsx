@@ -48,7 +48,7 @@ const Changepass = () => {
       setLoading(false);
       setLoader(false);
       setFormdata(data.user);
-      router.replace("/Pages/profile");
+      router.push("/Pages/profile");
     } catch (error) {
       setError(error);
       setLoader(false)

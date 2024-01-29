@@ -8,7 +8,7 @@ import { setSevaName } from "../../Redux/Features/counter/sevaslice";
 const page = () => {
   const [sevaname, setSevaname] = useState(null);
   const handleBookSeva = (name) => {
-    router.replace("/Pages/sevabookinform");
+    router.push("/Pages/sevabookinform");
     setSevaname(name);
     dispatch(setSevaName(name));
   };

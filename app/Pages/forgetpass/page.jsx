@@ -59,12 +59,12 @@ const Changepass = () => {
       setLoader(false);
       setFormdata(data.user);
       if (data.role === "admin") {
-        router.replace("/Pages/Admin/dashboard");
+        router.push("/Pages/Admin/dashboard");
         const userToken = "someToken"; // Replace with the actual token received from the server
         localStorage.setItem("userToken", userToken);
         localStorage.setItem("userRole", "admin"); // or 'user'
       } else {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         const userToken = "someToken"; // Replace with the actual token received from the server
         localStorage.setItem("userToken", userToken);
         localStorage.setItem("userRole", "user"); // or 'user'

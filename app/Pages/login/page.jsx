@@ -57,12 +57,12 @@ const Login = () => {
       }
       dispatch(signInSuccess(data));
       if (data.role === "admin") {
-        router.replace("/Pages/Admin/dashboard");
+        router.push("/Pages/Admin/dashboard");
         const userToken = "someToken"; // Replace with the actual token received from the server
         localStorage.setItem("userToken", userToken);
         localStorage.setItem("userRole", "admin"); // or 'user'
       } else {
-        router.replace("/");
+        router.push("/");
         const userToken = "someToken"; // Replace with the actual token received from the server
         localStorage.setItem("userToken", userToken);
         localStorage.setItem("userRole", "user"); // or 'user'
@@ -98,12 +98,12 @@ const Login = () => {
       }
       dispatch(signInSuccess(data));
       if (data.role === "admin") {
-        router.replace("/Pages/Admin/dashboard");
+        router.push("/Pages/Admin/dashboard");
         const userToken = "someToken"; // Replace with the actual token received from the server
         localStorage.setItem("userToken", userToken);
         localStorage.setItem("userRole", "admin"); // or 'user'
       } else {
-        router.replace("/");
+        router.push("/");
         const userToken = "someToken"; // Replace with the actual token received from the server
         localStorage.setItem("userToken", userToken);
         localStorage.setItem("userRole", "user"); // or 'user'
@@ -135,7 +135,7 @@ const Login = () => {
             <input
               type="text"
               placeholder="Phone number"
-              className="border p-3 rounded-lg hover:shadow-lg hover:scale-105"
+              className="border p-3 rounded-lg hover:shadow-lg "
               id="phonenumber"
               onChange={handleChange}
             />
@@ -143,27 +143,27 @@ const Login = () => {
               <input
                 type={password ? "password" : "text"}
                 placeholder="Password"
-                className="border p-3 rounded-lg pr-10 w-full md:w-[70%] lg:w-full xl:w-full hover:shadow-lg hover:scale-105"
+                className="border p-3 rounded-lg pr-10 w-full md:w-[70%] lg:w-full xl:w-full hover:shadow-lg "
                 id="password"
                 onChange={handleChange}
               />
               <button
                 type="button"
                 onClick={togglepassword} 
-                className="absolute top-1/2 right-5 transform -translate-y-1/2 hover:shadow-lg hover:scale-105"
+                className="absolute top-1/2 right-5 transform -translate-y-1/2 "
               >
                 {password ? <IoIosEye /> : <IoIosEyeOff />}
               </button>
             </div>
           </form>
           <button
-            className="bg-gradient-to-r from-yellow-500  to-orange-500 text-white p-3 font-semibold text-xl hover:shadow-lg hover:scale-105"
+            className="bg-gradient-to-r from-yellow-500  to-orange-500 text-white p-3 font-semibold text-xl hover:shadow-lg "
             onClick={handleSubmit}
           >
             Login
           </button>
           <button
-            className=" flex bg-white text-black p-3 hover:scale-105 rounded-lg font-semibold text-xl items-center justify-center gap-2"
+            className=" flex bg-white text-black p-3 hover:shadow-lg rounded-lg font-semibold text-xl items-center justify-center gap-2"
             onClick={handlegoogleSubmit}
           >
             <FcGoogle /> Login with Google
@@ -175,7 +175,7 @@ const Login = () => {
               </p>
             </Link> */}
             <Link href="/Pages/register">
-              <p className="text-blue-500 font-bold cursor-pointer hover:scale-110 hover:underline">
+              <p className="text-blue-500 font-bold cursor-pointer  hover:underline">
                 New User?
               </p>
             </Link>

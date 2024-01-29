@@ -49,27 +49,37 @@ const Page = () => {
   }, [])
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Adjust the threshold based on your preference
-      const threshold = window.innerWidth * 0.7;
-
-      // Check if the element is within the viewport
-      const element = document.querySelector('.animate-text');
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const elementVisible = rect.left <= threshold;
-        setIsVisible(elementVisible);
-      }
-    };
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Remove the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-
+    // Check screen size and set isVisible accordingly
+    const isSmallScreen = window.innerWidth <= 600; // Adjust the breakpoint as needed
+  
+    if (isSmallScreen) {
+      setIsVisible(true);
+    } else {
+      // Add scroll event listener to trigger animation on scroll
+      const handleScroll = () => {
+        // Adjust the threshold based on your preference
+        const threshold = window.innerWidth * 0.7;
+  
+        // Check if the element is within the viewport
+        const element = document.querySelector('.animate-text');
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementVisible = rect.left <= threshold;
+          setIsVisible(elementVisible);
+          // Remove the scroll event listener once the animation is triggered
+          window.removeEventListener('scroll', handleScroll);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      // Remove the event listener when the component is unmounted
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
+  
   const scrollToFeaturedProducts = () => {
     featuredProductsRef.current.scrollIntoView({
       behavior: "smooth",
@@ -99,10 +109,10 @@ const Page = () => {
     kannada: {
       title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ',
       text: '⦾ ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ...',
-      readMore: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ...',
-      title1: 'ಹೇಗೆ ಹೋಗಬಹುದು?',
-      text1: '⦾  ಬಸ್ ಮಾರ್ಗದಲ್ಲಿ:ಹೆಚ್ಚಿನ ಬಸ್‌ಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಹೋಗಲು ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಾಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುತ್ತವೆ. ಕುಲ್ಕುಂಡ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿಯಿರಿ ಮತ್ತು ದೇವಸ್ಥಾನಕ್ಕೆ ಸೇರಲು ಸುಮಾರು 350 ಮೀಟರ್ ನಡೆಯಿರಿ.',
-      readMore1: 'ಮತಾಂತರಿಸಿ ಹೇಳಿ...',
+      readMore: 'ಹೆಚ್ಚು ಓದಿ...',
+      title1: 'ತಲುಪುವುದು ಹೇಗೆ?',
+      text1: '⦾  ಬಸ್ಸಿನ ಮೂಲಕ:ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಾಕಷ್ಟು ಬಸ್ಸುಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸುತ್ತವೆ.ಈ ಎಲ್ಲಾ ಬಸ್ಸುಗಳಿಗೆ ಕುಲ್ಕುಂದದಲ್ಲಿ ನಿಲುಗಡೆಯಿದೆ. ಕುಲ್ಕುಂದ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿದು ಸರಿಸುಮಾರು 350 ಮೀಟರ್ ನಡೆದು ದೇವಸ್ಥಾನವನ್ನು ತಲುಪಬಹುದು.',
+      readMore1: 'ಹೆಚ್ಚು ಓದಿ...',
       title3: 'ದರ್ಶನ ಸಮಯ:',
       text31: '⦾ ಬೆಳಗ್ಗೆ 6 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆ ತನಕ ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆ ತನಕ',
       text32: 'ಬೆಳಗ್ಗೆ ಪೂಜೆ: 8 ಗಂಟೆಗೆ',
@@ -115,13 +125,13 @@ const Page = () => {
   const currentContent = content[lang];
 
   return (
-    <div className='container mx-auto'>
+    <div className='relative mx-auto'>
       {/* ImageSlider component */}
       <ImageSlider />
 
       {/* Loader */}
       {loader && <Loader />}
-      <div className='flex justify-center py-16 sm:py-12'>
+      <div className='hidden justify-center py-16 sm:py-12 sm:flex'>
       <button
           className="flex justify-center items-center bg-gradient-to-r text-xl font-bold from-orange-100 to-orange-500 p-4 rounded-full px-20 border-2 border-black hover:scale-110"
           onClick={scrollToFeaturedProducts}
@@ -161,6 +171,7 @@ const Page = () => {
             alt="register background image"
             width={800}
             height={800}
+            priority={true}
           />
         </div>
         <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-2'>
@@ -182,7 +193,7 @@ const Page = () => {
           <div className='relative w-full p-5'>
             <h3 className='text-2xl font-semibold mb-2 text-black-500'>{currentContent.title1}</h3>
             <p className='text-black-500'>{currentContent.text1}</p>
-            <Link href="/Pages/contactus">
+            <Link href="/Pages/aboutus">
               <p className='text-red-500 font-bold py-1 text-sm'>{currentContent.readMore1}</p>
             </Link>
           </div>
@@ -195,6 +206,7 @@ const Page = () => {
             alt="register background image"
             width={300}
             height={250}
+            priority={true}
           />
         </div>
       </div>
@@ -209,6 +221,7 @@ const Page = () => {
               alt="register background image"
               width={300}
               height={250}
+              priority={true}
             />
             <div className='absolute top-5 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title3}</h3>
@@ -230,6 +243,7 @@ const Page = () => {
               alt="register background image"
               width={300}
               height={250}
+              priority={true}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>  {currentContent.title2}</h3>

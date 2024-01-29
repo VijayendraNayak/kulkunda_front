@@ -1,13 +1,19 @@
 "use client";
+
+// Import necessary modules
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import Loader from "../../Components/Loader";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const GalleryPage = () => {
   const [mediaData, setMediaData] = useState([]);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [slideshowOpen, setSlideshowOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const slideshowRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,13 +39,23 @@ const GalleryPage = () => {
   }, []);
 
   const openSlideshow = (index) => {
+    setLoading(true)
     setSelectedImageIndex(index);
     setSlideshowOpen(true);
+    setLoading(false)
   };
 
   const closeSlideshow = () => {
     setSelectedImageIndex(null);
     setSlideshowOpen(false);
+  };
+
+  const handlePrevPage = () => {
+    setSelectedImageIndex((prev) => (prev - 1 + mediaData.length) % mediaData.length);
+  };
+
+  const handleNextPage = () => {
+    setSelectedImageIndex((prev) => (prev + 1) % mediaData.length);
   };
 
   return (
@@ -64,6 +80,7 @@ const GalleryPage = () => {
                 onClick={() => openSlideshow(index)}
                 width={500}
                 height={500}
+                priority={true}
               />
             ))}
           </div>
@@ -74,9 +91,9 @@ const GalleryPage = () => {
         selectedImageIndex !== null &&
         mediaData[selectedImageIndex]?.avatar && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-            <div className="relative">
+            <div className="relative slideshow-container">
               <button
-                className="absolute top-2 right-2 text-white text-xl"
+                className="absolute top-2 right-2 text-orange-200 text-xl"
                 onClick={closeSlideshow}
               >
                 Close
@@ -87,10 +104,19 @@ const GalleryPage = () => {
                   src={image}
                   alt={`Image ${selectedImageIndex + 1}-${imageIndex + 1}`}
                   className="mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full"
-                  width={250} // Set the width to 50% of the original size
-                  height={250} // Set the height to 50% of the original size
+                  width={250}
+                  height={250}
+                  priority={true}
                 />
               ))}
+              <div onClick={handlePrevPage} className='z-10 absolute  bottom-1/2 left-4 text-2xl  md:left-8 font-semibold cursor-pointer text-orange-200'>
+                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
+              </div>
+
+              {/* Right arrow */}
+              <div onClick={handleNextPage} className='z-10 absolute bottom-1/2 right-8 text-2xl  md:right-8 font-semibold cursor-pointer text-orange-200'>
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </div>
             </div>
           </div>
         )}

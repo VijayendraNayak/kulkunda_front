@@ -21,10 +21,10 @@ const AdminContactPage = () => {
       const isAdmin =
         userRole === "admin" && userRole !== null && userRole !== undefined;
       if (!isLoggedIn) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
       }
       if (!isAdmin) {
-        router.replace("/Pages/login");
+        router.push("/Pages/login");
         console.log("The user should be admin to access this page");
       }
       setLoader(false)
@@ -59,7 +59,7 @@ const AdminContactPage = () => {
       const data=await res.json()
       if (data.success===false){
         console.log(data.message)
-        router.replace("/Pages/login")
+        router.push("/Pages/login")
         setLoader(false)
         return
       }
@@ -78,7 +78,7 @@ const AdminContactPage = () => {
   });
 
   const handleclick = () => {
-    router.replace("/Pages/Admin/findcontact");
+    router.push("/Pages/Admin/findcontact");
   };
 
   const handleDelete = async (contactId) => {
