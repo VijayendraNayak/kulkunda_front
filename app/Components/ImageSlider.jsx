@@ -31,8 +31,8 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className='relative flex h-[600px] sm:h-[500px] w-full flex-col mt-12 sm:mt-26 sm:justify-center items-center'>
-      <div className='relative w-full h-[600px] sm:h-[500px] flex overflow-hidden'>
+    <div className='relative flex h-[400px] sm:h-[400px] w-full flex-col mt-12 sm:mt-26 sm:justify-center items-center'>
+      <div className='relative w-full h-[400px] sm:h-[400px] flex overflow-hidden'>
         <div className='relative w-full h-full'>
           <Image
             className='w-full h-full object-cover object-center'

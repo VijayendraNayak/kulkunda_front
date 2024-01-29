@@ -61,7 +61,7 @@ const page = () => {
           <div className="flex flex-wrap justify-center p-5">
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <Image
-                className="w-full h-64 md:h-80 object-cover rounded-3xl border-1 lg:hover:scale-105"
+                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
                 src={Temple6}
                 alt="image here"
               />
@@ -69,7 +69,7 @@ const page = () => {
             
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <Image
-                className="w-full h-80 md:h-96 object-cover rounded-3xl border-1 lg:hover:scale-105"
+                className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
                 src={Temple7}
                 alt="image here"
               />
@@ -77,7 +77,7 @@ const page = () => {
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <Image
-                className="w-full h-64 md:h-80 object-cover rounded-3xl border-1 lg:hover:scale-105"
+                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
                 src={Temple10}
                 alt="image here"
               />
@@ -108,17 +108,6 @@ const page = () => {
                 The construction of Lord Sri Subrahmanya Swamy's Champa Shasthi
                 Brahma Ratha commences after the Go Puja (cow worship).
               </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-2 md:h-60 rounded-3xl p-2">
-            <div className="h-full w-full p-1 rounded-full flex items-center justify-center">
-              <Image
-                className="rounded-lg border-1 lg:hover:scale-105"
-                src={Temple10}
-                alt="image here"
-                height={100}
-                width={500}
-              />
             </div>
           </div>
 
@@ -187,7 +176,6 @@ const page = () => {
                 By Bus: The nearest bus station is Mangalore.
               </span>
             </p>
-
           </div>
           <div className="w-full md:w-1/3 p-1 rounded-lg">
             <Image
@@ -223,7 +211,7 @@ const page = () => {
           <div className="flex flex-wrap justify-center p-5">
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <Image
-                className="w-full h-64 md:h-80 object-cover rounded-3xl border-1 lg:hover:scale-105"
+                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
                 src={Temple6}
                 alt="image here"
               />
@@ -231,7 +219,7 @@ const page = () => {
             
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <Image
-                className="w-full h-80 md:h-96 object-cover rounded-3xl border-1 lg:hover:scale-105"
+                className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
                 src={Temple7}
                 alt="image here"
               />
@@ -239,7 +227,7 @@ const page = () => {
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <Image
-                className="w-full h-64 md:h-80 object-cover rounded-3xl border-1 lg:hover:scale-105"
+                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
                 src={Temple10}
                 alt="image here"
               />
@@ -247,13 +235,13 @@ const page = () => {
           </div>
 
 
-          <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
-            {/* Information on the Left */}
-            <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-                ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
-              </span>
-              <p className="text-sm md:text-base lg:text-md text-center">
+        <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
+          {/* Information on the Left */}
+          <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
+            </span>
+            <p className="text-sm md:text-base lg:text-md text-center">
               ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ಸಮೀಪದ ಹಸಿರು ಸಿರಿಯ
               ಕುಮಾರ ಪರ್ವತದ ತಪ್ಪಲಿನ ಕುಮಾರಧಾರ ನದಿಯ ತಟದ ಪೌರಾಣಿಕ ಹಾಗೂ ಐತಿಹಾಸಿಕ
               ಹಿನ್ನಲೆ ಇರುವ ಕುಲ್ಕುಂದ ಬಸವನ ಮೂಲ ಎಂಬ ಸ್ಥಳವು ಅನೇಕ ವರ್ಷಗಳಿಂದ ಸಾವಿರಾರು
@@ -284,25 +272,21 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-2 md:h-60 rounded-3xl mt-10">
-            <div className="h-full w-full p-1 rounded-full flex items-center justify-center">
-              <Image
-                className="rounded-lg border-1 lg:hover:scale-105"
-                src={Temple10}
-                alt="image here"
-                height={100}
-                width={500}
-              />
-            </div>
-          </div>
-        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl ">
-          <div className="w-full md:w-full p-2 gap-2 flex flex-col lg:mt-10">
+
+        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
+          <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col lg:mt-10">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-            ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
+              ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
-            ಸುಮಾರು 800 ವರ್ಷಗಳ ಹಿಂದೆ ಕೆಳದಿ ರಾಜರಾದ ಶಿವಪ್ಪ ನಾಯಕ ಮತ್ತು ಸೂರಪ್ಪ ನಾಯಕ ರಾಜ್ಯವನ್ನು "ಕದಂಬಸಂಸ್ಥಾನ" ಅಥವಾ "ಕಡಬ" ಎಂದು ಆಳುತ್ತಿದ್ದರು. ಅವರು ಬಸವನ ಮೂಲದಲ್ಲಿ ಶಿವಲಿಂಗ ಕಂಡು ಆರಾಧನೆಗೆ ಪ್ರೇರಿತರಾಗಿ, ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶದ ನಂತರ ಅವರ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಬಸವೇಶ್ವರ ದೇವರ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಿದರು. ಇತಿಹಾಸದ ಕೊನೆಯಲ್ಲಿ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ನಾಶವಾದ ನಂತರ, ಸಾವಿರಾರು ಭಕ್ತರ ನಂಬಿಕೆಯಿಂದ ಅಷ್ಟಮಂಗಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರ ಪೂರ್ವಾರ್ಜಿತ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಲಾಯಿತು. ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ ಬಸವನ ಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾರಾಂಶ.
-
+              ಸುಮಾರು 800 ವರ್ಷಗಳ ಹಿಂದೆ ಕೆಳದಿ ರಾಜರಾದ ಶಿವಪ್ಪ ನಾಯಕ ಮತ್ತು ಸೂರಪ್ಪ ನಾಯಕ
+              ರಾಜ್ಯವನ್ನು "ಕದಂಬಸಂಸ್ಥಾನ" ಅಥವಾ "ಕಡಬ" ಎಂದು ಆಳುತ್ತಿದ್ದರು. ಅವರು ಬಸವನ
+              ಮೂಲದಲ್ಲಿ ಶಿವಲಿಂಗ ಕಂಡು ಆರಾಧನೆಗೆ ಪ್ರೇರಿತರಾಗಿ, ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶದ ನಂತರ
+              ಅವರ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಬಸವೇಶ್ವರ ದೇವರ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಿದರು. ಇತಿಹಾಸದ
+              ಕೊನೆಯಲ್ಲಿ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ನಾಶವಾದ ನಂತರ, ಸಾವಿರಾರು ಭಕ್ತರ
+              ನಂಬಿಕೆಯಿಂದ ಅಷ್ಟಮಂಗಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರ ಪೂರ್ವಾರ್ಜಿತ
+              ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಲಾಯಿತು. ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ ಬಸವನ
+              ಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾರಾಂಶ.
             </p>
           </div>
         </div>
@@ -333,24 +317,27 @@ const page = () => {
         <div className="flex flex-col md:flex-row gap-2 lg:mb-10 lg:mt-10 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-            ತಲುಪುವುದು ಹೇಗೆ?
+              ಹೇಗೆ ಹೋಗಬಹುದು?
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
               <span className="block">
-              ಬಸ್ಸಿನ ಮೂಲಕ: 
-              ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಾಕಷ್ಟು ಬಸ್ಸುಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸುತ್ತವೆ.ಈ ಎಲ್ಲಾ ಬಸ್ಸುಗಳಿಗೆ ಕುಲ್ಕುಂದದಲ್ಲಿ ನಿಲುಗಡೆಯಿದೆ. ಕುಲ್ಕುಂದ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿದು ಸರಿಸುಮಾರು 350 ಮೀಟರ್ ನಡೆದು ದೇವಸ್ಥಾನವನ್ನು ತಲುಪಬಹುದು.
+                ರೈಲು ಮಾರ್ಗದಲ್ಲಿ: ರೈಲುದಾರರಾಗಿ ಬರುವಾಗ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್‌ಗೆ ಹೋಗಲು
+                ಕಾರ್ವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ
+                ಹೊಂದಿಕೊಳ್ಳಬಹುದು. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ಸ್ಥಾನದಿಂದ ಕುಲ್ಕುಂಡ,
+                ಸುಬ್ರಹ್ಮಣ್ಯ ಗೆ ಕೆಳಗೆ ಹೋಗಲು ಕೆಎಸ್ಆರ್ಟಿಸಿ ಬಸ್ಸುಗಳು ಅಥವಾ ಆಟೊ
+                ರಿಕ್ಷಾಗಳು ನಿಮ್ಮನ್ನು ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯಗೆ ಕರೆಸಬಹುದು.
               </span>
               <span className="block">
-              ರೈಲು ಮಾರ್ಗ:
-ರೈಲಿನಲ್ಲಿ ಬಂದರೆ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ, ಕಾರವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಪ್ರಯಾಣಿಸಬಹುದು.. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣದಿಂದ ಕೆ.ಎಸ.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪು ಅಥವಾ ಆಟೋ ರಿಕ್ಷಾಗಳು ನೀವು ಕುಲ್ಕುಂದ,ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು..
+                ವಿಮಾನ ಮಾರ್ಗದಲ್ಲಿ: ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು ದೂರದ ಸರಸ್ವತೀ ಆಂತರಾಷ್ಟ್ರೀಯ
+                ವಿಮಾನ ನಿಲ್ದಾಣವೇ ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು. ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ,
+                ಮುಂಬಯಿ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಖಾಡಿ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನ ಸೇವೆಗಳು
+                ನಡೆಯುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ ನೀವು ಕುಲ್ಕುಂಡಕ್ಕೆ ರಸ್ತೆ ಅಥವಾ ರೈಲು
+                ಮಾರ್ಗದಿಂದ ಹೋಗಬಹುದು.
               </span>
               <span className="block">
-              ವಿಮಾನದ ಮೂಲಕ:
-ಕುಲ್ಕುಂದಕ್ಕೆ ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ, ಮುಂಬೈ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ದೇಶಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
-
+                ಬಸ್ ಮಾರ್ಗದಲ್ಲಿ: ಬಸ್ಸಿನ ಮೂಲಕ ಹೋಗಲು ಇಲ್ಲಿ ಬರೆಯಿರಿ
               </span>
             </p>
-
           </div>
           <div className="w-full md:w-1/3 p-1 rounded-lg">
             <Image
