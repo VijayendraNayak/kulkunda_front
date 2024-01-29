@@ -274,7 +274,7 @@ const page = () => {
           </div>
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col lg:mt-10">
+          <div className="w-full md:w-full p-2 gap-2 flex flex-col lg:mt-10">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
             </span>
