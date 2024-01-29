@@ -5,7 +5,7 @@ import Temple7 from "/app/assets/image/temple7.jpg";
 import Temple9 from "/app/assets/image/temple9.jpg";
 import Temple10 from "/app/assets/image/temple10.jpg";
 import Temple12 from "/app/assets/image/temple12.png";
-import Temple5 from "/app/assets/image/temple5.jpg";
+import Temple5 from "/app/assets/image/temple3.jpg";
 import { useState } from "react";
 import Loader from "../../Components/Loader";
 import dynamic from "next/dynamic";
@@ -118,7 +118,6 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple6}
               alt="image here"
-              priority={true}
             />
           </div>
 
@@ -127,7 +126,6 @@ const page = () => {
               className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple7}
               alt="image here"
-              priority={true}
             />
           </div>
 
@@ -136,39 +134,38 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple10}
               alt="image here"
-              priority={true}
             />
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
-          {/* Information on the Left */}
-          <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              Restoration and Worship
-            </span>
-            <p className="text-sm md:text-base lg:text-lg text-center">
-              A dedicated theologian played a crucial role in renovating and
-              re-establishing the temple through Ashtamangala rituals.
-            </p>
+          <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
+            {/* Information on the Left */}
+            <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
+              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+                Restoration and Worship
+              </span>
+              <p className="text-sm md:text-base lg:text-lg text-center">
+                A dedicated theologian played a crucial role in renovating and
+                re-establishing the temple through Ashtamangala rituals.
+              </p>
+            </div>
+            
+            {/* Information on the Right */}
+            <div className="w-full md:w-1/2 p-5 flex flex-col">
+              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+                Cultural Traditions
+              </span>
+              <p className="text-sm md:text-base lg:text-lg text-center">
+                Even today, during Kartika masa, Basavanamoola observes cow pooja
+                and gogras (feeding cows) as part of the cattle fair tradition.
+                The construction of Lord Sri Subrahmanya Swamy's Champa Shasthi
+                Brahma Ratha commences after the Go Puja (cow worship).
+              </p>
+            </div>
           </div>
-
-          {/* Information on the Right */}
-          <div className="w-full md:w-1/2 p-5 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              Cultural Traditions
-            </span>
-            <p className="text-sm md:text-base lg:text-lg text-center">
-              Even today, during Kartika masa, Basavanamoola observes cow pooja
-              and gogras (feeding cows) as part of the cattle fair tradition.
-              The construction of Lord Sri Subrahmanya Swamy's Champa Shasthi
-              Brahma Ratha commences after the Go Puja (cow worship).
-            </p>
-          </div>
-        </div>
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col">
+          <div className="w-full md:w-full p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               Historical Figures and Influence
             </span>
@@ -188,15 +185,14 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
-              priority={true}
             />
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full md:w-1/2 p-1 rounded-lg">
+        <div className="flex flex-col md:flex-row md:h-60 p-2">
+          <div className="w-full md:w-1/2 rounded-lg">
             <Image
-              className="w-full h-full object-cover rounded-xl border-1 hover:scale-105"
+              className="w-full h-full object-cover lg:rounded-tr-full lg:rounded-br-full rounded-xl border-1 lg:hover:scale-105"
               src={Temple5}
               alt="image here"
               height={800}
@@ -209,17 +205,18 @@ const page = () => {
               Spiritual Significance
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              It's believed that visiting Lord Kukke Subrahmanya and then
-              seeking darshan of Lord Sri Basaveshwara (Nandishwara) while
-              offering prayers brings complete fulfillment for devotees' wishes.
-              Devotees firmly believe that Lord Basaveshwara resides at
-              Basavanmoola and grants the sincere desires of his devotees.
+              It's believed that visiting Lord Kukke Subrahmanya and then seeking
+              darshan of Lord Sri Basaveshwara (Nandishwara) while offering prayers
+              brings complete fulfillment for devotees' wishes. Devotees firmly believe
+              that Lord Basaveshwara resides at Basavanmoola and grants the sincere
+              desires of his devotees.
             </p>
           </div>
         </div>
 
+
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full h-full md:w-1/2 p-2 gap-2 flex flex-col">
+          <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               How to Reach..
             </span>
@@ -242,9 +239,9 @@ const page = () => {
               </span>
             </p>
           </div>
-          <div className="w-full md:w-1/2 p-1 rounded-lg">
+          <div className="w-full md:w-1/3 p-1 rounded-lg">
             <Image
-              className="w-full h-full object-cover rounded-lg border-1 hover:scale-105"
+              className="w-full h-full object-cover lg:rounded-tl-full lg:rounded-bl-full rounded-3xl border-1 lg:hover:scale-105 mt-10"
               src={Temple12}
               alt="image here"
               height={800}
@@ -326,7 +323,6 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple6}
               alt="image here"
-              priority={true}
             />
           </div>
 
@@ -335,7 +331,6 @@ const page = () => {
               className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple7}
               alt="image here"
-              priority={true}
             />
           </div>
 
@@ -344,7 +339,6 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple10}
               alt="image here"
-              priority={true}
             />
           </div>
         </div>
@@ -363,32 +357,32 @@ const page = () => {
               ಮಾರಾಟವಾಗುತ್ತಿದ್ದ ಪ್ರದೇಶವಾಗಿತ್ತು. ಇಂತಹ ಐತಿಹಾಸಿಕ ಸ್ಥಳವಾದ ಕುಲ್ಕುಂದ
               ಬಸವನ ಮೂಲದಲ್ಲಿ ಕಾಡಿನ ಮಧ್ಯದಲ್ಲಿ ಬಸವನ ಹಣೆಯಲ್ಲಿ ಶಿವಲಿಂಗ ವಿರುವ ಸುಂದರ
               ಬಸವೇಶ್ವರ ದೇವಾಲಯವಿದೆ.
-            </p>
+              </p>
+            </div>
+            
+            {/* Information on the Right */}
+            <div className="w-full md:w-1/2 p-5 flex flex-col">
+              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+                ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
+              </span>
+              <p className="relative text-sm md:text-base lg:text-md text-wrap text-center">
+                ಒಂದು ಕಾಲದಲ್ಲಿ ರಾಜ್ಯದಾದ್ಯಂತ ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸಿ ಕುಕ್ಕೆ ಕ್ಷೇತ್ರ ಹಾಗೂ
+                ಬಸವೇಶ್ವರ ದೇವರ ಕೃಪಾಶಯದಲ್ಲಿ ಕೃಪಾಶಯದಲ್ಲಿ ಲಕ್ಷಗಟ್ಟಲೆ ಜಾನುವಾರುಗಳನ್ನು
+                ತಂದು ವ್ಯಾಪಾರ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳುತ್ತಿದ್ದ ಸ್ಥಳವಿದು. ಕಾರ್ತಿಕ
+                ಹುಣ್ಣಿಮೆಯಿಂದ ಮೊದಲಗೊಂಡು 15 ದಿವಸಗಳ ಕಾಲ ನಡೆಯುತ್ತಿದ್ದ ವೈಭವದ ಚಾರಿತ್ರಿಕ
+                ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ ಕಾರಣಗಳಿಂದ
+                ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು. ಇವತ್ತಿಗೂ
+                ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
+                ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ
+                ಹಾಗೂ ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ
+                ಕ್ಷೇತ್ರದಲ್ಲಿ ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ
+                ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
+              </p>
+            </div>
           </div>
-
-          {/* Information on the Right */}
-          <div className="w-full md:w-1/2 p-5 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
-            </span>
-            <p className="relative text-sm md:text-base lg:text-md text-wrap text-center">
-              ಒಂದು ಕಾಲದಲ್ಲಿ ರಾಜ್ಯದಾದ್ಯಂತ ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸಿ ಕುಕ್ಕೆ ಕ್ಷೇತ್ರ ಹಾಗೂ
-              ಬಸವೇಶ್ವರ ದೇವರ ಕೃಪಾಶಯದಲ್ಲಿ ಕೃಪಾಶಯದಲ್ಲಿ ಲಕ್ಷಗಟ್ಟಲೆ ಜಾನುವಾರುಗಳನ್ನು
-              ತಂದು ವ್ಯಾಪಾರ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳುತ್ತಿದ್ದ ಸ್ಥಳವಿದು. ಕಾರ್ತಿಕ
-              ಹುಣ್ಣಿಮೆಯಿಂದ ಮೊದಲಗೊಂಡು 15 ದಿವಸಗಳ ಕಾಲ ನಡೆಯುತ್ತಿದ್ದ ವೈಭವದ ಚಾರಿತ್ರಿಕ
-              ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ ಕಾರಣಗಳಿಂದ
-              ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು. ಇವತ್ತಿಗೂ
-              ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
-              ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ
-              ಹಾಗೂ ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ
-              ಕ್ಷೇತ್ರದಲ್ಲಿ ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ
-              ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
-            </p>
-          </div>
-        </div>
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col lg:mt-10">
+          <div className="w-full md:w-full p-2 gap-2 flex flex-col lg:mt-10">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
               ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
             </span>
@@ -410,7 +404,6 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
-              priority={true}
             />
           </div>
         </div>
@@ -418,7 +411,7 @@ const page = () => {
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/2 p-1 rounded-lg">
             <Image
-              className="w-full h-full object-cover rounded-xl border-1 hover:scale-105 mt-10"
+              className="w-full h-full object-cover rounded-3xl lg:rounded-tr-full lg:rounded-br-full border-1 lg:hover:scale-105 mt-10"
               src={Temple5}
               alt="image here"
               height={800}
@@ -440,42 +433,37 @@ const page = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-2 lg:mb-10 lg:mt-10 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full h-full md:w-1/2 p-2 gap-2 flex flex-col">
+          <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              ತಲುಪುವುದು ಹೇಗೆ?
+              ಹೇಗೆ ಹೋಗಬಹುದು?
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
               <span className="block">
-                ಬಸ್ಸಿನ ಮೂಲಕ: ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು
-                ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಾಕಷ್ಟು ಬಸ್ಸುಗಳು ಕುಕ್ಕೆ
-                ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸುತ್ತವೆ.ಈ ಎಲ್ಲಾ ಬಸ್ಸುಗಳಿಗೆ ಕುಲ್ಕುಂದದಲ್ಲಿ
-                ನಿಲುಗಡೆಯಿದೆ. ಕುಲ್ಕುಂದ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿದು ಸರಿಸುಮಾರು 350 ಮೀಟರ್
-                ನಡೆದು ದೇವಸ್ಥಾನವನ್ನು ತಲುಪಬಹುದು.
+                ರೈಲು ಮಾರ್ಗದಲ್ಲಿ: ರೈಲುದಾರರಾಗಿ ಬರುವಾಗ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್‌ಗೆ ಹೋಗಲು
+                ಕಾರ್ವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ
+                ಹೊಂದಿಕೊಳ್ಳಬಹುದು. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ಸ್ಥಾನದಿಂದ ಕುಲ್ಕುಂಡ,
+                ಸುಬ್ರಹ್ಮಣ್ಯ ಗೆ ಕೆಳಗೆ ಹೋಗಲು ಕೆಎಸ್ಆರ್ಟಿಸಿ ಬಸ್ಸುಗಳು ಅಥವಾ ಆಟೊ
+                ರಿಕ್ಷಾಗಳು ನಿಮ್ಮನ್ನು ಕುಲ್ಕುಂಡ, ಸುಬ್ರಹ್ಮಣ್ಯಗೆ ಕರೆಸಬಹುದು.
               </span>
               <span className="block">
-                ರೈಲು ಮಾರ್ಗ: ರೈಲಿನಲ್ಲಿ ಬಂದರೆ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ
-                ಪ್ರಯಾಣಿಸಿ, ಕಾರವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು
-                ವಿಜಯಪುರದಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಪ್ರಯಾಣಿಸಬಹುದು.. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್
-                ರೈಲು ನಿಲ್ದಾಣದಿಂದ ಕೆ.ಎಸ.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪು ಅಥವಾ ಆಟೋ
-                ರಿಕ್ಷಾಗಳು ನೀವು ಕುಲ್ಕುಂದ,ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು..
+                ವಿಮಾನ ಮಾರ್ಗದಲ್ಲಿ: ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು ದೂರದ ಸರಸ್ವತೀ ಆಂತರಾಷ್ಟ್ರೀಯ
+                ವಿಮಾನ ನಿಲ್ದಾಣವೇ ಹತ್ತೈದನೇ ಕಿಲೋಮೀಟರು. ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ,
+                ಮುಂಬಯಿ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಖಾಡಿ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನ ಸೇವೆಗಳು
+                ನಡೆಯುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ ನೀವು ಕುಲ್ಕುಂಡಕ್ಕೆ ರಸ್ತೆ ಅಥವಾ ರೈಲು
+                ಮಾರ್ಗದಿಂದ ಹೋಗಬಹುದು.
               </span>
               <span className="block">
-                ವಿಮಾನದ ಮೂಲಕ: ಕುಲ್ಕುಂದಕ್ಕೆ ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ
-                ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. ಬೆಂಗಳೂರು,
-                ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ, ಮುಂಬೈ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ದೇಶಗಳಿಂದ
-                ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ
-                ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
+                ಬಸ್ ಮಾರ್ಗದಲ್ಲಿ: ಬಸ್ಸಿನ ಮೂಲಕ ಹೋಗಲು ಇಲ್ಲಿ ಬರೆಯಿರಿ
               </span>
             </p>
           </div>
-          <div className="w-full md:w-1/2 p-1 rounded-lg">
+          <div className="w-full md:w-1/3 p-1 rounded-lg">
             <Image
-              className="w-full h-full object-cover rounded-lg border-1 hover:scale-105"
+              className="w-full h-full object-cover rounded-3xl lg:rounded-tl-full lg:rounded-bl-full border-1 lg:hover:scale-105 mt-10"
               src={Temple12}
               alt="image here"
               height={800}
               width={700}
-              priority={true}
             />
           </div>
         </div>
