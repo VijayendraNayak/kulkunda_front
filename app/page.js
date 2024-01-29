@@ -192,7 +192,7 @@ const Page = () => {
           <div className='relative w-full p-5'>
             <h3 className='text-2xl font-semibold mb-2 text-black-500'>{currentContent.title1}</h3>
             <p className='text-black-500'>{currentContent.text1}</p>
-            <Link href="/Pages/contactus">
+            <Link href="/Pages/aboutus">
               <p className='text-red-500 font-bold py-1 text-sm'>{currentContent.readMore1}</p>
             </Link>
           </div>

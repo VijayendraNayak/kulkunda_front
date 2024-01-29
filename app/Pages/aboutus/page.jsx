@@ -45,71 +45,124 @@ const page = () => {
           lang === "english" ? "flex" : "hidden"
         }`}
       >
-      {/* Section 1 */}
-          <div className="w-full p-5 gap-2 flex flex-col">
+        {/* Section 1 */}
+        <div className="w-full p-5 gap-2 flex flex-col">
+          <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            Historical Significance
+          </span>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            A place called 'Basavanamoola' of Kulkunda which has a legendary and
+            historical background on the bank of Kumaradhara River at the
+            foothills of Kumara Parvata, near the famous Kukke Sri Subramanya
+            temple was a place of devotion for thousands of people for many
+            years and it was an area where cattle were traded in the form of a
+            cattle fair. One such historical place, Kulkunda Basavanamoola, has
+            a beautiful Basaveshwara temple in the middle of the forest with a
+            'Shivalinga' on Basava's forehead.
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            As mentioned in 'Skanda Purana', when Lord Sri Subrahmanya Swami
+            killed the demons like Tarakasura with archery, Lord Sri Subrahmanya
+            Swami did penance on Lord Shiva when he saw the demons come back to
+            life and fight. According to the Puranas, Sri Mahadev himself
+            appeared in the form of Nandi and taught Lord Sri Subrahmanya Swami
+            the art of weaponry first.
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            Once upon a time, it attracted devotees from all over the state and
+            who brought lakhs of cattle near Kukke Kshetra and Lord
+            Basaveshwara, for trade exchange.
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            The 'Cattle Fair' with its glorious historical background which was
+            held for 15 days starting from the full moon of Kartika masa (Around
+            November). Over time due to various reasons the cattle fair became
+            limited to worship only. Even today, as part of the cattle fair on
+            the day of the full moon of Kartika masa (Around November) at
+            Basavanamoola, on behalf of the Kukke Sri Subramanya temple, cow
+            pooja and gogras (food to cow) are offered as a tradition. At
+            Basavanamoola, the construction of the Brahma Ratha of Lord Sri
+            Subrahmanya Swamy's Champa Shasthi begins after the Go Puja
+            (worshiping of cow).
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            About 800 years ago, it is known in history that the Keladi kings
+            Shivappa Nayaka and Surappa Nayaka were ruling the 'Kadambasamsthan'
+            (Kadaba). It is also known in Ashtamangala that the royal family
+            knew the origin and history of Sri Basaveshwara and the history of
+            Kulkunda and got was inspired by seeing Basava with 'Shivalinga' on
+            his forehead. In the years that followed, the entire town of Kukke
+            was destroyed by smallpox epidemic and it continued to be so during
+            the later British rule. Elderly devotees of this region, who saw
+            Lord Basaveshwara with Shivlinga in the jungle in the recent past
+            year, made the statue to sit at the foot of a tree and started to
+            worship.
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            In the course of time, a good theologian completely guided in
+            renovating and re-instating the temple through Ashtamangala.
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            It is believed that, if you get darshan of Lord Kukke Subrahmanya
+            and then get darshan of Lord Sri Basaveshwara (Nandishwara) and
+            offer prayers, you will get full results.
+          </p>
+          <p className="text-sm md:text-base lg:text-lg text-center">
+            It is believed by thousands of devotees that Lord Basaveshwara
+            resides at Basavanmoola and grants the wishes of the devotees.
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center p-5">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <Image
+              className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
+              src={Temple6}
+              alt="image here"
+            />
+          </div>
+
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <Image
+              className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
+              src={Temple7}
+              alt="image here"
+            />
+          </div>
+
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <Image
+              className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
+              src={Temple10}
+              alt="image here"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
+          {/* Information on the Left */}
+          <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              Historical Significance
+              Restoration and Worship
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              According to 'Skanda Purana,' it is believed that Lord Shri
-              Subrahmanya Swami performed penance on Lord Shiva at this site.
-              The area witnessed a bustling 15-day cattle fair during Kartika
-              masa (around November), gradually evolving into a place primarily
-              dedicated to worship.
+              A dedicated theologian played a crucial role in renovating and
+              re-establishing the temple through Ashtamangala rituals.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center p-5">
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
-              <Image
-                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
-                src={Temple6}
-                alt="image here"
-              />
-            </div>
-            
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
-              <Image
-                className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
-                src={Temple7}
-                alt="image here"
-              />
-            </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
-              <Image
-                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
-                src={Temple10}
-                alt="image here"
-              />
-            </div>
+          {/* Information on the Right */}
+          <div className="w-full md:w-1/2 p-5 flex flex-col">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              Cultural Traditions
+            </span>
+            <p className="text-sm md:text-base lg:text-lg text-center">
+              Even today, during Kartika masa, Basavanamoola observes cow pooja
+              and gogras (feeding cows) as part of the cattle fair tradition.
+              The construction of Lord Sri Subrahmanya Swamy's Champa Shasthi
+              Brahma Ratha commences after the Go Puja (cow worship).
+            </p>
           </div>
-
-
-          <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
-            {/* Information on the Left */}
-            <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-                Restoration and Worship
-              </span>
-              <p className="text-sm md:text-base lg:text-lg text-center">
-                A dedicated theologian played a crucial role in renovating and
-                re-establishing the temple through Ashtamangala rituals.
-              </p>
-            </div>
-            
-            {/* Information on the Right */}
-            <div className="w-full md:w-1/2 p-5 flex flex-col">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-                Cultural Traditions
-              </span>
-              <p className="text-sm md:text-base lg:text-lg text-center">
-                Even today, during Kartika masa, Basavanamoola observes cow pooja
-                and gogras (feeding cows) as part of the cattle fair tradition.
-                The construction of Lord Sri Subrahmanya Swamy's Champa Shasthi
-                Brahma Ratha commences after the Go Puja (cow worship).
-              </p>
-            </div>
-          </div>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col">
@@ -183,7 +236,6 @@ const page = () => {
                 By Bus: The nearest bus station is Mangalore.
               </span>
             </p>
-
           </div>
           <div className="w-full md:w-1/2 p-1 rounded-lg">
             <Image
@@ -203,53 +255,98 @@ const page = () => {
           lang === "kannada" ? "flex" : "hidden"
         }`}
       >
-          <div className="w-full p-5 gap-2 flex flex-col">
+        <div className="w-full p-5 gap-2 flex flex-col">
+          <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            ಪೌರಾಣಿಕ ಹಿನ್ನೆಲೆ
+          </span>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ಸಮೀಪದ ಹಸಿರು ಸಿರಿಯ
+            ಕುಮಾರ ಪರ್ವತದ ತಪ್ಪಲಿನ ಕುಮಾರಧಾರ ನದಿಯ ತಟದ ಪೌರಾಣಿಕ ಹಾಗೂ ಐತಿಹಾಸಿಕ ಹಿನ್ನಲೆ
+            ಇರುವ ಕುಲ್ಕುಂದ ಬಸವನ ಮೂಲ ಎಂಬ ಸ್ಥಳವು ಅನೇಕ ವರ್ಷಗಳಿಂದ ಸಾವಿರಾರು ಜನರ
+            ಶ್ರದ್ಧಾ ಕೇಂದ್ರವಾಗಿ ಜಾನುವಾರು ಜಾತ್ರೆಯ ರೂಪದಲ್ಲಿ ವಿನಿಮಯ ಮಾರಾಟವಾಗುತ್ತಿದ್ದ
+            ಪ್ರದೇಶವಾಗಿತ್ತು. ಇಂತಹ ಐತಿಹಾಸಿಕ ಸ್ಥಳವಾದ ಕುಲ್ಕುಂದ ಬಸವನ ಮೂಲದಲ್ಲಿ ಕಾಡಿನ
+            ಮಧ್ಯದಲ್ಲಿ ಬಸವನ ಹಣೆಯಲ್ಲಿ ಶಿವಲಿಂಗ ವಿರುವ ಸುಂದರ ಬಸವೇಶ್ವರ ದೇವಾಲಯವಿದೆ.
+          </p>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇ ಮೊದಲಾದ
+            ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ, ಮರುಜೀವ ಪಡೆದು ಯುದ್ಧಕ್ಕೆ
+            ಬರುತ್ತಿದ್ದುದನ್ನು ಕಂಡು ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ಶಿವನ ಕುರಿತು ತಪಸ್ಸು
+            ಮಾಡಿದ ಅವಾಗ, ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದೀ ಸ್ವರೂಪದಲ್ಲಿ ಪ್ರತ್ಯಕ್ಷನಾಗಿ
+            ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಗೆ ನಂದಿ ವಿದ್ಯೆಯೇ ಮೊದಲಾಗಿ ಶಸ್ತ್ರ ವಿದ್ಯೆಯನ್ನು
+            ಬೋಧಿಸಿದರು ಎಂದು ಪುರಾಣದಲ್ಲಿ ತಿಳಿಯಪಡುತ್ತದೆ.
+          </p>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಒಂದು ಕಾಲದಲ್ಲಿ ರಾಜ್ಯದಾದ್ಯಂತ ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸಿ ಕುಕ್ಕೆ ಕ್ಷೇತ್ರ ಹಾಗೂ
+            ಬಸವೇಶ್ವರ ದೇವರ ಕೃಪಾಶಯದಲ್ಲಿ ಕೃಪಾಶಯದಲ್ಲಿ ಲಕ್ಷಗಟ್ಟಲೆ ಜಾನುವಾರುಗಳನ್ನು ತಂದು
+            ವ್ಯಾಪಾರ ವಿನಿಮಯ #విదు. ಮಾಡಿಕೊಳ್ಳುತ್ತಿದ್ದ ಸ್ಥಳವಿದು.
+          </p>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯಿಂದ ಮೊದಲಗೊಂಡು 15 ದಿವಸಗಳ ಕಾಲ ನಡೆಯುತ್ತಿದ್ದ ವೈಭವದ
+            ಚಾರಿತ್ರಿಕ ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ
+            ಕಾರಣಗಳಿಂದ ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು.
+            ಇವತ್ತಿಗೂ ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
+            ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ ಹಾಗೂ
+            ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ ಕ್ಷೇತ್ರದಲ್ಲಿ
+            ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ
+            ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
+          </p>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಸುಮಾರು 800 ವರ್ಷಗಳ ಹಿಂದೆ ಕೆಳದಿ ರಾಜರಾದ ಶಿವಪ್ಪ ನಾಯಕ, ಸೂರಪ್ಪ ನಾಯಕ ಎಂಬ
+            ರಾಜರುಗಳು "ಕದಂಬಸಂಸ್ಥಾನ" (ಕಡಬ)ವನ್ನು ಆಳುತ್ತಿದ್ದರು ಎಂಬುದು ಇತಿಹಾಸದಲ್ಲಿ
+            ತಿಳಿದು ಬರುತ್ತದೆ. ಅವರುಗಳು ಶ್ರೀ ಬಸವನ ಮೂಲ ಹಾಗೂ ಕುಲ್ಕುಂದ ಇತಿಹಾಸವನ್ನು
+            ತಿಳಿದು ಹಣೆಯಲ್ಲಿ ಶಿವಲಿಂಗವಿರುವ ಬಸವನನ್ನು ಕಂಡು ಪ್ರೇರೇಪಿತರಾಗಿ ಅವರ
+            ಕಾಲಘಟ್ಟದಲ್ಲಿಯೇ ಪ್ರತಿಷ್ಠಾಪಿಸಿದ್ದರು ಎಂಬುದು ಕೂಡ ಅಷ್ಟಮಂಗಲ ಚಿಂತನೆಯಲ್ಲಿ
+            ತಿಳಿದು ಬಂದಿರುತ್ತದೆ. ಆನಂತರದ ವರ್ಷಗಳಲ್ಲಿ ಸಿಡುಬು ರೋಗ ಮಹಾಮಾರಿಯಿಂದ ಸಂಪೂರ್ಣ
+            ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶ ಹೊಂದಿತು. ನಂತರ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ಹಾಗೆಯೇ
+            ಮುಂದುವರೆಯಿತು. ಇತ್ತೀಚಿನ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಶಿವಲಿಂಗವಿರುವ ಶ್ರೀ ಬಸವೇಶ್ವರರನ್ನು
+            ಕಾಡಿನ ಮದ್ಯದಲ್ಲಿ ಇದ್ದುದನ್ನು ಕಂಡ ಈ ಪ್ರದೇಶದ ಹಿರಿಯ ಭಕ್ತ ಜನರು ಒಂದು ಮರದ
+            ಬುಡದಲ್ಲಿ ಕೂರಿಸಿ ಭಕ್ತಿಯ ಆರಾಧನೆ ಮಾಡುತ್ತಿದ್ದು ಈಗಲೂ ಹಿರಿಯರು
+            ನೆನಪಿಸುತ್ತಾರೆ ಕಾಲಕ್ರಮೇಣ ಉತ್ತಮ ದೈವಜ್ಞ ಮುಖೇನ ಅಷ್ಟಮಂಗಲ ಪ್ರಶ್ನೆಚಿಂತನೆ
+            ನಡೆಸಿ ಸಂಪೂರ್ಣ ಜೀರ್ಣೋದ್ಧಾರ ಮಾಡಿ ಪುನಃ ಪ್ರತಿಷ್ಠಾಪಿಸಲಾಯಿತು
+          </p>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯ ದೇವರ ದರ್ಶನ ಪಡೆದು ನಂತರ ಶ್ರೀ ಬಸವೇಶ್ವರ
+            (ನಂದೀಶ್ವರ)ದೇವರ ದರ್ಶನ ಪಡೆದು ಪ್ರಾರ್ಥನೆ ಸಲ್ಲಿಸಿದಲ್ಲಿ ಪೂರ್ಣ ಫಲ
+            ಲಭಿಸುವುದು.
+          </p>
+          <p className="text-sm md:text-base lg:text-md text-center">
+            ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ ಬಸವನ ಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ
+            ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾವಿರಾರು ಭಕ್ತರ ನಂಬಿಕೆಯಾಗಿದೆ.
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center p-5">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <Image
+              className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
+              src={Temple6}
+              alt="image here"
+            />
+          </div>
+
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <Image
+              className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
+              src={Temple7}
+              alt="image here"
+            />
+          </div>
+
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <Image
+              className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
+              src={Temple10}
+              alt="image here"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
+          {/* Information on the Left */}
+          <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              ಪೌರಾಣಿಕ ಹಿನ್ನೆಲೆ
+              ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
-              ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇ
-              ಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ, ಮರುಜೀವ ಪಡೆದು
-              ಯುದ್ಧಕ್ಕೆ ಬರುತ್ತಿದ್ದುದನ್ನು ಕಂಡು ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ಶಿವನ
-              ಕುರಿತು ತಪಸ್ಸು ಮಾಡಿದ ಅವಾಗ, ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದೀ ಸ್ವರೂಪದಲ್ಲಿ
-              ಪ್ರತ್ಯಕ್ಷನಾಗಿ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಗೆ ನಂದಿ ವಿದ್ಯೆಯೇ ಮೊದಲಾಗಿ
-              ಶಸ್ತ್ರ ವಿದ್ಯೆಯನ್ನು ಬೋಧಿಸಿದರು ಎಂದು ಪುರಾಣದಲ್ಲಿ ತಿಳಿಯಪಡುತ್ತದೆ.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center p-5">
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
-              <Image
-                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
-                src={Temple6}
-                alt="image here"
-              />
-            </div>
-            
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
-              <Image
-                className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
-                src={Temple7}
-                alt="image here"
-              />
-            </div>
-
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
-              <Image
-                className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
-                src={Temple10}
-                alt="image here"
-              />
-            </div>
-          </div>
-
-
-          <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
-            {/* Information on the Left */}
-            <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-                ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
-              </span>
-              <p className="text-sm md:text-base lg:text-md text-center">
               ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ಸಮೀಪದ ಹಸಿರು ಸಿರಿಯ
               ಕುಮಾರ ಪರ್ವತದ ತಪ್ಪಲಿನ ಕುಮಾರಧಾರ ನದಿಯ ತಟದ ಪೌರಾಣಿಕ ಹಾಗೂ ಐತಿಹಾಸಿಕ
               ಹಿನ್ನಲೆ ಇರುವ ಕುಲ್ಕುಂದ ಬಸವನ ಮೂಲ ಎಂಬ ಸ್ಥಳವು ಅನೇಕ ವರ್ಷಗಳಿಂದ ಸಾವಿರಾರು
@@ -257,38 +354,44 @@ const page = () => {
               ಮಾರಾಟವಾಗುತ್ತಿದ್ದ ಪ್ರದೇಶವಾಗಿತ್ತು. ಇಂತಹ ಐತಿಹಾಸಿಕ ಸ್ಥಳವಾದ ಕುಲ್ಕುಂದ
               ಬಸವನ ಮೂಲದಲ್ಲಿ ಕಾಡಿನ ಮಧ್ಯದಲ್ಲಿ ಬಸವನ ಹಣೆಯಲ್ಲಿ ಶಿವಲಿಂಗ ವಿರುವ ಸುಂದರ
               ಬಸವೇಶ್ವರ ದೇವಾಲಯವಿದೆ.
-              </p>
-            </div>
-            
-            {/* Information on the Right */}
-            <div className="w-full md:w-1/2 p-5 flex flex-col">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-                ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
-              </span>
-              <p className="relative text-sm md:text-base lg:text-md text-wrap text-center">
-                ಒಂದು ಕಾಲದಲ್ಲಿ ರಾಜ್ಯದಾದ್ಯಂತ ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸಿ ಕುಕ್ಕೆ ಕ್ಷೇತ್ರ ಹಾಗೂ
-                ಬಸವೇಶ್ವರ ದೇವರ ಕೃಪಾಶಯದಲ್ಲಿ ಕೃಪಾಶಯದಲ್ಲಿ ಲಕ್ಷಗಟ್ಟಲೆ ಜಾನುವಾರುಗಳನ್ನು
-                ತಂದು ವ್ಯಾಪಾರ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳುತ್ತಿದ್ದ ಸ್ಥಳವಿದು. ಕಾರ್ತಿಕ
-                ಹುಣ್ಣಿಮೆಯಿಂದ ಮೊದಲಗೊಂಡು 15 ದಿವಸಗಳ ಕಾಲ ನಡೆಯುತ್ತಿದ್ದ ವೈಭವದ ಚಾರಿತ್ರಿಕ
-                ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ ಕಾರಣಗಳಿಂದ
-                ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು. ಇವತ್ತಿಗೂ
-                ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
-                ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ
-                ಹಾಗೂ ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ
-                ಕ್ಷೇತ್ರದಲ್ಲಿ ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ
-                ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
-              </p>
-            </div>
+            </p>
           </div>
+
+          {/* Information on the Right */}
+          <div className="w-full md:w-1/2 p-5 flex flex-col">
+            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
+            </span>
+            <p className="relative text-sm md:text-base lg:text-md text-wrap text-center">
+              ಒಂದು ಕಾಲದಲ್ಲಿ ರಾಜ್ಯದಾದ್ಯಂತ ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸಿ ಕುಕ್ಕೆ ಕ್ಷೇತ್ರ ಹಾಗೂ
+              ಬಸವೇಶ್ವರ ದೇವರ ಕೃಪಾಶಯದಲ್ಲಿ ಕೃಪಾಶಯದಲ್ಲಿ ಲಕ್ಷಗಟ್ಟಲೆ ಜಾನುವಾರುಗಳನ್ನು
+              ತಂದು ವ್ಯಾಪಾರ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳುತ್ತಿದ್ದ ಸ್ಥಳವಿದು. ಕಾರ್ತಿಕ
+              ಹುಣ್ಣಿಮೆಯಿಂದ ಮೊದಲಗೊಂಡು 15 ದಿವಸಗಳ ಕಾಲ ನಡೆಯುತ್ತಿದ್ದ ವೈಭವದ ಚಾರಿತ್ರಿಕ
+              ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ ಕಾರಣಗಳಿಂದ
+              ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು. ಇವತ್ತಿಗೂ
+              ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
+              ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ
+              ಹಾಗೂ ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ
+              ಕ್ಷೇತ್ರದಲ್ಲಿ ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ
+              ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
+            </p>
+          </div>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col lg:mt-10">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-            ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
+              ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
-            ಸುಮಾರು 800 ವರ್ಷಗಳ ಹಿಂದೆ ಕೆಳದಿ ರಾಜರಾದ ಶಿವಪ್ಪ ನಾಯಕ ಮತ್ತು ಸೂರಪ್ಪ ನಾಯಕ ರಾಜ್ಯವನ್ನು "ಕದಂಬಸಂಸ್ಥಾನ" ಅಥವಾ "ಕಡಬ" ಎಂದು ಆಳುತ್ತಿದ್ದರು. ಅವರು ಬಸವನ ಮೂಲದಲ್ಲಿ ಶಿವಲಿಂಗ ಕಂಡು ಆರಾಧನೆಗೆ ಪ್ರೇರಿತರಾಗಿ, ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶದ ನಂತರ ಅವರ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಬಸವೇಶ್ವರ ದೇವರ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಿದರು. ಇತಿಹಾಸದ ಕೊನೆಯಲ್ಲಿ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ನಾಶವಾದ ನಂತರ, ಸಾವಿರಾರು ಭಕ್ತರ ನಂಬಿಕೆಯಿಂದ ಅಷ್ಟಮಂಗಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರ ಪೂರ್ವಾರ್ಜಿತ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಲಾಯಿತು. ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ ಬಸವನ ಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾರಾಂಶ.
-
+              ಸುಮಾರು 800 ವರ್ಷಗಳ ಹಿಂದೆ ಕೆಳದಿ ರಾಜರಾದ ಶಿವಪ್ಪ ನಾಯಕ ಮತ್ತು ಸೂರಪ್ಪ ನಾಯಕ
+              ರಾಜ್ಯವನ್ನು "ಕದಂಬಸಂಸ್ಥಾನ" ಅಥವಾ "ಕಡಬ" ಎಂದು ಆಳುತ್ತಿದ್ದರು. ಅವರು ಬಸವನ
+              ಮೂಲದಲ್ಲಿ ಶಿವಲಿಂಗ ಕಂಡು ಆರಾಧನೆಗೆ ಪ್ರೇರಿತರಾಗಿ, ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶದ ನಂತರ
+              ಅವರ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಬಸವೇಶ್ವರ ದೇವರ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಿದರು. ಇತಿಹಾಸದ
+              ಕೊನೆಯಲ್ಲಿ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ನಾಶವಾದ ನಂತರ, ಸಾವಿರಾರು ಭಕ್ತರ
+              ನಂಬಿಕೆಯಿಂದ ಅಷ್ಟಮಂಗಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರ ಪೂರ್ವಾರ್ಜಿತ
+              ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಲಾಯಿತು. ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ ಬಸವನ
+              ಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾರಾಂಶ.
             </p>
           </div>
           <div className="w-full md:w-1/2 p-1 rounded-lg">
@@ -328,25 +431,31 @@ const page = () => {
         <div className="flex flex-col md:flex-row gap-2 lg:mb-10 lg:mt-10 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full h-full md:w-1/2 p-2 gap-2 flex flex-col">
             <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-            ತಲುಪುವುದು ಹೇಗೆ?
+              ತಲುಪುವುದು ಹೇಗೆ?
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
               <span className="block">
-              ರೈಲು ಮಾರ್ಗ:
-              ರೈಲಿನಲ್ಲಿ ಬಂದರೆ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ, ಕಾರವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ವಿಜಯಪುರದಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಪ್ರಯಾಣಿಸಬಹುದು. 
-              ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣದಿಂದ ಕೆ.ಎಸ.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪು ಅಥವಾ ಆಟೋ ರಿಕ್ಷಾಗಳು ನೀವು ಕುಲ್ಕುಂದ,ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು.
-
-
+                ಬಸ್ಸಿನ ಮೂಲಕ: ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು
+                ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಾಕಷ್ಟು ಬಸ್ಸುಗಳು ಕುಕ್ಕೆ
+                ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸುತ್ತವೆ.ಈ ಎಲ್ಲಾ ಬಸ್ಸುಗಳಿಗೆ ಕುಲ್ಕುಂದದಲ್ಲಿ
+                ನಿಲುಗಡೆಯಿದೆ. ಕುಲ್ಕುಂದ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿದು ಸರಿಸುಮಾರು 350 ಮೀಟರ್
+                ನಡೆದು ದೇವಸ್ಥಾನವನ್ನು ತಲುಪಬಹುದು.
               </span>
               <span className="block">
-              ವಿಮಾನದ ಮೂಲಕ:
-              ಕುಲ್ಕುಂದಕ್ಕೆ ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. 
-              ಬೆಂಗಳೂರು, ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ, ಮುಂಬೈ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ದೇಶಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. 
-              ಮಂಗಳೂರಿನಿಂದ ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
-
+                ರೈಲು ಮಾರ್ಗ: ರೈಲಿನಲ್ಲಿ ಬಂದರೆ, ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ
+                ಪ್ರಯಾಣಿಸಿ, ಕಾರವಾರ, ಮಂಗಳೂರು, ಬೆಂಗಳೂರು, ಹಾಸನ, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು
+                ವಿಜಯಪುರದಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಪ್ರಯಾಣಿಸಬಹುದು.. ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್
+                ರೈಲು ನಿಲ್ದಾಣದಿಂದ ಕೆ.ಎಸ.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪು ಅಥವಾ ಆಟೋ
+                ರಿಕ್ಷಾಗಳು ನೀವು ಕುಲ್ಕುಂದ,ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು..
+              </span>
+              <span className="block">
+                ವಿಮಾನದ ಮೂಲಕ: ಕುಲ್ಕುಂದಕ್ಕೆ ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ
+                ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. ಬೆಂಗಳೂರು,
+                ಹೈದರಾಬಾದ್, ಚೆನ್ನೈ, ಮುಂಬೈ, ಪುಣೆ, ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ದೇಶಗಳಿಂದ
+                ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. ಮಂಗಳೂರಿನಿಂದ
+                ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
               </span>
             </p>
-
           </div>
           <div className="w-full md:w-1/2 p-1 rounded-lg">
             <Image
