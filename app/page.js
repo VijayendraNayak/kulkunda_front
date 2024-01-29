@@ -171,6 +171,7 @@ const Page = () => {
             alt="register background image"
             width={800}
             height={800}
+            priority={true}
           />
         </div>
         <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-2'>
@@ -205,6 +206,7 @@ const Page = () => {
             alt="register background image"
             width={300}
             height={250}
+            priority={true}
           />
         </div>
       </div>
@@ -219,6 +221,7 @@ const Page = () => {
               alt="register background image"
               width={300}
               height={250}
+              priority={true}
             />
             <div className='absolute top-5 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title3}</h3>
@@ -240,6 +243,7 @@ const Page = () => {
               alt="register background image"
               width={300}
               height={250}
+              priority={true}
             />
             <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>  {currentContent.title2}</h3>
