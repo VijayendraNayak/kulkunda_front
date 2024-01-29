@@ -1,16 +1,18 @@
-.social-icons {
-    display: flex ;
-    justify-content: space-between;
-    display: flex; 
-    justify-content: space-around;
-    
-}
-
-.social-icons {
-    margin-right: 10px; /* Optional margin between icons */
-}
-.icon-container {
-    background-color: black;
-    padding: 5px; /* Adjust padding as needed */
-    border-radius: 50%; /* Optional: Apply rounded corners */
-}
+@import '~@fortawesome/fontawesome-free/css/all.css';
+/* Add these styles to your global CSS or component-specific styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0; /* Reset margin to eliminate default body margin */
+  }
+  
+  main {
+    flex-grow: 1; /* Allow the main content to grow and fill the available space */
+  }
+  
+  footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    padding-top: 20px; /* Add padding to create space between the main content and the footer */
+  }
+  

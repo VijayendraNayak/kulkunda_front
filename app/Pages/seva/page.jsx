@@ -6,7 +6,7 @@ import { setSevaName } from "../../Redux/Features/counter/sevaslice";
 import Image from "next/image";
 import Entrance from "/app/assets/image/entrance.jpg";
 import Loader from "../../Components/Loader";
-
+import "../../Components/Scrollbar.css";
 
 const SevaPage = () => {
   const [language, setLanguage] = useState("english");
@@ -69,7 +69,7 @@ const SevaPage = () => {
 
       <div className="flex flex-row">
         <div
-          className="flex-1 p-2 px-8 overflow-y-auto"
+          className="flex-1 p-2 px-8 overflow-y-auto custom-scrollbar" 
           style={{ maxHeight: "500px" }}
         >
           {formdata &&
@@ -79,7 +79,7 @@ const SevaPage = () => {
                 className="flex text-center justify-center w-full h-28 border-2 border-orange-400 mb-8 rounded-lg bg-orange-100 cursor-pointer relative  hover:scale-105" // Updated this line
               >
                 <div className="flex flex-col">
-                  <div className="font-semibold text-xl p-4">
+                  <div className="font-semibold text-xl p-4 ">
                     {language === "english"
                       ? seva.sevanamee
                       : language === "kannada"
