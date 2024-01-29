@@ -2,6 +2,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Loader from "../../Components/Loader";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const GalleryPage = () => {
   const [mediaData, setMediaData] = useState([]);
@@ -40,6 +43,14 @@ const GalleryPage = () => {
   const closeSlideshow = () => {
     setSelectedImageIndex(null);
     setSlideshowOpen(false);
+  };
+
+  const handlePrevPage = () => {
+    setSelectedImageIndex((prev) => (prev - 1 + mediaData.length) % mediaData.length);
+  };
+
+  const handleNextPage = () => {
+    setSelectedImageIndex((prev) => (prev + 1) % mediaData.length);
   };
 
   return (
@@ -91,6 +102,14 @@ const GalleryPage = () => {
                   height={250} // Set the height to 50% of the original size
                 />
               ))}
+              <div onClick={handlePrevPage} className='z-10 absolute  bottom-1/2 left-4 text-2xl  md:left-8 font-semibold cursor-pointer text-orange-200'>
+                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
+              </div>
+
+              {/* Right arrow */}
+              <div onClick={handleNextPage} className='z-10 absolute bottom-1/2 right-8 text-2xl  md:right-8 font-semibold cursor-pointer text-orange-200'>
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </div>
             </div>
           </div>
         )}
