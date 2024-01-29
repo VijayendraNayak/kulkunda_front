@@ -118,6 +118,7 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple6}
               alt="image here"
+              priority={true}
             />
           </div>
 
@@ -126,6 +127,7 @@ const page = () => {
               className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple7}
               alt="image here"
+              priority={true}
             />
           </div>
 
@@ -134,6 +136,7 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple10}
               alt="image here"
+              priority={true}
             />
           </div>
         </div>
@@ -185,6 +188,7 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
+              priority={true}
             />
           </div>
         </div>
@@ -197,6 +201,7 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
+              priority={true}
             />
           </div>
           <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col">
@@ -244,6 +249,7 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
+              priority={true}
             />
           </div>
         </div>
@@ -320,6 +326,7 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple6}
               alt="image here"
+              priority={true}
             />
           </div>
 
@@ -328,6 +335,7 @@ const page = () => {
               className="w-full h-80 md:h-96 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple7}
               alt="image here"
+              priority={true}
             />
           </div>
 
@@ -336,6 +344,7 @@ const page = () => {
               className="w-full h-64 md:h-80 object-cover rounded-xl border-1 hover:scale-105"
               src={Temple10}
               alt="image here"
+              priority={true}
             />
           </div>
         </div>
@@ -401,6 +410,7 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
+              priority={true}
             />
           </div>
         </div>
@@ -413,6 +423,7 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
+              priority={true}
             />
           </div>
           <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col mt-10">
@@ -464,6 +475,7 @@ const page = () => {
               alt="image here"
               height={800}
               width={700}
+              priority={true}
             />
           </div>
         </div>

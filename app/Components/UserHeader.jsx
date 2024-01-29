@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";   
+import Image from "next/image";
 
 const UserHeader = ({ loading }) => {
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -242,10 +243,11 @@ const UserHeader = ({ loading }) => {
                   <div className={`flex gap-1 items-center ${
                         path === "/Pages/profile" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
                       }`}>
-                    <img
+                    <Image
                       className=" rounded-full w-10 h-10  sm:hidden"
                       src={currentUser.avatar}
                       alt="profile"
+                      priority={true}
                     />
                     <span
                       className={`hover:underline text-orange-700 sm:hidden `}

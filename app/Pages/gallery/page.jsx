@@ -1,6 +1,8 @@
 "use client";
+
+// Import necessary modules
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import Loader from "../../Components/Loader";
 
 const GalleryPage = () => {
@@ -8,6 +10,7 @@ const GalleryPage = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [slideshowOpen, setSlideshowOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const slideshowRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,14 +36,30 @@ const GalleryPage = () => {
   }, []);
 
   const openSlideshow = (index) => {
+    setLoading(true)
     setSelectedImageIndex(index);
     setSlideshowOpen(true);
+    setLoading(false)
   };
 
   const closeSlideshow = () => {
     setSelectedImageIndex(null);
     setSlideshowOpen(false);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (slideshowOpen && !event.target.closest(".slideshow-container")) {
+        closeSlideshow();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [slideshowOpen]);
 
   return (
     <div className="container mx-auto py-20 px-10">
@@ -64,6 +83,7 @@ const GalleryPage = () => {
                 onClick={() => openSlideshow(index)}
                 width={500}
                 height={500}
+                priority={true}
               />
             ))}
           </div>
@@ -74,21 +94,16 @@ const GalleryPage = () => {
         selectedImageIndex !== null &&
         mediaData[selectedImageIndex]?.avatar && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-            <div className="relative">
-              <button
-                className="absolute top-2 right-2 text-white text-xl"
-                onClick={closeSlideshow}
-              >
-                Close
-              </button>
+            <div className="relative slideshow-container">
               {mediaData[selectedImageIndex].avatar.map((image, imageIndex) => (
                 <Image
                   key={imageIndex}
                   src={image}
                   alt={`Image ${selectedImageIndex + 1}-${imageIndex + 1}`}
                   className="mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full"
-                  width={250} // Set the width to 50% of the original size
-                  height={250} // Set the height to 50% of the original size
+                  width={250}
+                  height={250}
+                  priority={true}
                 />
               ))}
             </div>
