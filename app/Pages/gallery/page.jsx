@@ -50,6 +50,14 @@ const GalleryPage = () => {
     setSlideshowOpen(false);
   };
 
+  const handlePrevPage = () => {
+    setSelectedImageIndex((prev) => (prev - 1 + mediaData.length) % mediaData.length);
+  };
+
+  const handleNextPage = () => {
+    setSelectedImageIndex((prev) => (prev + 1) % mediaData.length);
+  };
+
   return (
     <div className="container mx-auto py-20 px-10">
       <div className="font-semibold text-5xl text-black text-center pb-10">
@@ -84,6 +92,12 @@ const GalleryPage = () => {
         mediaData[selectedImageIndex]?.avatar && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
             <div className="relative slideshow-container">
+              <button
+                className="absolute top-2 right-2 text-orange-200 text-xl"
+                onClick={closeSlideshow}
+              >
+                Close
+              </button>
               {mediaData[selectedImageIndex].avatar.map((image, imageIndex) => (
                 <Image
                   key={imageIndex}
