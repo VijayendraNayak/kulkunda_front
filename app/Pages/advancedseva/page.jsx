@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { setSevaName } from "../../Redux/Features/counter/sevaslice";
 
-
 const page = () => {
   const [sevaname, setSevaname] = useState(null);
   const handleBookSeva = (name) => {
@@ -14,7 +13,9 @@ const page = () => {
   };
   const router = useRouter();
   const dispatch = useDispatch();
-  return <div></div>;
+  return <div className="pt-20 text-xl">
+    Comming soon...
+  </div>;
 };
 
 export default page;

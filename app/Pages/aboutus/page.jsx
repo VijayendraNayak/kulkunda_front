@@ -2,18 +2,17 @@
 import Image from "next/image";
 import Temple6 from "/app/assets/image/temple6.jpg";
 import Temple7 from "/app/assets/image/temple7.jpg";
-import Temple9 from "/app/assets/image/temple9.jpg";
 import Temple10 from "/app/assets/image/temple10.jpg";
 import Temple12 from "/app/assets/image/temple12.png";
 import Temple5 from "/app/assets/image/temple3.jpg";
 import Loader from "../../Components/Loader";
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const page = () => {
   const [loader, setLoader] = useState(false);
-const[lang,setLang]=useState("English")
-
+  const {langName}=useSelector(state=>state.lang)
   return (
     <div className="pt-10 pb-10 lg:pt-20 ">
       {loader && <Loader />}
@@ -21,11 +20,9 @@ const[lang,setLang]=useState("English")
         <p className="text-3xl lg:text-5xl text-center font-semibold text-black py-4 px-4 underline md:mx-auto">
           About Us
         </p>
-        
       </div>
-
       <div
-        className={`flex flex-col gap-4 px-4 md:px-8 ${lang==="Kannada"?"hidden":"flex"}`}
+        className={`flex flex-col gap-4 px-4 md:px-8 ${langName==="Kannada"?"hidden":"flex"}`}
       >
         {/* Section 1 */}
         <div className="w-full p-5 gap-2 flex flex-col">
@@ -240,7 +237,7 @@ const[lang,setLang]=useState("English")
 
       {/* Kannada  */}
       <div
-        className={`flex flex-col gap-4 px-4 md:px-8 ${lang==="English"?"hidden":"flex"}`}
+        className={`flex flex-col gap-4 px-4 md:px-8 ${langName==="English"?"hidden":"flex"}`}
       >
         <div className="w-full p-5 gap-2 flex flex-col">
           <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">

@@ -4,11 +4,13 @@ import Image from "next/image";
 import Entrance from "/app/assets/image/entrance.jpg";
 import Loader from "../../Components/Loader";
 import "../../Components/Scrollbar.css";
+import { useSelector } from "react-redux";
 
 const SevaPage = () => {
-  const [lang, setLang] = useState("English");
   const [formdata, setFormdata] = useState(null);
   const [loader, setLoader] = useState(false);
+  const {langName}=useSelector(state=>state.lang)
+
 
   useEffect(() => {
     const getdata = async () => {
@@ -53,7 +55,7 @@ const SevaPage = () => {
               >
                 <div className="flex flex-col">
                   <div className="font-semibold text-xl p-4 ">
-                    {lang === "English"
+                    {langName === "English"
                       ? seva.sevanamee
                       : seva.sevanamek
                       }

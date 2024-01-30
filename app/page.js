@@ -7,16 +7,15 @@ import Image from 'next/image';
 import Loader from "./Components/Loader";
 import Temple from "/app/assets/image/temple20.png";
 import Temple13 from "/app/assets/image/temple13.jpg";
-import Temple2 from "/app/assets/image/temple3.jpg";
 import Temple15 from "/app/assets/image/temple15.jpg";
 import { MdOutlineMouse } from "react-icons/md";
 import Temple12 from "/app/assets/image/temple12.png";
-
+import { useSelector } from "react-redux";
 
 const Page = () => {
   const featuredProductsRef = useRef(null);
-  const [lang, setLang] = useState('English');
   const [loader, setLoader] = useState(false);
+  const {langName}=useSelector(state=>state.lang)
   const [isVisible, setIsVisible] = useState(false);
   const [newsUpdatesList, setNewsUpdatesList] = useState([]);
   const [found, setFound] = useState(false);
@@ -117,7 +116,7 @@ const Page = () => {
     },
   };
 
-  const currentContent = content[lang];
+  const currentContent = content[langName];
 
   return (
     <div className='relative mx-auto'>
