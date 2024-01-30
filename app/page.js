@@ -15,17 +15,12 @@ import Temple12 from "/app/assets/image/temple12.png";
 
 const Page = () => {
   const featuredProductsRef = useRef(null);
-  const [lang, setLang] = useState('english');
+  const [lang, setLang] = useState('English');
   const [loader, setLoader] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [newsUpdatesList, setNewsUpdatesList] = useState([]);
   const [found, setFound] = useState(false);
 
-  const handleLanguageChange = () => {
-    setLoader(true);
-    setLang((prevLang) => (prevLang === 'english' ? 'kannada' : 'english'));
-    setLoader(false);
-  };
   useEffect(() => {
     const fetchNewsUpdates = async () => {
       try {
@@ -88,7 +83,7 @@ const Page = () => {
   };
 
   const content = {
-    english: {
+    English: {
       title: 'Shree Basaveshwara Temple ',
       text: '⦾ According to Skanda Purana, it is believed that Lord Shri Subrahmanya Swami performed penance on Lord Shiva at this site...',
       readMore: 'Read more...',
@@ -106,7 +101,7 @@ const Page = () => {
       text34: "⦾ Evening: 3PM-7PM",
       text35: "⦾ Evening Pooja: 6:30PM",
     },
-    kannada: {
+    Kannada: {
       title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ',
       text: '⦾ ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ, ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇಮೊದಲಾದ ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ...',
       readMore: 'ಹೆಚ್ಚು ಓದಿ...',
@@ -151,17 +146,6 @@ const Page = () => {
         <span className='text-center'>
           Kulkunda Shree Basaveshwara Temple
         </span>
-      </div>
-
-      {/* Language switch button */}
-      <div className="flex  justify-end px-4 mt-5">
-        <button
-          type="button"
-          className="border-2 font-bold bg-gradient-to-r from-yellow-100 to-orange-500 p-3 rounded-lg px-5  border-black font-serif"
-          onClick={handleLanguageChange}
-        >
-          {lang === "english" ? "ಕನ್ನಡ" : "English"}
-        </button>
       </div>
       <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
         <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-1 '>

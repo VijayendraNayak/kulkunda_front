@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Image from "next/image";
 import Temple6 from "/app/assets/image/temple6.jpg";
 import Temple7 from "/app/assets/image/temple7.jpg";
@@ -6,24 +6,14 @@ import Temple9 from "/app/assets/image/temple9.jpg";
 import Temple10 from "/app/assets/image/temple10.jpg";
 import Temple12 from "/app/assets/image/temple12.png";
 import Temple5 from "/app/assets/image/temple3.jpg";
-import { useState } from "react";
 import Loader from "../../Components/Loader";
 import dynamic from "next/dynamic";
+import { useState } from "react";
 
 const page = () => {
-  const [lang, setLang] = useState("english");
   const [loader, setLoader] = useState(false);
+const[lang,setLang]=useState("English")
 
-  const handleonclick = () => {
-    setLoader(true);
-    if (lang === "english") {
-      setLang("kannada");
-      setLoader(false);
-    } else {
-      setLang("english");
-      setLoader(false);
-    }
-  };
   return (
     <div className="pt-10 pb-10 lg:pt-20 ">
       {loader && <Loader />}
@@ -31,19 +21,11 @@ const page = () => {
         <p className="text-3xl lg:text-5xl text-center font-semibold text-black py-4 px-4 underline md:mx-auto">
           About Us
         </p>
-        <button
-          type="button"
-          className="flex self-end border-2 border-orange-500 bg-orange-300 px-3 py-3 rounded-full hover:bg-orange-400 lg:mr-20 mr-3"
-          onClick={handleonclick}
-        >
-          {lang === "english" ? "ಕನ್ನಡ" : "English"}
-        </button>
+        
       </div>
 
       <div
-        className={`flex flex-col gap-4 px-4 md:px-8 ${
-          lang === "english" ? "flex" : "hidden"
-        }`}
+        className={`flex flex-col gap-4 px-4 md:px-8 ${lang==="Kannada"?"hidden":"flex"}`}
       >
         {/* Section 1 */}
         <div className="w-full p-5 gap-2 flex flex-col">
@@ -258,9 +240,7 @@ const page = () => {
 
       {/* Kannada  */}
       <div
-        className={`flex flex-col lg:gap-8 px-4 md:px-8 ${
-          lang === "kannada" ? "flex" : "hidden"
-        }`}
+        className={`flex flex-col gap-4 px-4 md:px-8 ${lang==="English"?"hidden":"flex"}`}
       >
         <div className="w-full p-5 gap-2 flex flex-col">
           <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">

@@ -3,6 +3,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import userReducer from './Features/counter/counterslice';
 import phoneReducer from './Features/counter/phoneslice';
 import sevaReducer from './Features/counter/sevaslice';
+import langReducer from './Features/counter/langslice';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   phone: phoneReducer, // Add phone reducer
   seva: sevaReducer, // Add phone reducer
+  lang:langReducer,
 });
 
 // Configuration for persisting the entire state

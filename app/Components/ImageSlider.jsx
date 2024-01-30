@@ -64,17 +64,19 @@ const ImageSlider = () => {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer bg-orange-300 bg-opacity-50 ${
-              index === currentPage ? "bg-orange-500" : "bg-gray-300"
-            }`}
-          ></div>
-        ))}
-      </div>
+      {/* Dots */}
+<div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+  {images.map((_, index) => (
+    <div
+      key={index}
+      onClick={() => handleDotClick(index)}
+      className={`w-3 h-3 rounded-full cursor-pointer bg-white opacity-50 ${
+        index === currentPage ? "opacity-100" : ""
+      }`}
+    ></div>
+  ))}
+</div>
+
     </div>
   );
 };
