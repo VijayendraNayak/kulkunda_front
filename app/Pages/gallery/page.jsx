@@ -1,18 +1,19 @@
-"use client";
-
+// Import necessary modules
+"use client"
 // Import necessary modules
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Loader from "../../Components/Loader";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FaRegRectangleXmark } from "react-icons/fa6";
 
 const GalleryPage = () => {
   const [mediaData, setMediaData] = useState([]);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [slideshowOpen, setSlideshowOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(Array(50).fill(false)); // Track individual image loading
   const slideshowRef = useRef(null);
 
   useEffect(() => {
@@ -39,10 +40,8 @@ const GalleryPage = () => {
   }, []);
 
   const openSlideshow = (index) => {
-    setLoading(true)
     setSelectedImageIndex(index);
     setSlideshowOpen(true);
-    setLoading(false)
   };
 
   const closeSlideshow = () => {
@@ -51,11 +50,46 @@ const GalleryPage = () => {
   };
 
   const handlePrevPage = () => {
-    setSelectedImageIndex((prev) => (prev - 1 + mediaData.length) % mediaData.length);
+    setSelectedImageIndex(
+      (prev) => (prev - 1 + mediaData.length) % mediaData.length
+    );
   };
 
   const handleNextPage = () => {
     setSelectedImageIndex((prev) => (prev + 1) % mediaData.length);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        slideshowOpen &&
+        slideshowRef.current &&
+        !slideshowRef.current.contains(event.target)
+      ) {
+        closeSlideshow();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [slideshowOpen]);
+
+  const handleImageClick = (index) => {
+    setLoading(true);
+    openSlideshow(index);
+    setLoading(false);
+
+  };
+
+  const handleImageLoad = (index) => {
+    setImageLoaded((prev) => {
+      const newState = [...prev];
+      newState[index] = true;
+      return newState;
+    });
   };
 
   return (
@@ -72,16 +106,27 @@ const GalleryPage = () => {
             className="relative overflow-hidden rounded-lg shadow-md aspect-w-1 aspect-h-1 hover:opacity-80"
           >
             {media.avatar.map((image, imageIndex) => (
-              <Image
+              <div
                 key={imageIndex}
-                src={image}
-                alt={`Image ${index + 1}-${imageIndex + 1}`}
-                className="object-cover w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75 cursor-pointer"
-                onClick={() => openSlideshow(index)}
-                width={500}
-                height={500}
-                priority={true}
-              />
+                className="relative w-full h-full"
+                style={{ cursor: "pointer" }}
+                onClick={() => handleImageClick(index)}
+              >
+                {loading && !imageLoaded[index] && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <Loader />
+                  </div>
+                )}
+                <Image
+                  src={image}
+                  alt={`Image ${index + 1}-${imageIndex + 1}`}
+                  className="object-cover w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75"
+                  width={500}
+                  height={500}
+                  priority={true}
+                  onLoad={() => handleImageLoad(index)} // Close loader once image is loaded
+                />
+              </div>
             ))}
           </div>
         ))}
@@ -91,12 +136,12 @@ const GalleryPage = () => {
         selectedImageIndex !== null &&
         mediaData[selectedImageIndex]?.avatar && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-            <div className="relative slideshow-container">
+            <div className="relative slideshow-container" ref={slideshowRef}>
               <button
                 className="absolute top-2 right-2 text-orange-200 text-xl"
                 onClick={closeSlideshow}
               >
-                Close
+                <FaRegRectangleXmark />
               </button>
               {mediaData[selectedImageIndex].avatar.map((image, imageIndex) => (
                 <Image
@@ -104,17 +149,23 @@ const GalleryPage = () => {
                   src={image}
                   alt={`Image ${selectedImageIndex + 1}-${imageIndex + 1}`}
                   className="mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full"
-                  width={250}
-                  height={250}
+                  width={600} // Adjust the width for desktop view
+                  height={600} // Adjust the height for desktop view
                   priority={true}
                 />
               ))}
-              <div onClick={handlePrevPage} className='z-10 absolute  bottom-1/2 left-4 text-2xl  md:left-8 font-semibold cursor-pointer text-orange-200'>
+              <div
+                onClick={handlePrevPage}
+                className="z-10 absolute  bottom-1/2 left-4 text-2xl  md:left-8 font-semibold cursor-pointer text-orange-200"
+              >
                 <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
               </div>
 
               {/* Right arrow */}
-              <div onClick={handleNextPage} className='z-10 absolute bottom-1/2 right-8 text-2xl  md:right-8 font-semibold cursor-pointer text-orange-200'>
+              <div
+                onClick={handleNextPage}
+                className="z-10 absolute bottom-1/2 right-8 text-2xl  md:right-8 font-semibold cursor-pointer text-orange-200"
+              >
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
               </div>
             </div>
