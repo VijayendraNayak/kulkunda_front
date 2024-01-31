@@ -135,10 +135,12 @@ const Login = () => {
             <input
               type="text"
               placeholder="Phone number"
-              className="border p-3 rounded-lg hover:shadow-lg "
+              className="border p-3 rounded-lg hover:shadow-lg"
               id="phonenumber"
+              defaultValue={"+91 "}
               onChange={handleChange}
             />
+
             <div className="relative">
               <input
                 type={password ? "password" : "text"}
@@ -149,7 +151,7 @@ const Login = () => {
               />
               <button
                 type="button"
-                onClick={togglepassword} 
+                onClick={togglepassword}
                 className="absolute top-1/2 right-5 transform -translate-y-1/2 "
               >
                 {password ? <IoIosEye /> : <IoIosEyeOff />}

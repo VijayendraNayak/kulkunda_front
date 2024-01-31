@@ -84,15 +84,28 @@ const Register = () => {
           <input
             type="text"
             placeholder="Username"
-            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none"
+            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none" 
             id="name"
             onChange={handleChange}
           />
+          <div className="flex gap-10 ">
+            <input
+              type="text"
+              placeholder="Phone number"
+              className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
+              id="phonenumber"
+              defaultValue={"+91 "}
+              onChange={handleChange}
+            />
+            <button className="p-3 bg-green-400 text-white text-xl hover:bg-green-600 rounded-lg font-semibold">
+              Send OTP
+            </button>
+          </div>
           <input
             type="text"
-            placeholder="Phone number"
-            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none"
-            id="phonenumber"
+            placeholder="Enter the OTP"
+            className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
+            id="otp"
             onChange={handleChange}
           />
           <input
