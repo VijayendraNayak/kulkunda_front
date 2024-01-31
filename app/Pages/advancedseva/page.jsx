@@ -14,7 +14,7 @@ const page = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   return <div className="pt-20 text-xl">
-    Comming soon...
+    Coming soon...
   </div>;
 };
 
