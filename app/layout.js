@@ -41,20 +41,20 @@ export default function RootLayout({ children }) {
 
 const Metadata = () => (
   <>
-    <title>Kulkunda Shree Basaweshwara Temple</title>
+    <title>Kulkunda Shree Basaveshwara Temple</title>
     <meta
       name="description"
-      content="Your custom description goes here. Update this to a meaningful description for SEO."
+      content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola,Kulkunda.This temple is located 2kms away from Kukke Shree Subrahmanya Temple.Lord Shiva is worshipped here in the form of bull(Basava)."
     />
   </>
 );
 
 const OpenGraphMetadata = () => (
   <>
-    <meta property="og:title" content="Kulkunda Shree Basaweshwara Temple" />
+    <meta property="og:title" content="Kulkunda Shree Basaveshwara Temple" />
     <meta
       property="og:description"
-      content="Your custom description goes here. Update this to a meaningful description for SEO."
+      content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola,Kulkunda.This temple is located 2kms away from Kukke Shree Subrahmanya Temple.Lord Shiva is worshipped here in the form of bull(Basava)."
     />
     <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:url" content="https://basavanamoolatemple.in" />
@@ -64,14 +64,14 @@ const OpenGraphMetadata = () => (
 
 const FacebookMetadata = () => (
   <>
-    <meta property="og:site_name" content="Kulkunda Basaweshwara" />
+    <meta property="og:site_name" content="Kulkunda Shree Basaveshwara Temple" />
     <meta property="article:publisher" content="https://www.facebook.com/profile.php?id=100090518155741" />
   </>
 );
 
 const InstagramMetadata = () => (
   <>
-    <meta property="instagram:card" content="summary_large_image" />
+    <meta property="instagram:card" content="Instagram page" />
     <meta
       property="instagram:creator"
       content="https://www.instagram.com/shreebasaveshwaratemple?igsh=Ymk0ZXhwZHV0a3lk"
