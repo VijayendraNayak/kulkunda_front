@@ -250,6 +250,7 @@ setLoader(false)
         {showAlert && (
           <div className="mt-4 p-2 text-white bg-green-500 rounded-md">
             <p className="text-center">Form submitted successfully!</p>
+            <p className="text-center">We'll soon address all your inquiries.</p>
           </div>
         )}
 
