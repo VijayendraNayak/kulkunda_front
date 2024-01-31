@@ -69,8 +69,10 @@ const ImageSlider = () => {
           <div
             key={index}
             onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer bg-orange-300 bg-opacity-50 ${
-              index === currentPage ? "bg-orange-500" : "bg-gray-300"
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              index === currentPage
+                ? "bg-white opacity-100"
+                : "bg-white opacity-50"
             }`}
           ></div>
         ))}

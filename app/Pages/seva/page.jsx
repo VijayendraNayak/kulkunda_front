@@ -1,20 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { setSevaName } from "../../Redux/Features/counter/sevaslice";
 import Image from "next/image";
 import Entrance from "/app/assets/image/entrance.jpg";
 import Loader from "../../Components/Loader";
 import "../../Components/Scrollbar.css";
+import { useSelector } from "react-redux";
 
 const SevaPage = () => {
-  const [language, setLanguage] = useState("english");
   const [formdata, setFormdata] = useState(null);
-  const [sevaname, setSevaname] = useState(null);
   const [loader, setLoader] = useState(false);
-  const router = useRouter();
-  const dispatch = useDispatch();
+  const {langName}=useSelector(state=>state.lang)
+
 
   useEffect(() => {
     const getdata = async () => {
@@ -36,15 +32,7 @@ const SevaPage = () => {
     getdata();
   }, []);
 
-  const handleLanguageChange = (selectedLanguage) => {
-    setLanguage(selectedLanguage);
-  };
 
-  const handleBookSeva = (name) => {
-    router.push("/Pages/sevabookinform");
-    setSevaname(name);
-    dispatch(setSevaName(name));
-  };
 
   return (
     <div className="pt-20">
@@ -54,19 +42,6 @@ const SevaPage = () => {
       <p className="text-black lg:text-6xl text-3xl text-center font-bold" style={{ textDecoration: 'none', fontFamily: 'Roboto' }}>
         Seva Served Here
       </p>
-      <div className="flex justify-end pr-8 mb-4">
-        <label className="hidden md:block text-lg mr-2 font-serif">Select Language:</label>
-        <select
-          className="border p-1 rounded-md bg-gradient-to-r from-orange-300 via-orange-500 to-orange-700 focus:outline-none focus:ring focus:border-blue-300"
-          value={language}
-          onChange={(e) => handleLanguageChange(e.target.value)}
-        >
-          <option value="english">English</option>
-          <option value="kannada">ಕನ್ನಡ</option>
-          <option value="hindi">हिंदी</option>
-        </select>
-      </div>
-
       <div className="flex flex-row">
         <div
           className="flex-1 p-2 px-8 overflow-y-auto custom-scrollbar" 
@@ -80,11 +55,10 @@ const SevaPage = () => {
               >
                 <div className="flex flex-col">
                   <div className="font-semibold text-xl p-4 ">
-                    {language === "english"
+                    {langName === "English"
                       ? seva.sevanamee
-                      : language === "kannada"
-                      ? seva.sevanamek
-                      : seva.sevanameh}
+                      : seva.sevanamek
+                      }
                   </div>
                   <div className="font-semibold text-xl px-4 text-green-500">
                     ₹{seva.price}/-

@@ -25,7 +25,7 @@ const App = () => {
         <div className="w-80 flex flex-col gap-4 rounded-lg p-4">
           <h1 className="text-center leading-normal text-white font-medium text-3xl mb-6">
             Welcome to <br />
-            <span className="font-bold">KULKUNDA BASAWESHWARA</span>
+            <span className="font-bold">KULKUNDA SHREE BASAVESHWARA TEMPLE</span>
           </h1>
           {showOTP ? (
             <>
