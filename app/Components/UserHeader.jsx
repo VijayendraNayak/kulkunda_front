@@ -50,6 +50,12 @@ const UserHeader = ({ loading }) => {
     } else if (selectedValue === "advancedSevaBookings") {
       router.push("/Pages/advancedseva");
     }
+
+    if (selectedValue === "aboutTemple") {
+      router.push("/Pages/aboutus");
+    } else if (selectedValue === "howtoReach") {
+      router.push("/Pages/reach");
+    }
   };
 
   return (
@@ -114,15 +120,36 @@ const UserHeader = ({ loading }) => {
               Advanced seva bookings
             </option>
           </select>
-          <Link href="/Pages/aboutus">
-            <li
-              className={`hover:underline text-orange-700 hidden sm:flex ${
+          <select
+            value={selectedOption}
+            onChange={handleOptionChange}
+            className="bg-transparent text-orange-700 hidden sm:flex w-20 font-semibold hover:none"
+          >
+            <option
+              value=""
+              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
                 path === "/Pages/aboutus" ? "underline" : ""
               }`}
             >
-              About
-            </li>
-          </Link>
+              About Us
+            </option>
+            <option
+              value="aboutTemple"
+              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
+                path === "/Pages/aboutus" ? "underline" : ""
+              }`}
+            >
+              About Temple
+            </option>
+            <option
+              value="howtoReach"
+              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
+                path === "/Pages/reach" ? "underline" : ""
+              }`}
+            >
+              How to Reach
+            </option>
+          </select>
           <Link href="/Pages/contactus">
             <li
               className={`hover:underline text-orange-700 hidden sm:flex ${
