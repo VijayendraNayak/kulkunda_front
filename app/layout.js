@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import Footer from './Components/Footer';
+import Languageswitch from './Components/Languageswitch';
 import HeaderSelector from './Components/HeaderSelector';
 import './globals.css';
 import { Providers } from './Redux/provider';
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <HeaderSelector />
           {children}
+          <Languageswitch/>
           <Footer />
         </Providers>
       </body>
