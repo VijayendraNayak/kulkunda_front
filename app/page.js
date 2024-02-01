@@ -1,6 +1,6 @@
 "use client"
 // Import necessary modules
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import ImageSlider from './Components/ImageSlider';
 import Image from 'next/image';
@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 const Page = () => {
   const featuredProductsRef = useRef(null);
   const [loader, setLoader] = useState(false);
-  const {langName}=useSelector(state=>state.lang)
+  const { langName } = useSelector(state => state.lang)
   const [isVisible, setIsVisible] = useState(false);
   const [newsUpdatesList, setNewsUpdatesList] = useState([]);
   const [found, setFound] = useState(false);
@@ -45,7 +45,7 @@ const Page = () => {
   useEffect(() => {
     // Check screen size and set isVisible accordingly
     const isSmallScreen = window.innerWidth <= 600; // Adjust the breakpoint as needed
-  
+
     if (isSmallScreen) {
       setIsVisible(true);
     } else {
@@ -53,7 +53,7 @@ const Page = () => {
       const handleScroll = () => {
         // Adjust the threshold based on your preference
         const threshold = window.innerWidth * 0.7;
-  
+
         // Check if the element is within the viewport
         const element = document.querySelector('.animate-text');
         if (element) {
@@ -64,16 +64,16 @@ const Page = () => {
           window.removeEventListener('scroll', handleScroll);
         }
       };
-  
+
       window.addEventListener('scroll', handleScroll);
-  
+
       // Remove the event listener when the component is unmounted
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }
   }, []);
-  
+
   const scrollToFeaturedProducts = () => {
     featuredProductsRef.current.scrollIntoView({
       behavior: "smooth",
@@ -91,7 +91,7 @@ const Page = () => {
       readMore1: 'Read more...',
       title2: 'News and Updates',
       text2: '',
-      title3: 'Darshana and Pooja Timings:',
+      title3: 'Darshana Timings:',
       text31: `
       ⦾ Morning: 6AM-1PM
       `,
@@ -99,6 +99,7 @@ const Page = () => {
       text33: "⦾ Mahapooja: 12:15PM",
       text34: "⦾ Evening: 3PM-7PM",
       text35: "⦾ Evening Pooja: 6:30PM",
+      title4: "Pooja Timings"
     },
     Kannada: {
       title: 'ಶ್ರೀ ಬಸವೇಶ್ವರ ',
@@ -126,7 +127,7 @@ const Page = () => {
       {/* Loader */}
       {loader && <Loader />}
       <div className='hidden justify-center py-16 sm:py-12 sm:flex'>
-      <button
+        <button
           className="flex justify-center items-center bg-gradient-to-r text-xl font-bold from-orange-100 to-orange-500 p-4 rounded-full px-20 border-2 border-black hover:scale-110"
           onClick={scrollToFeaturedProducts}
         >
@@ -209,9 +210,10 @@ const Page = () => {
             <div className='absolute top-5 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
               <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title3}</h3>
               <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text31}</p>
+              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text34}</p>
+              <h3 className='text-2xl font-semibold mb-2 text-yellow-300 pt-4'>{currentContent.title4}</h3>
               <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text32}</p>
               <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text33}</p>
-              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text34}</p>
               <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text35}</p>
             </div>
           </div>
