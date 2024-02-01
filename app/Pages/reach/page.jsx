@@ -31,6 +31,7 @@ const page = () => {
                 and Vijayapura. KSRTC buses from Subrahmanya Road station or
                 auto rickshaws can take you to Kulkunda.
               </span>
+              <br></br>
               <span className="block">
                 By flight: The nearest airport is Mangaluru International
                 Airport, 108 km away. Flights from Bengaluru, Hyderabad,
@@ -38,6 +39,7 @@ const page = () => {
                 Mangaluru. From Mangaluru, you can reach Kulkunda by road or
                 train.
               </span>
+              <br></br>
               <span className="block">
                 By Bus: The nearest bus station is Mangalore.
               </span>
@@ -66,15 +68,18 @@ const page = () => {
         </span>
       </div>
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
-            <p className="text-sm md:text-base lg:text-lg text-justify">
+          <div className="w-full md:w-2/3 p-2 gap-2 flex flex-col">
+            <p className="text-sm md:text-base lg:text-lg lg:text-justify text-justify break-words text-wrap">
               <span className="block">
               ರೈಲು ಮೂಲಕ:
-              ರೈಲಿನಲ್ಲಿ ಕಾರವಾರ,ಮಂಗಳೂರು,ಬೆಂಗಳೂರು,ಹಾಸನ,ಹುಬ್ಬಳ್ಳಿ,ವಿಜಯಪುರ,ಕಣ್ಣೂರು,ಕಾಸರಗೋಡಿನಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ,ಅಲ್ಲಿಂದ 
+              <br></br>
+            ರೈಲಿನಲ್ಲಿಕಾರವಾರ,ಮಂಗಳೂರು,ಬೆಂಗಳೂರು,ಹಾಸನ,ಹುಬ್ಬಳ್ಳಿ,ವಿಜಯಪುರ,ಕಣ್ಣೂರು,ಕಾಸರಗೋಡಿನಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ,ಅಲ್ಲಿಂದ 
               ಕೆ.ಎಸ್.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪುಗಳು ಅಥವಾ ಆಟೋ ರಿಕ್ಷಾಗಳ ಮೂಲಕ 12 ಕಿಲೋಮೀಟರು ದೂರದಲ್ಲಿರುವ ಕುಲ್ಕುಂದ, ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು.   
               </span>
+              <br></br>
               <span className="block">
               ವಿಮಾನದ ಮೂಲಕ:
+              <br></br>
               ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. 
               ಬೆಂಗಳೂರು,ಹೈದರಾಬಾದ್,ಚೆನ್ನೈ,ಮುಂಬೈ,ಪುಣೆ,ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. 
               ಮಂಗಳೂರಿನಿಂದ ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
