@@ -64,7 +64,6 @@ const UserHeader = ({ loading }) => {
         isNavVisible ? "translateY(0)" : "-translate-y-full"
       }`}
     >
-      {console.log(path)}
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div

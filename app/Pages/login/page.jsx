@@ -28,6 +28,7 @@ const Login = () => {
   };
   const { phoneNumber } = useSelector((state) => state.phone);
   const { loading, error } = useSelector((state) => state.user);
+
   useEffect(() => {
     // Set phonenumber in formdata if phoneNumber exists
     if (phoneNumber) {
@@ -136,10 +137,12 @@ const Login = () => {
             <input
               type="text"
               placeholder="Phone number"
-              className="border p-3 rounded-lg hover:shadow-lg"
+              className="border p-3 rounded-lg hover:shadow-lg bg-white"
               id="phonenumber"
-              defaultValue={"+91 "}
+              defaultValue={phoneNumber}
               onChange={handleChange}
+              disabled
+
             />
 
             <div className="relative">
@@ -171,12 +174,12 @@ const Login = () => {
           >
             <FcGoogle /> Login with Google
           </button>
-          <div className="flex justify-end">
-            {/* <Link href="/Pages/passwordotp">
+          <div className="flex justify-between">
+            <Link href="/Pages/passwordotp">
               <p className="text-red-500 font-bold cursor-pointer hover:scale-110 hover:underline">
                 forgot password?
               </p>
-            </Link> */}
+            </Link>
             <Link href="/Pages/register">
               <p className="text-blue-500 font-bold cursor-pointer  hover:underline">
                 New User?

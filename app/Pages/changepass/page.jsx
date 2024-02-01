@@ -57,7 +57,7 @@ const Changepass = () => {
   return (
     <div className="py-8 px-4 md:py-16 md:px-8 lg:py-20 lg:px-16 xl:py-28 xl:px-20">
       {loader && <Loader />}
-      <p className="pb-10 text-center text-4xl md:text-5xl lg:text-6xl font-semibold text-orange-500 mt-7 underline">
+      <p className="pb-10 text-center text-4xl md:text-5xl lg:text-6xl font-semibold text-black mt-7">
         Change Password
       </p>
       <div className="flex flex-col justify-center border-2 border-orange-500 max-w-md mx-auto rounded-lg bg-orange-50 hover:scale-105">
