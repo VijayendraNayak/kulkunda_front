@@ -132,7 +132,7 @@ setLoader(false)
                 <path d="M10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
                 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
               </svg>
-              <p className="text-gray-700 break-all"><a href="mailto:shreebasaveshwaratemplekulkund@gmail.com" class="inline-block px-4 py-2 bg-orange text-black rounded-md transition-all hover:bg-dark-orange hover:text-green focus:outline-none focus:ring focus:border-black-300">shreebasaveshwaratemplekulkund@gmail.com</a></p>
+              <p className="text-gray-700 break-all"><a href="mailto:shreebasaveshwaratemplekulkund@gmail.com" class="text-black hover:text-green-500 transition-colors duration-300">shreebasaveshwaratemplekulkund@gmail.com</a></p>
             </div>
           </div>
         </div>
@@ -253,28 +253,32 @@ setLoader(false)
             <p className="text-center">We'll soon address all your inquiries.</p>
           </div>
         )}
+<div className="w-full max-w-md p-4 sm:p-8 bg-orange-100 rounded-lg shadow-lg mt-8 mx-auto">
+  <h2 className="text-2xl sm:text-3xl text-center font-bold tracking-tight mb-4 sm:mb-6">Social Links</h2>
+  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-4">
+    {/* Instagram */}
+    <div className="social-icon">
+      <a href="https://www.instagram.com/shreebasaveshwaratemple?igsh=Ymk0ZXhwZHV0a3lk" target="_blank" rel="noopener noreferrer" className="icon-link relative overflow-hidden group">
+        <Image src={Insta} alt="Instagram" width={80} height={80} className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110" />
+      </a>
+    </div>
+    
+    {/* Facebook */}
+    <div className="social-icon">
+      <a href="https://www.facebook.com/profile.php?id=100090518155741" target="_blank" rel="noopener noreferrer" className="icon-link relative overflow-hidden group">
+        <Image src={Face} alt="Facebook" width={80} height={80} className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110" />
+      </a>
+    </div>
+    
+    {/* YouTube */}
+    <div className="social-icon">
+      <a href="https://www.instagram.com/shreebasaveshwaratemple?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer" className="icon-link relative overflow-hidden group">
+        <Image src={Yt} alt="YouTube" width={80} height={80} className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110" />
+      </a>
+    </div>
+  </div>
 
-        <div className="w-full max-w-md p-8 bg-orange-100 rounded-lg shadow-lg mt-8">
-          <h2 className="text-3xl font-bold tracking-tight mb-6">
-            Social Links
-          </h2>
-          <div className="social-icons flex flex-row gap-4">
-            <div className="icon-container">
-              <a href="https://www.instagram.com/shreebasaveshwaratemple?igsh=Ymk0ZXhwZHV0a3lk" target="_blank" className="icon-link">
-                <Image src={Insta} width={100} />
-              </a>
-            </div>
-            <div className="icon-container">
-              <a href="https://www.facebook.com/profile.php?id=100090518155741" target="_blank" className="icon-link">
-                <Image src={Face} width={100} />
-              </a>
-            </div>
-            <div className="icon-container">
-              <a href="https://www.instagram.com/shreebasaveshwaratemple?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank" className="icon-link">
-                <Image src={Yt} width={100} height={300}/>
-              </a>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
