@@ -121,72 +121,80 @@ const Page = () => {
 
   return (
     <div className='relative mx-auto'>
+  
       {/* ImageSlider component */}
       <ImageSlider />
-
+  
       {/* Loader */}
       {loader && <Loader />}
-      <div className='hidden justify-center py-16 sm:py-12 sm:flex'>
+      
+      {/* Scroll button */}
+      <div className='hidden justify-center py-4 sm:py-2 sm:flex'>
         <button
-          className="flex justify-center items-center bg-gradient-to-r text-xl font-bold from-orange-100 to-orange-500 p-4 rounded-full px-20 border-2 border-black hover:scale-110"
+          className="flex justify-center items-center bg-gradient-to-r text-md sm:text-xl font-bold from-orange-100 to-orange-500 p-2 sm:p-4 rounded-full px-10 sm:px-20 border-2 border-black hover:scale-110"
           onClick={scrollToFeaturedProducts}
         >
           Scroll <MdOutlineMouse />
         </button>
       </div>
+  
+      {/* Welcome text */}
       <div
-        className={`font-extrabold flex flex-col text-4xl sm:text-5xl sm:max-w-xl sm:mx-auto m-10 p-5 lg:text-center items-center ${isVisible ? 'animate-slide-in' : 'opacity-0'
-          } animate-text`}
+        className={`font-extrabold flex flex-col text-2xl sm:text-3xl sm:max-w-xl sm:mx-auto m-5 p-3 lg:text-center items-center 
+          ${isVisible ? 'animate-slide-in' : 'opacity-0'} animate-text`}
         style={{ fontFamily: 'Poppins, sans-serif', color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}
         ref={featuredProductsRef}
       >
-        <span style={{ fontSize: '1.5rem', fontWeight: 'normal' }}>
+        <span style={{ fontSize: '1rem', fontWeight: 'normal' }}>
           Welcome to
         </span>
         <span className='text-center'>
           Kulkunda Shree Basaveshwara Temple
         </span>
       </div>
-      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center'>
-        <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-1 '>
+  
+      {/* First content block */}
+      <div className='flex flex-col sm:flex-row overflow-auto py-2 sm:p-5 justify-center'>
+        <div className='relative w-full sm:w-1/2 mb-3 sm:mb-5 p-3'>
+          {/* Image on the left */}
           <Image
             src={Temple}
-            className='w-full'
+            className='w-full rounded-md'
             alt="register background image"
             width={800}
             height={800}
             priority={true}
           />
         </div>
-        <div className='relative w-full lg:w-1/2 md:w-1/2 mb-3 md:mb-5 lg:mb-5 md:order-2'>
-          <div className='flex flex-col mt-10 p-5 h-full '>
-            <h3 className='text-2xl font-semibold mb-2 text-black-500'>{currentContent.title}</h3>
-            <p className='line-clamp-3 md:line-clamp-5 text-blck-500'>{currentContent.text}</p>
+        <div className='relative w-full sm:w-1/2 mb-3 sm:mb-5 p-3'>
+          {/* Text on the right */}
+          <div className='flex flex-col mt-3 sm:mt-10 p-3 h-full '>
+            <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-black-500'>{currentContent.title}</h3>
+            <p className='line-clamp-3 sm:line-clamp-5 text-black-500'>{currentContent.text}</p>
             <Link href="/Pages/aboutus">
               <p className='text-red-500 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
             </Link>
           </div>
         </div>
-        {/* ... Repeat the structure for the second content block */}
       </div>
-
-
-      <div className='relative flex flex-col md:flex-row py-5 md:p-5 justify-center items-center'>
-        <div className='relative w-full lg:w-1/2 md:w-full mb-5 md:mb-0'>
-          {/* Text in the left */}
-          <div className='relative w-full p-5'>
-            <h3 className='text-2xl font-semibold mb-2 text-black-500'>{currentContent.title1}</h3>
+  
+      {/* Second content block */}
+      <div className='flex flex-col sm:flex-row overflow-auto py-2 sm:p-5 justify-center items-center'>
+        <div className='relative w-full sm:w-1/2 mb-3 sm:mb-0 p-3'>
+          {/* Text on the left */}
+          <div className='relative w-full p-3'>
+            <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-black-500'>{currentContent.title1}</h3>
             <p className='text-black-500'>{currentContent.text1}</p>
             <Link href="/Pages/aboutus">
               <p className='text-red-500 font-bold py-1 text-sm'>{currentContent.readMore1}</p>
             </Link>
           </div>
         </div>
-        <div className='relative w-full lg:w-1/3 md:w-full p-2'>
+        <div className='relative w-full sm:w-1/3 p-3'>
           {/* Image on the right */}
           <Image
             src={Temple12}
-            className='w-full rounded-3xl'
+            className='w-full rounded-md'
             alt="register background image"
             width={300}
             height={250}
@@ -194,56 +202,59 @@ const Page = () => {
           />
         </div>
       </div>
-
-      <div className='flex flex-col md:flex-row overflow-auto py-5 md:p-5 justify-center'>
-        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5 p-3 mr-20'>
+  
+      {/* Third and Fourth content blocks */}
+      <div className='flex flex-col sm:flex-row overflow-auto py-2 sm:p-5 justify-center'>
+        {/* Third content block */}
+        <div className='relative w-full sm:w-1/3 mb-3 sm:mb-5 p-3'>
           {/* Image with text overlay */}
           <div className='relative w-full bg-black'>
             <Image
               src={Temple13}
-              className='w-full opacity-40'
+              className='w-full opacity-40 rounded-md'
               alt="register background image"
               width={300}
               height={250}
               priority={true}
             />
-            <div className='absolute top-5 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title3}</h3>
-              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text31}</p>
-              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text34}</p>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-300 pt-4'>{currentContent.title4}</h3>
-              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text32}</p>
-              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text33}</p>
-              <p className='line-clamp-3 md:line-clamp-5 text-yellow-300 '>{currentContent.text35}</p>
+            <div className='absolute top-3 left-0 right-0 bottom-16 flex flex-col justify-end p-3'>
+              <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title3}</h3>
+              <p className='line-clamp-3 sm:line-clamp-5 text-yellow-300'>{currentContent.text31}</p>
+              <p className='line-clamp-3 sm:line-clamp-5 text-yellow-300'>{currentContent.text34}</p>
+              <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-yellow-300 pt-2'>{currentContent.title4}</h3>
+              <p className='line-clamp-3 sm:line-clamp-5 text-yellow-300'>{currentContent.text32}</p>
+              <p className='line-clamp-3 sm:line-clamp-5 text-yellow-300'>{currentContent.text33}</p>
+              <p className='line-clamp-3 sm:line-clamp-5 text-yellow-300'>{currentContent.text35}</p>
             </div>
           </div>
         </div>
-
-        <div className='relative w-full lg:w-1/3 md:w-1/2 mb-3 md:mb-5 lg:mb-5 p-3 md:ml-20'>
+  
+        {/* Fourth content block */}
+        <div className='relative w-full sm:w-1/3 mb-3 sm:mb-5 p-3'>
           {/* Image with text overlay */}
           <div className='relative w-full bg-black'>
             <Image
               src={Temple15}
-              className='w-full opacity-40'
+              className='w-full opacity-40 rounded-md'
               alt="register background image"
               width={300}
               height={250}
               priority={true}
             />
-            <div className='absolute top-0 left-0 right-0 bottom-24 flex flex-col justify-end p-5'>
-              <h3 className='text-2xl font-semibold mb-2 text-yellow-300'>  {currentContent.title2}</h3>
-              <p className='text-xl font-semibold mb-2 text-yellow-300'>⦾ {found && newsUpdatesList.length > 0 && newsUpdatesList[0].headline}</p>
-              <p className='text-sm font-semibold mb-2 text-yellow-300 line-clamp-3'>
+            <div className='absolute top-0 left-0 right-0 bottom-16 flex flex-col justify-end p-3'>
+              <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title2}</h3>
+              <p className='text-xl sm:text-2xl font-semibold mb-2 text-yellow-300'>⦾ {found && newsUpdatesList.length > 0 && newsUpdatesList[0].headline}</p>
+              <p className='text-sm sm:text-base font-semibold mb-2 text-yellow-300 line-clamp-3'>
                 {found && newsUpdatesList.length > 0 && newsUpdatesList[0].description}
               </p>
             </div>
           </div>
         </div>
       </div>
-
+  
     </div>
-
   );
+  
 };
 
 export default Page;
