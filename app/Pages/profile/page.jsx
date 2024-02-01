@@ -223,7 +223,7 @@ const Profile = () => {
               <IoLogOutOutline /> Logout
             </button>
             <Link
-              className="text-blue-500 font-semibold ml-auto cursor-pointer hover:scale-110 hidden"
+              className="text-blue-500 font-semibold ml-auto cursor-pointer hover:scale-110 "
               href="/Pages/changepass"
             >
               <span>Change password?</span>
