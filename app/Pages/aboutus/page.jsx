@@ -198,41 +198,7 @@ const page = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              How to Reach..
-            </span>
-            <p className="text-sm md:text-base lg:text-lg text-center">
-              <span className="block">
-                By train: If arriving by train, travel to Subrahmanya Road,
-                accessible from Karwar, Mangaluru, Bengaluru, Hassan, Hubballi,
-                and Vijayapura. KSRTC buses from Subrahmanya Road station or
-                auto rickshaws can take you to Kulkunda.
-              </span>
-              <span className="block">
-                By flight: The nearest airport is Mangaluru International
-                Airport, 108 km away. Flights from Bengaluru, Hyderabad,
-                Chennai, Mumbai, Pune, Delhi, and Gulf cities operate to
-                Mangaluru. From Mangaluru, you can reach Kulkunda by road or
-                train.
-              </span>
-              <span className="block">
-                By Bus: The nearest bus station is Mangalore.
-              </span>
-            </p>
-          </div>
-          <div className="w-full md:w-1/3 p-1 rounded-lg">
-            <Image
-              className="w-full h-full object-cover lg:rounded-tl-full lg:rounded-bl-full rounded-3xl border-1 lg:hover:scale-105 mt-10"
-              src={Temple12}
-              alt="image here"
-              height={800}
-              width={700}
-              priority={true}
-            />
-          </div>
-        </div>
+        
       </div>
 
       {/* Kannada  */}
@@ -414,38 +380,6 @@ const page = () => {
               ಭರಿಸುತ್ತದೆ. ಶ್ರದ್ಧಾಭಕ್ತರು ಬಸವೇಶ್ವರನು ಬಸವನಮೂಲದಲ್ಲಿ ನೆಲೆಸಿರುವುದನ್ನು
               ನಂಬಿದ್ದಾರೆ ಮತ್ತು ಅವರ ಈಶ್ವರನು ಭಕ್ತರ ಸದಾ ಇಚ್ಛೆಗಳನ್ನು ಪೂರೈಸುತ್ತಾನೆ.
             </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-2 lg:mb-10 lg:mt-10 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
-              ಹೇಗೆ ಹೋಗಬಹುದು?
-            </span>
-            <p className="text-sm md:text-base lg:text-md text-center">
-              <span className="block">
-              ರೈಲು ಮೂಲಕ:
-              ರೈಲಿನಲ್ಲಿ ಕಾರವಾರ,ಮಂಗಳೂರು,ಬೆಂಗಳೂರು,ಹಾಸನ,ಹುಬ್ಬಳ್ಳಿ,ವಿಜಯಪುರ,ಕಣ್ಣೂರು,ಕಾಸರಗೋಡಿನಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ,ಅಲ್ಲಿಂದ ಕೆ.ಎಸ್.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪುಗಳು ಅಥವಾ ಆಟೋ ರಿಕ್ಷಾಗಳ ಮೂಲಕ 12 ಕಿಲೋಮೀಟರು ದೂರದಲ್ಲಿರುವ ಕುಲ್ಕುಂದ, ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು.
-
-              </span>
-              <span className="block">
-              ವಿಮಾನದ ಮೂಲಕ:
-              ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. 
-              ಬೆಂಗಳೂರು,ಹೈದರಾಬಾದ್,ಚೆನ್ನೈ,ಮುಂಬೈ,ಪುಣೆ,ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. 
-              ಮಂಗಳೂರಿನಿಂದ ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
-
-              </span>
-            </p>
-          </div>
-          <div className="w-full md:w-1/3 p-1 rounded-lg">
-            <Image
-              className="w-full h-full object-cover rounded-3xl lg:rounded-tl-full lg:rounded-bl-full border-1 lg:hover:scale-105 mt-10"
-              src={Temple12}
-              alt="image here"
-              height={800}
-              width={700}
-              priority={true}
-            />
           </div>
         </div>
       </div>
