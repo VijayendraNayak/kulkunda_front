@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";   
 import Image from "next/image";
+import Select from 'react-select';
 
 const UserHeader = ({ loading }) => {
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -58,12 +59,59 @@ const UserHeader = ({ loading }) => {
     }
   };
 
+  const sevasOptions = [
+    { value: "", label: "Sevas" },
+    { value: "sevaList", label: "Seva list" },
+    { value: "advancedSevaBookings", label: "Advanced seva bookings" },
+  ];
+
+  const aboutUsOptions = [
+    { value: "", label: "About Us" },
+    { value: "aboutTemple", label: "About Temple" },
+    { value: "howtoReach", label: "How to Reach" },
+  ];
+
+  const customStyles = {
+      control: (provided) => ({
+        ...provided,
+        background: '#ff8c00', // Set background color
+        border: 'none',
+        borderRadius: '4px',
+        width: '120px',
+        '&:hover': {
+          background: '#ff6a00', // Adjust hover background color
+        },
+      }),
+      indicatorSeparator: () => ({
+        display: 'none', // Remove the indicator separator
+      }),
+      dropdownIndicator: (provided) => ({
+        ...provided,
+        color: '#ffb400', // Adjust color to match your design
+        '&:hover': {
+          color: '#ff7400', // Adjust hover color
+        },
+      }),
+      option: (provided, state) => ({
+        ...provided,
+        backgroundColor: state.isSelected ? '#ff7400' : state.isFocused ? '#ffe6cc' : 'transparent', // Adjust colors as needed
+        color: state.isSelected ? '#fff' : '#333', // Adjust text color
+        '&:hover': {
+          backgroundColor: '#ff7400', // Adjust hover background color
+          color: '#fff', // Adjust hover text color
+        },
+      }),
+      menu: (provided) => ({
+        ...provided,
+        border: '1px solid #ffb400', // Adjust border color
+        borderRadius: '4px',
+        marginTop: '4px', // Adjust menu top margin
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Add a subtle box shadow
+      }),
+    };
+
   return (
-    <header
-      className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${
-        isNavVisible ? "translateY(0)" : "-translate-y-full"
-      }`}
-    >
+    <header className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${isNavVisible ? "translateY(0)" : "-translate-y-full"}`}>
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div
@@ -89,67 +137,20 @@ const UserHeader = ({ loading }) => {
               Home
             </li>
           </Link>
-          <select
-            value={selectedOption}
-            onChange={handleOptionChange}
-            className="bg-transparent text-orange-700 hidden sm:flex w-20 font-semibold hover:none"
-          >
-            <option
-              value=""
-              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
-                path === "/Pages/seva" ? "underline" : ""
-              }`}
-            >
-              Sevas
-            </option>
-            <option
-              value="sevaList"
-              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
-                path === "/Pages/seva" ? "underline" : ""
-              }`}
-            >
-              Seva list
-            </option>
-            <option
-              value="advancedSevaBookings"
-              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
-                path === "/Pages/advancedseva" ? "underline" : ""
-              }`}
-            >
-              Advanced seva bookings
-            </option>
-          </select>
-          <select
-            value={selectedOption}
-            onChange={handleOptionChange}
-            className="bg-transparent text-orange-700 hidden sm:flex w-24 font-semibold hover:none"
-          >
-            <option
-              value=""
-              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
-                path === "/Pages/aboutus" ? "underline" : ""
-              }`}
-            >
-              About Us
-            </option>
-            <option
-              value="aboutTemple"
-              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
-                path === "/Pages/aboutus" ? "underline" : ""
-              }`}
-            >
-              About Temple
-            </option>
-            <option
-              value="howtoReach"
-              className={`hover:underline text-orange-700 hidden sm:flex p-3 ${
-                path === "/Pages/reach" ? "underline" : ""
-              }`}
-            >
-              How to Reach
-            </option>
-          </select>
-          <Link href="/Pages/contactus">
+          <Select
+          value={sevasOptions.find(option => option.value === selectedOption)}
+          options={sevasOptions}
+          onChange={(selected) => handleOptionChange({ target: { value: selected.value } })}
+          styles={customStyles}
+        />
+
+        <Select
+          value={aboutUsOptions.find(option => option.value === selectedOption)}
+          options={aboutUsOptions}
+          onChange={(selected) => handleOptionChange({ target: { value: selected.value } })}
+          styles={customStyles}
+        />          
+        <Link href="/Pages/contactus">
             <li
               className={`hover:underline text-orange-700 hidden sm:flex ${
                 path === "/Pages/contactus" ? "underline" : ""
