@@ -123,7 +123,7 @@ const UserHeader = ({ loading }) => {
           <select
             value={selectedOption}
             onChange={handleOptionChange}
-            className="bg-transparent text-orange-700 hidden sm:flex w-20 font-semibold hover:none"
+            className="bg-transparent text-orange-700 hidden sm:flex w-24 font-semibold hover:none"
           >
             <option
               value=""
@@ -222,7 +222,17 @@ const UserHeader = ({ loading }) => {
                   }`}
                   onClick={togglenavbar}
                 >
-                  About Us
+                  About The Temple
+                </li>
+              </Link>
+              <Link href="/Pages/reach">
+                <li
+                  className={`hover:underline text-orange-700 sm:hidden ${
+                    path === "/Pages/reach" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                  }`}
+                  onClick={togglenavbar}
+                >
+                  How to reach
                 </li>
               </Link>
               <Link href="/Pages/seva">

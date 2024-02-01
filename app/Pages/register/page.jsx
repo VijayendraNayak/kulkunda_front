@@ -66,9 +66,10 @@ const Register = () => {
   return (
     <div className=" my-20 sm:p-10 p-5 flex items-center gap-8">
       {loading && <Loader />}
-      <div className="flex-1 relative  hidden sm:flex">
+      <div className="flex-1 relative  hidden sm:flex ">
         <Image
           src={RegisterImage}
+          className="rounded-2xl"
           alt="register background image"
           layout="responsive"
           objectFit="cover"

@@ -1,0 +1,12 @@
+body {
+    user-select: none;
+  }
+  
+  body, div {
+    pointer-events: none;
+  }
+  
+  /* Optionally, add a class to specific elements where you want to allow interactions */
+  .allow-interaction {
+    pointer-events: auto;
+  }

@@ -1,3 +1,4 @@
+
 "use client"
 import Image from "next/image";
 import Temple6 from "/app/assets/image/temple6.jpg";
@@ -9,6 +10,7 @@ import Loader from "../../Components/Loader";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import "./styles.css"
 
 const page = () => {
   const [loader, setLoader] = useState(false);

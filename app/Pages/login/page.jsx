@@ -120,6 +120,7 @@ const Login = () => {
         <Image
           src={RegisterBackground}
           alt="regester background image"
+          className="rounded-2xl"
           layout="fill"
           objectFit="cover"
           objectPosition="left"
