@@ -11,8 +11,10 @@ import {
   registerSuccess,
   registerFailure,
 } from "../../Redux/Features/counter/counterslice";
+import { setPhoneNumber } from "../../Redux/Features/counter/phoneslice";
 import dynamic from "next/dynamic";
 import Loader from "../../Components/Loader";
+
 
 const Register = () => {
   const [formdata, setFormdata] = useState({});
@@ -21,6 +23,8 @@ const Register = () => {
   const [votp, setVotp] = useState(false);
   const [otp, setOtp] = useState("false");
   const [verror, setVerror] = useState(false);
+  const [tick, setTick] = useState(false);
+
   const dispatch = useDispatch();
 
   const router = useRouter();
@@ -98,21 +102,28 @@ const Register = () => {
     e.preventDefault();
     if (formdata && formdata.phonenumber) {
       const phoneNumber = formdata.phonenumber;
+      const votp = otp.otp;
+      console.log(phoneNumber, votp);
       if (phoneNumber.length >= 5) {
         // Remove the 4th character and merge the parts
         const modifiedPhoneNumber =
           phoneNumber.substring(0, 3) + phoneNumber.substring(4);
-        const res=await fetch("/api/otp/check-verification", {
+        const res = await fetch("/api/otp/check-verification", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            phonenumber: modifiedPhoneNumber,otp
+            phonenumber: modifiedPhoneNumber,
+            otp: votp, // assuming otp is a variable holding the OTP value
           }),
         });
-        const data=await res.json()
-        console.log(data)
+        const data = await res.json();
+        if (data.status === "approved") {
+          setTick(true);
+          dispatch(setPhoneNumber(phoneNumber))
+        }
+        setVotp(true);
         // Handle the response as needed
       } else {
         console.error("Invalid phone number length");
@@ -121,6 +132,7 @@ const Register = () => {
       console.error("formdata or formdata.phonenumber is undefined");
     }
   };
+
   return (
     <div className=" my-20 sm:p-10 p-5 flex items-center gap-8">
       {loading && <Loader />}
@@ -151,13 +163,21 @@ const Register = () => {
             <input
               type="text"
               placeholder="Phone number"
-              className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
+              className={`border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60 ${
+                tick ? "border-green-500" : ""
+              }`}
               id="phonenumber"
               defaultValue={"+91 "}
               onChange={handleChange}
             />
+            {tick && (
+              <span className="text-green-500 ml-2 font-extrabold text-xl">
+                &#10003; verified
+              </span>
+            )}
+
             <button
-              className="p-3 bg-green-400 text-white text-xl hover:bg-green-600 rounded-lg font-semibold"
+              className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
               onClick={handlesendotp}
               type="button"
             >
@@ -173,7 +193,7 @@ const Register = () => {
               onChange={handleotpChange}
             />
             <button
-              className="p-3 bg-blue-400 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold"
+              className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
               onClick={handleverifyotp}
               type="button"
             >

@@ -28,6 +28,7 @@ const Login = () => {
   };
   const { phoneNumber } = useSelector((state) => state.phone);
   const { loading, error } = useSelector((state) => state.user);
+
   useEffect(() => {
     // Set phonenumber in formdata if phoneNumber exists
     if (phoneNumber) {
@@ -136,10 +137,12 @@ const Login = () => {
             <input
               type="text"
               placeholder="Phone number"
-              className="border p-3 rounded-lg hover:shadow-lg"
+              className="border p-3 rounded-lg hover:shadow-lg bg-white"
               id="phonenumber"
-              defaultValue={"+91 "}
+              defaultValue={phoneNumber}
               onChange={handleChange}
+              disabled
+
             />
 
             <div className="relative">
