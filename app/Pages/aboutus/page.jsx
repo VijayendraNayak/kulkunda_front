@@ -4,7 +4,6 @@ import Image from "next/image";
 import Temple6 from "/app/assets/image/temple6.jpg";
 import Temple7 from "/app/assets/image/temple7.jpg";
 import Temple10 from "/app/assets/image/temple10.jpg";
-import Temple12 from "/app/assets/image/temple12.png";
 import Temple5 from "/app/assets/image/temple3.jpg";
 import Loader from "../../Components/Loader";
 import dynamic from "next/dynamic";
@@ -198,9 +197,6 @@ const page = () => {
             </p>
           </div>
         </div>
-
-
-        
       </div>
 
       {/* Kannada  */}
