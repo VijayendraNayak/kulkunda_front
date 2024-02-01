@@ -4,10 +4,11 @@ import Image from "next/image";
 import Slide1 from "/app/assets/image/lake.jpg";
 import Slide2 from "/app/assets/image/ship.jpg";
 import Slide3 from "/app/assets/image/slider2.jpg";
+import Slide4 from "/app/assets/image/temple16.jpg"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const images = [Slide1, Slide2, Slide3];
+const images = [Slide1, Slide2, Slide3, Slide4];
 
 const ImageSlider = () => {
   const [currentPage, setCurrentPage] = useState(0);
