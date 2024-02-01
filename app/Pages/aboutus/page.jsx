@@ -27,7 +27,7 @@ const page = () => {
       >
         {/* Section 1 */}
         <div className="w-full p-5 gap-2 flex flex-col">
-          <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+          <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
             Historical Significance
           </span>
           <p className="text-sm md:text-base lg:text-lg text-center">
@@ -124,7 +124,7 @@ const page = () => {
           <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
             {/* Information on the Left */}
             <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
                 Restoration and Worship
               </span>
               <p className="text-sm md:text-base lg:text-lg text-center">
@@ -135,7 +135,7 @@ const page = () => {
             
             {/* Information on the Right */}
             <div className="w-full md:w-1/2 p-5 flex flex-col">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
                 Cultural Traditions
               </span>
               <p className="text-sm md:text-base lg:text-lg text-center">
@@ -149,7 +149,7 @@ const page = () => {
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-full p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
               Historical Figures and Influence
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -185,7 +185,7 @@ const page = () => {
             />
           </div>
           <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
               Spiritual Significance
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
@@ -204,7 +204,7 @@ const page = () => {
         className={`flex flex-col gap-4 px-4 md:px-8 ${langName==="English"?"hidden":"flex"}`}
       >
         <div className="w-full p-5 gap-2 flex flex-col">
-          <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+          <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
             ಪೌರಾಣಿಕ ಹಿನ್ನೆಲೆ
           </span>
           <p className="text-sm md:text-base lg:text-md text-center">
@@ -294,7 +294,7 @@ const page = () => {
         <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
           {/* Information on the Left */}
           <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
               ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
@@ -310,7 +310,7 @@ const page = () => {
             
             {/* Information on the Right */}
             <div className="w-full md:w-1/2 p-5 flex flex-col">
-              <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+              <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
                 ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
               </span>
               <p className="relative text-sm md:text-base lg:text-md text-wrap text-center">
@@ -331,7 +331,7 @@ const page = () => {
 
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-full p-2 gap-2 flex flex-col lg:mt-10">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
               ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
@@ -369,7 +369,7 @@ const page = () => {
             />
           </div>
           <div className="w-full md:w-1/2 p-2 gap-2 flex flex-col mt-10">
-            <span className="text-lg md:text-2xl lg:text-4xl font-semibold text-center underline">
+            <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
               ಆಧ್ಯಾತ್ಮಿಕ ಮಹತ್ವ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
