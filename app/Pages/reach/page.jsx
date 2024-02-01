@@ -69,7 +69,7 @@ const page = () => {
       </div>
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-2/3 p-2 gap-2 flex flex-col">
-            <p className="text-sm md:text-base lg:text-lg lg:text-justify text-justify break-words text-wrap">
+            <p className="text-sm md:text-base lg:text-lg text-justify break-words text-wrap">
               <span className="block">
               ರೈಲು ಮೂಲಕ:
               <br></br>
