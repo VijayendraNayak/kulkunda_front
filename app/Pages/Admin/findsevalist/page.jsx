@@ -87,7 +87,7 @@ const FindUser = () => {
   };
 
   return (
-    <div className="pt-28 h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white mt-16 p-4"> {/* Added mt-16 for top margin */}
       <form className="flex items-center justify-between max-w-lg mx-auto bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4 rounded-full">
         <select
           value={searchCategory}
@@ -118,7 +118,7 @@ const FindUser = () => {
         </button>
       </form>
 
-      <div className="pt-4">
+      <div className="flex-grow overflow-y-auto p-4">
         {found && sevaList.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {sevaList.map((seva, index) => (
