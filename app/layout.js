@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Footer from './Components/Footer';
 import Languageswitch from './Components/Languageswitch';
@@ -12,18 +13,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Metadata */}
-        <Metadata />
+        <MetaTags />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
-        {/* Open Graph meta tags for social media sharing */}
+        {/* Open Graph, Facebook, and Instagram meta tags */}
         <OpenGraphMetadata />
-
-        {/* Facebook meta tags */}
         <FacebookMetadata />
-
-        {/* Instagram meta tags */}
         <InstagramMetadata />
       </head>
 
@@ -31,7 +28,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <HeaderSelector />
           {children}
-          <Languageswitch/>
+          <Languageswitch />
           <Footer />
         </Providers>
       </body>
@@ -39,13 +36,15 @@ export default function RootLayout({ children }) {
   );
 }
 
-const Metadata = () => (
+const MetaTags = () => (
   <>
     <title>Kulkunda Shree Basaveshwara Temple</title>
     <meta
       name="description"
-      content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola,Kulkunda.This temple is located 2kms away from Kukke Shree Subrahmanya Temple.Lord Shiva is worshipped here in the form of bull(Basava)."
+      content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola, Kulkunda. This temple is located 2kms away from Kukke Shree Subrahmanya Temple. Lord Shiva is worshipped here in the form of bull (Basava)."
     />
+    <meta name="keywords" content="Shree Basaveshwara Temple, Hindu temple, Basavanamoola, Kulkunda, Lord Shiva, Kukke Subrahmanya,Kukke Shree Subrahmanya Temple, sacred place, cultural significance,historical place,Bisle Ghats,Tulunadu,Temples in Coastal Karnataka,Temples in Kukke Subrahmanya,Nearby places in Subrahmanya,places to visit,places to visit at Subrahmanya,Nearby temples to Kukke Shri Subrahmanya Temple,Dharmasthala,Shri Kshethra Dharmasthala" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </>
 );
 
@@ -54,7 +53,7 @@ const OpenGraphMetadata = () => (
     <meta property="og:title" content="Kulkunda Shree Basaveshwara Temple" />
     <meta
       property="og:description"
-      content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola,Kulkunda.This temple is located 2kms away from Kukke Shree Subrahmanya Temple.Lord Shiva is worshipped here in the form of bull(Basava)."
+      content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola, Kulkunda. This temple is located 2kms away from Kukke Shree Subrahmanya Temple. Lord Shiva is worshipped here in the form of bull (Basava)."
     />
     <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:url" content="https://basavanamoolatemple.in" />
