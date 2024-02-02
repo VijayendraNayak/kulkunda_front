@@ -2,10 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { useRouter } from "next/navigation";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import Loader from "../../Components/Loader";
-
 
 const Page = () => {
   const [formdata, setFormdata] = useState({});
@@ -33,20 +32,42 @@ const Page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res=await("/api/user/forgetpass",{
-      method:'POST',
-      headers:{
-        'Content-Type':"application/json",
-      },
-      body:JSON.stringify(formdata)
-    })
-    const data=await res.json()
-    if(data.success===false){
-      return
+
+    // Assuming formdata is an object with a property 'phonenumber'
+    const phoneNumber = formdata.phonenumber;
+
+    if (phoneNumber.length >= 5) {
+      // Remove the first 4 characters
+      const modifiedPhoneNumber = phoneNumber.substring(4);
+
+      const newpassword = formdata.newpassword;
+      const newconfirmpassword = formdata.newconfirmpassword;
+
+      const res = await fetch("/api/user/forgetpass", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          phonenumber: modifiedPhoneNumber,
+          newpassword: newpassword,
+          newconfirmpassword: newconfirmpassword,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success === false) {
+        console.log(data.message);
+        return;
+      }
+
+      router.replace("/Pages/login");
+    } else {
+      console.error("Invalid phone number length");
     }
-    router.push('/Pages/login');
   };
-  
+
   const handlesendotp = async (e) => {
     e.preventDefault();
     // Assuming formdata is an object with a property 'phonenumber'
@@ -133,7 +154,9 @@ const Page = () => {
             )}
 
             <button
-              className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
+              className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${
+                tick ? "hidden" : "flex"
+              }`}
               onClick={handlesendotp}
               type="button"
             >
@@ -149,7 +172,9 @@ const Page = () => {
               onChange={handleotpChange}
             />
             <button
-              className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
+              className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${
+                tick ? "hidden" : "flex"
+              }`}
               onClick={handleverifyotp}
               type="button"
             >
@@ -161,7 +186,7 @@ const Page = () => {
               type={password ? "password" : "text"}
               placeholder="Password"
               className="border p-3 rounded-lg pr-10 w-full hover:shadow-lg focus:outline-none"
-              id="password"
+              id="newpassword"
               onChange={handleChange}
             />
             <button
@@ -177,7 +202,7 @@ const Page = () => {
               type={password ? "password" : "text"}
               placeholder="Confirm Password"
               className="border p-3 rounded-lg pr-10 w-full hover:shadow-lg focus:outline-none"
-              id="confirmpassword"
+              id="newconfirmpassword"
               onChange={handleChange}
             />
             <button
@@ -196,14 +221,6 @@ const Page = () => {
             {loading ? "Loading..." : "Proceed"}
           </button>
         </form>
-        {error && (
-          <p className="text-red-500 text-center font-semibold mt-4">{error}</p>
-        )}
-        {verror && (
-          <p className="text-red-500 text-center font-semibold mt-4">
-            The user should Enter the otp to proceed
-          </p>
-        )}
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 // Import necessary modules
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";   
+import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Select from 'react-select';
+import Select from "react-select";
 
 const UserHeader = ({ loading }) => {
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -72,46 +72,54 @@ const UserHeader = ({ loading }) => {
   ];
 
   const customStyles = {
-      control: (provided) => ({
-        ...provided,
-        background: '#ff8c00', // Set background color
-        border: 'none',
-        borderRadius: '4px',
-        width: '120px',
-        '&:hover': {
-          background: '#ff6a00', // Adjust hover background color
-        },
-      }),
-      indicatorSeparator: () => ({
-        display: 'none', // Remove the indicator separator
-      }),
-      dropdownIndicator: (provided) => ({
-        ...provided,
-        color: '#ffb400', // Adjust color to match your design
-        '&:hover': {
-          color: '#ff7400', // Adjust hover color
-        },
-      }),
-      option: (provided, state) => ({
-        ...provided,
-        backgroundColor: state.isSelected ? '#ff7400' : state.isFocused ? '#ffe6cc' : 'transparent', // Adjust colors as needed
-        color: state.isSelected ? '#fff' : '#333', // Adjust text color
-        '&:hover': {
-          backgroundColor: '#ff7400', // Adjust hover background color
-          color: '#fff', // Adjust hover text color
-        },
-      }),
-      menu: (provided) => ({
-        ...provided,
-        border: '1px solid #ffb400', // Adjust border color
-        borderRadius: '4px',
-        marginTop: '4px', // Adjust menu top margin
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Add a subtle box shadow
-      }),
-    };
+    control: (provided) => ({
+      ...provided,
+      background: "#ff8c00", // Set background color
+      border: "none",
+      borderRadius: "4px",
+      width: "120px",
+      "&:hover": {
+        background: "#ff6a00", // Adjust hover background color
+      },
+    }),
+    indicatorSeparator: () => ({
+      display: "none", // Remove the indicator separator
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      color: "#ffb400", // Adjust color to match your design
+      "&:hover": {
+        color: "#ff7400", // Adjust hover color
+      },
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isSelected
+        ? "#ff7400"
+        : state.isFocused
+        ? "#ffe6cc"
+        : "transparent", // Adjust colors as needed
+      color: state.isSelected ? "#fff" : "#333", // Adjust text color
+      "&:hover": {
+        backgroundColor: "#ff7400", // Adjust hover background color
+        color: "#fff", // Adjust hover text color
+      },
+    }),
+    menu: (provided) => ({
+      ...provided,
+      border: "1px solid #ffb400", // Adjust border color
+      borderRadius: "4px",
+      marginTop: "4px", // Adjust menu top margin
+      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Add a subtle box shadow
+    }),
+  };
 
   return (
-    <header className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${isNavVisible ? "translateY(0)" : "-translate-y-full"}`}>
+    <header
+      className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${
+        isNavVisible ? "translateY(0)" : "-translate-y-full"
+      }`}
+    >
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div
@@ -131,26 +139,36 @@ const UserHeader = ({ loading }) => {
           <Link href="/">
             <li
               className={`hover:underline text-orange-700 hidden sm:flex ${
-              path === "/" ? "underline" : ""
+                path === "/" ? "underline" : ""
               }`}
             >
               Home
             </li>
           </Link>
           <Select
-          value={sevasOptions.find(option => option.value === selectedOption)}
-          options={sevasOptions}
-          onChange={(selected) => handleOptionChange({ target: { value: selected.value } })}
-          styles={customStyles}
-        />
+            className="hidden sm:flex"
+            value={sevasOptions.find(
+              (option) => option.value === selectedOption
+            )}
+            options={sevasOptions}
+            onChange={(selected) =>
+              handleOptionChange({ target: { value: selected.value } })
+            }
+            styles={customStyles}
+          />
 
-        <Select
-          value={aboutUsOptions.find(option => option.value === selectedOption)}
-          options={aboutUsOptions}
-          onChange={(selected) => handleOptionChange({ target: { value: selected.value } })}
-          styles={customStyles}
-        />          
-        <Link href="/Pages/contactus">
+          <Select
+            className="hidden sm:flex"
+            value={aboutUsOptions.find(
+              (option) => option.value === selectedOption
+            )}
+            options={aboutUsOptions}
+            onChange={(selected) =>
+              handleOptionChange({ target: { value: selected.value } })
+            }
+            styles={customStyles}
+          />
+          <Link href="/Pages/contactus">
             <li
               className={`hover:underline text-orange-700 hidden sm:flex ${
                 path === "/Pages/contactus" ? "underline" : ""
@@ -208,7 +226,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -218,7 +238,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/Pages/aboutus">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/Pages/aboutus" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/Pages/aboutus"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -228,7 +250,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/Pages/reach">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/Pages/reach" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/Pages/reach"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -238,7 +262,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/Pages/seva">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/Pages/seva" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/Pages/seva"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -248,7 +274,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/Pages/advancedseva">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/Pages/advancedseva" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/Pages/advancedseva"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -258,7 +286,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/Pages/contactus">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/Pages/contactus" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/Pages/contactus"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -268,7 +298,9 @@ const UserHeader = ({ loading }) => {
               <Link href="/Pages/gallery">
                 <li
                   className={`hover:underline text-orange-700 sm:hidden ${
-                    path === "/Pages/gallery" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                    path === "/Pages/gallery"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
                   }`}
                   onClick={togglenavbar}
                 >
@@ -277,9 +309,13 @@ const UserHeader = ({ loading }) => {
               </Link>
               {currentUser ? (
                 <Link href="/Pages/profile">
-                  <div className={`flex gap-1 items-center ${
-                        path === "/Pages/profile" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
-                      }`}>
+                  <div
+                    className={`flex gap-1 items-center ${
+                      path === "/Pages/profile"
+                        ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                        : ""
+                    }`}
+                  >
                     <Image
                       className=" rounded-full w-10 h-10  sm:hidden"
                       src={currentUser.avatar}
@@ -298,7 +334,9 @@ const UserHeader = ({ loading }) => {
                 <Link href="/Pages/login">
                   <li
                     className={`hover:underline text-white bg-red-500 rounded-lg p-3 sm:hidden ${
-                      path === "/Pages/login" ? "bg-orange-400 p-2 rounded-lg text-white text-lg" : ""
+                      path === "/Pages/login"
+                        ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                        : ""
                     }`}
                     onClick={togglenavbar}
                   >

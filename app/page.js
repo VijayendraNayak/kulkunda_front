@@ -11,6 +11,7 @@ import Temple15 from "/app/assets/image/temple15.jpg";
 import { MdOutlineMouse } from "react-icons/md";
 import Temple12 from "/app/assets/image/temple12.png";
 import { useSelector } from "react-redux";
+import dynamic from "next/dynamic";
 
 const Page = () => {
   const featuredProductsRef = useRef(null);
@@ -93,7 +94,7 @@ const Page = () => {
       text2: '',
       title3: 'Darshana Timings:',
       text31: `
-      ⦾ Morning: 6AM-1PM
+        ⦾ Morning: 6AM-1PM
       `,
       text32: "⦾ Morning Pooja: 8AM",
       text33: "⦾ Mahapooja: 12:15PM",
@@ -114,8 +115,10 @@ const Page = () => {
       text33: 'ಮಧ್ಯಾಹ್ನ ಮಹಾಪೂಜೆ: ಮಧ್ಯಾಹ್ನ 12:15',
       text34: 'ಸಂಜೆ ದರ್ಶನ ಸಮಯ: ಸಂಜೆ 3 ಗಂಟೆಯಿಂದ 7 ಗಂಟೆಯ ತನಕ',
       text35: 'ರಾತ್ರಿ ಪೂಜೆ: ಸಂಜೆ 6:30ಕ್ಕೆ',
+      title4: "Pooja Timings"
     },
   };
+  
 
   const currentContent = content[langName];
 
@@ -169,7 +172,7 @@ const Page = () => {
         <div className='relative w-full sm:w-1/2 mb-3 sm:mb-5 p-3'>
           {/* Text on the right */}
           <div className='flex flex-col mt-3 sm:mt-10 p-3 h-full '>
-            <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-black-500'>{currentContent.title}</h3>
+            <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-black-500'>{ currentContent.title}</h3>
             <p className='line-clamp-3 sm:line-clamp-5 text-black-500'>{currentContent.text}</p>
             <Link href="/Pages/aboutus">
               <p className='text-red-500 font-bold py-1 text-[15px]'>{currentContent.readMore}</p>
@@ -257,4 +260,4 @@ const Page = () => {
   
 };
 
-export default Page;
+export default dynamic(() => Promise.resolve(Page), { ssr: false });
