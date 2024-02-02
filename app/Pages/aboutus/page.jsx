@@ -41,37 +41,37 @@ const page = () => {
             'Shivalinga' on Basava's forehead.
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
-            As mentioned in 'Skanda Purana', when Lord Sri Subrahmanya Swami
+            As mentioned in 'Skanda Purana',when Lord Sri Subrahmanya Swami
             killed the demons like Tarakasura with archery, Lord Sri Subrahmanya
             Swami did penance on Lord Shiva when he saw the demons come back to
-            life and fight. According to the Puranas, Sri Mahadev himself
+            life and fight.According to the Puranas, Sri Mahadev himself
             appeared in the form of Nandi and taught Lord Sri Subrahmanya Swami
             the art of weaponry first.
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
-            Once upon a time, it attracted devotees from all over the state and
+            Once upon a time,it attracted devotees from all over the state and
             who brought lakhs of cattle near Kukke Kshetra and Lord
             Basaveshwara, for trade exchange.
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
             The 'Cattle Fair' with its glorious historical background which was
             held for 15 days starting from the full moon of Kartika masa (Around
-            November). Over time due to various reasons the cattle fair became
-            limited to worship only. Even today, as part of the cattle fair on
+            November).Over time due to various reasons the cattle fair became
+            limited to worship only.Even today,as part of the cattle fair on
             the day of the full moon of Kartika masa (Around November) at
             Basavanamoola, on behalf of the Kukke Sri Subramanya temple, cow
-            pooja and gogras (food to cow) are offered as a tradition. At
-            Basavanamoola, the construction of the Brahma Ratha of Lord Sri
+            pooja and gogras (food to cow) are offered as a tradition.At
+            Basavanamoola, the construction of the Brahma Ratha of Lord Shri
             Subrahmanya Swamy's Champa Shasthi begins after the Go Puja
             (worshiping of cow).
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
-            About 800 years ago, it is known in history that the Keladi kings
+            About 800 years ago,it is known in history that the Keladi kings
             Shivappa Nayaka and Surappa Nayaka were ruling the 'Kadambasamsthan'
-            (Kadaba). It is also known in Ashtamangala that the royal family
+            (Kadaba).It is also known in Ashtamangala that the royal family
             knew the origin and history of Sri Basaveshwara and the history of
             Kulkunda and got was inspired by seeing Basava with 'Shivalinga' on
-            his forehead. In the years that followed, the entire town of Kukke
+            his forehead. In the years that followed,the entire town of Kukke
             was destroyed by smallpox epidemic and it continued to be so during
             the later British rule. Elderly devotees of this region, who saw
             Lord Basaveshwara with Shivlinga in the jungle in the recent past
@@ -79,13 +79,13 @@ const page = () => {
             worship.
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
-            In the course of time, a good theologian completely guided in
+            In the course of time,a good theologian completely guided in
             renovating and re-instating the temple through Ashtamangala.
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
-            It is believed that, if you get darshan of Lord Kukke Subrahmanya
-            and then get darshan of Lord Sri Basaveshwara (Nandishwara) and
-            offer prayers, you will get full results.
+            It is believed that,if you get darshan of Lord Kukke Subrahmanya
+            and then get darshan of Lord Shri Basaveshwara (Nandishwara) and
+            offer prayers,you will get full results.
           </p>
           <p className="text-sm md:text-base lg:text-lg text-center">
             It is believed by thousands of devotees that Lord Basaveshwara
@@ -139,7 +139,7 @@ const page = () => {
                 Cultural Traditions
               </span>
               <p className="text-sm md:text-base lg:text-lg text-center">
-                Even today, during Kartika masa, Basavanamoola observes cow pooja
+                Even today,during Kartika masa, Basavanamoola observes cow pooja
                 and gogras (feeding cows) as part of the cattle fair tradition.
                 The construction of Lord Sri Subrahmanya Swamy's Champa Shasthi
                 Brahma Ratha commences after the Go Puja (cow worship).
@@ -153,11 +153,11 @@ const page = () => {
               Historical Figures and Influence
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              About 800 years ago, during the rule of Keladi kings Shivappa
+              About 800 years ago,during the rule of Keladi kings Shivappa
               Nayaka and Surappa Nayaka in Kadambasamsthan (Kadaba), the
-              significance of Basaveshwara and Kulkunda's history was
-              acknowledged by the royal family. Despite facing adversities such
-              as a smallpox epidemic, the devotion to Lord Basaveshwara endured,
+              significance of Lord Basaveshwara and Kulkunda's history was
+              acknowledged by the royal family.Despite facing adversities such
+              as a smallpox epidemic,the devotion to Lord Basaveshwara endured,
               with devotees constructing a statue for worship.
             </p>
           </div>
@@ -189,9 +189,9 @@ const page = () => {
               Spiritual Significance
             </span>
             <p className="text-sm md:text-base lg:text-lg text-center">
-              It's believed that visiting Lord Kukke Subrahmanya and then seeking
-              darshan of Lord Sri Basaveshwara (Nandishwara) while offering prayers
-              brings complete fulfillment for devotees' wishes. Devotees firmly believe
+              It is believed that visiting Lord Kukke Subrahmanya and then seeking
+              darshan of Lord Shri Basaveshwara (Nandishwara) while offering prayers
+              brings complete fulfillment for devotees wishes. Devotees firmly believe
               that Lord Basaveshwara resides at Basavanmoola and grants the sincere
               desires of his devotees.
             </p>
@@ -219,7 +219,7 @@ const page = () => {
             ಸ್ಕಂದ ಪುರಾಣ ಉಲ್ಲೇಖದಂತೆ,ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ತಾರಕಾಸುರನೇ ಮೊದಲಾದ
             ರಕ್ಕಸರನ್ನು ಧನುರ್ವಿದ್ಯೆ ಯಲ್ಲಿ ಸಂಹಾರ ಮಾಡಿದಾಗ, ಮರುಜೀವ ಪಡೆದು ಯುದ್ಧಕ್ಕೆ
             ಬರುತ್ತಿದ್ದುದನ್ನು ಕಂಡು ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯು ಶಿವನ ಕುರಿತು ತಪಸ್ಸು
-            ಮಾಡಿದ ಅವಾಗ,ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದೀ ಸ್ವರೂಪದಲ್ಲಿ ಪ್ರತ್ಯಕ್ಷನಾಗಿ
+            ಮಾಡಿದಾಗ,ಸಾಕ್ಷಾತ್ ಶ್ರೀ ಮಹಾದೇವನೇ ನಂದಿ(ಬಸವ) ಸ್ವರೂಪದಲ್ಲಿ ಪ್ರತ್ಯಕ್ಷನಾಗಿ
             ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಗೆ ನಂದಿ ವಿದ್ಯೆಯೇ ಮೊದಲಾಗಿ ಶಸ್ತ್ರ ವಿದ್ಯೆಯನ್ನು
             ಬೋಧಿಸಿದರು ಎಂದು ಪುರಾಣದಲ್ಲಿ ತಿಳಿಯಪಡುತ್ತದೆ.
           </p>
@@ -230,11 +230,11 @@ const page = () => {
           </p>
           <p className="text-sm md:text-base lg:text-md text-center">
             ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯಿಂದ ಮೊದಲಗೊಂಡು 15 ದಿವಸಗಳ ಕಾಲ ನಡೆಯುತ್ತಿದ್ದ ವೈಭವದ
-            ಚಾರಿತ್ರಿಕ ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ
+            ಚಾರಿತ್ರಿಕ ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ"ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ
             ಕಾರಣಗಳಿಂದ ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು.
             ಇವತ್ತಿಗೂ ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
-            ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ ಹಾಗೂ
-            ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ ಕ್ಷೇತ್ರದಲ್ಲಿ
+            ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ,ಗೋ ಪೂಜಾ ಹಾಗೂ
+            ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ.ಬಸವನ ಮೂಲ ಕ್ಷೇತ್ರದಲ್ಲಿ
             ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ
             ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
           </p>
@@ -298,7 +298,7 @@ const page = () => {
               ಕ್ಷೇತ್ರದ ಇತಿಹಾಸ ಹಾಗು ಪರಿಚಯ
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
-              ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ಸಮೀಪದ ಹಸಿರು ಸಿರಿಯ
+              ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ದೇವಸ್ಥಾನದ ಸಮೀಪದ ಹಸಿರು ಸಿರಿಯ
               ಕುಮಾರ ಪರ್ವತದ ತಪ್ಪಲಿನ ಕುಮಾರಧಾರ ನದಿಯ ತಟದ ಪೌರಾಣಿಕ ಹಾಗೂ ಐತಿಹಾಸಿಕ
               ಹಿನ್ನಲೆ ಇರುವ ಕುಲ್ಕುಂದ ಬಸವನ ಮೂಲ ಎಂಬ ಸ್ಥಳವು ಅನೇಕ ವರ್ಷಗಳಿಂದ ಸಾವಿರಾರು
               ಜನರ ಶ್ರದ್ಧಾ ಕೇಂದ್ರವಾಗಿ ಜಾನುವಾರು ಜಾತ್ರೆಯ ರೂಪದಲ್ಲಿ ವಿನಿಮಯ
@@ -321,7 +321,7 @@ const page = () => {
                 ಹಿನ್ನೆಲೆಯುಳ್ಳ "ಜಾನುವಾರು ಜಾತ್ರೆ'ಯು ಕಾಲಕ್ರಮೇಣ ಬೇರೆ ಬೇರೆ ಕಾರಣಗಳಿಂದ
                 ಜಾನುವಾರು ಜಾತ್ರೆಯು ಕೇವಲ ಆರಾಧನೆಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಯಿತು. ಇವತ್ತಿಗೂ
                 ಕಾರ್ತಿಕ ಹುಣ್ಣಿಮೆಯ ದಿವಸ ಜಾನುವಾರು ಜಾತ್ರೆಯ ಅಂಗವಾಗಿ ಬಸವನ ಮೂಲ
-                ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ
+                ಕ್ಷೇತ್ರದಲ್ಲಿ, ಕುಕ್ಕೆ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ, ಗೋ ಪೂಜಾ
                 ಹಾಗೂ ಗೋಗ್ರಾಸ ಸಮರ್ಪಣೆ ಮಾಡಿಕೊಂಡು ಬರುವುದು ರೂಡಿಯಲ್ಲಿದೆ. ಬಸವನ ಮೂಲ
                 ಕ್ಷೇತ್ರದಲ್ಲಿ ಗೋ ಪೂಜಾ ನಂತರದಲ್ಲಿಯೇ ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ಸ್ವಾಮಿಯ ಚಂಪಾ
                 ಷಷ್ಠಿಯ ಬ್ರಹ್ಮ ರಥವನ್ನು ಕಟ್ಟುವ ಕೆಲಸಗಳು ಪ್ರಾರಂಭ ಮಾಡುತ್ತಾರೆ
@@ -336,13 +336,12 @@ const page = () => {
             </span>
             <p className="text-sm md:text-base lg:text-md text-center">
               ಸುಮಾರು 800 ವರ್ಷಗಳ ಹಿಂದೆ ಕೆಳದಿ ರಾಜರಾದ ಶಿವಪ್ಪ ನಾಯಕ ಮತ್ತು ಸೂರಪ್ಪ ನಾಯಕ
-              ರಾಜ್ಯವನ್ನು "ಕದಂಬಸಂಸ್ಥಾನ" ಅಥವಾ "ಕಡಬ" ಎಂದು ಆಳುತ್ತಿದ್ದರು. ಅವರು ಬಸವನ
-              ಮೂಲದಲ್ಲಿ ಶಿವಲಿಂಗ ಕಂಡು ಆರಾಧನೆಗೆ ಪ್ರೇರಿತರಾಗಿ, ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶದ ನಂತರ
-              ಅವರ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಬಸವೇಶ್ವರ ದೇವರ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಿದರು. ಇತಿಹಾಸದ
-              ಕೊನೆಯಲ್ಲಿ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ನಾಶವಾದ ನಂತರ, ಸಾವಿರಾರು ಭಕ್ತರ
+              ರಾಜ್ಯವನ್ನು "ಕದಂಬಸಂಸ್ಥಾನ" ಅಥವಾ "ಕಡಬ" ಎಂದು ಆಳುತ್ತಿದ್ದರು. ಅವರು ಬಸವನಮೂಲದಲ್ಲಿ ಶಿವಲಿಂಗ ಕಂಡು ಆರಾಧನೆಗೆ ಪ್ರೇರಿತರಾಗಿ, 
+              ಕುಕ್ಕೆ ಪಟ್ಟಣ ನಾಶದ ನಂತರ ಅವರ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಬಸವೇಶ್ವರ ದೇವರ ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಿದರು. 
+              ಇತಿಹಾಸದ ಕೊನೆಯಲ್ಲಿ ಬ್ರಿಟಿಷ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ನಾಶವಾದ ನಂತರ,ಸಾವಿರಾರು ಭಕ್ತರ
               ನಂಬಿಕೆಯಿಂದ ಅಷ್ಟಮಂಗಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರ ಪೂರ್ವಾರ್ಜಿತ
-              ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಲಾಯಿತು. ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ ಬಸವನ
-              ಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾರಾಂಶ.
+              ಪ್ರತಿಷ್ಠಾಪನೆ ನಡೆಸಲಾಯಿತು. ಭಕ್ತರ ಇಷ್ಟಾರ್ಥಗಳನ್ನು ಅನುಗ್ರಹಿಸಲೆಂದೇ
+              ಬಸವನಮೂಲದಲ್ಲಿ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ ಎಂಬುದು ಸಾರಾಂಶ.
             </p>
           </div>
           <div className="w-full md:w-1/2 p-1 rounded-lg">
