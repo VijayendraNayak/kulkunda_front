@@ -25,6 +25,10 @@ const page = () => {
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
             <p className="text-sm md:text-base lg:text-lg text-justify">
+            <span className="block">
+            By bus: Plenty of buses travel to and from Kukke Subrahmanya, connecting Bisle, Dharmasthala, Kadaba, Uppinangady, Mangaluru, and other parts of Karnataka. 
+            Alight at Kulkunda junction and walk approximately 350 meters to reach the temple.
+              </span>
               <span className="block">
                 By train: If arriving by train, travel to Subrahmanya Road,
                 accessible from Karwar, Mangaluru, Bengaluru, Hassan, Hubballi,
@@ -40,9 +44,6 @@ const page = () => {
                 train.
               </span>
               <br></br>
-              <span className="block">
-                By Bus: The nearest bus station is Mangalore.
-              </span>
             </p>
           </div>
           <div className="w-full md:w-1/3 p-1 rounded-lg">
@@ -64,16 +65,23 @@ const page = () => {
       >
       <div className="flex flex-col items-center pb-5">
         <span className="text-3xl lg:text-5xl text-center font-semibold text-black py-4 px-4 underline md:mx-auto">
-            ಹೇಗೆ ಹೋಗಬಹುದು?
+          ಹೇಗೆ ಹೋಗಬಹುದು?
         </span>
       </div>
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-2/3 p-2 gap-2 flex flex-col">
             <p className="text-sm md:text-base lg:text-lg text-justify break-words text-wrap">
+            <span className="block">
+            ಬಸ್ಸಿನ ಮೂಲಕ:
+              <br></br>
+              ಬಿಸ್ಲೆ, ಧರ್ಮಸ್ಥಳ, ಕಡಬ, ಉಪ್ಪಿನಂಗಡಿ, ಮಂಗಳೂರು ಮತ್ತು ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಾಕಷ್ಟು ಬಸ್ಸುಗಳು ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸುತ್ತವೆ.
+              ಈ ಎಲ್ಲಾ ಬಸ್ಸುಗಳಿಗೆ ಕುಲ್ಕುಂದದಲ್ಲಿ ನಿಲುಗಡೆಯಿದೆ.ಕುಲ್ಕುಂದ ಜಂಕ್ಷನ್‌ನಲ್ಲಿ ಇಳಿದು ಸರಿಸುಮಾರು 350 ಮೀಟರ್ ನಡೆದು ದೇವಸ್ಥಾನವನ್ನು ತಲುಪಬಹುದು.
+              </span>
+              <br></br>
               <span className="block">
               ರೈಲು ಮೂಲಕ:
               <br></br>
-            ರೈಲಿನಲ್ಲಿಕಾರವಾರ,ಮಂಗಳೂರು,ಬೆಂಗಳೂರು,ಹಾಸನ,ಹುಬ್ಬಳ್ಳಿ,ವಿಜಯಪುರ,ಕಣ್ಣೂರು,ಕಾಸರಗೋಡಿನಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ,ಅಲ್ಲಿಂದ 
+            ರೈಲಿನಲ್ಲಿ ಕಾರವಾರ,ಮಂಗಳೂರು,ಬೆಂಗಳೂರು,ಹಾಸನ,ಹುಬ್ಬಳ್ಳಿ,ವಿಜಯಪುರ,ಕಣ್ಣೂರು,ಕಾಸರಗೋಡಿನಿಂದ ನೇರ ರೈಲುಗಳ ಮೂಲಕ ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಪ್ರಯಾಣಿಸಿ,ಅಲ್ಲಿಂದ 
               ಕೆ.ಎಸ್.ಆರ್.ಟಿ.ಸಿ ಬಸ್ಸುಗಳು,ಜೀಪುಗಳು ಅಥವಾ ಆಟೋ ರಿಕ್ಷಾಗಳ ಮೂಲಕ 12 ಕಿಲೋಮೀಟರು ದೂರದಲ್ಲಿರುವ ಕುಲ್ಕುಂದ, ಸುಬ್ರಹ್ಮಣ್ಯಕ್ಕೆ ಪ್ರಯಾಣಿಸಬಹುದು.   
               </span>
               <br></br>
