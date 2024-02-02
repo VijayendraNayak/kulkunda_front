@@ -9,7 +9,7 @@ import Loader from "../../Components/Loader";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-
+import '../aboutus/styles.css';
 
 const page = () => {
   const [loader, setLoader] = useState(false);

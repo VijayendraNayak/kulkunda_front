@@ -116,10 +116,10 @@ const UserHeader = ({ loading }) => {
 
   return (
     <header
-      className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${
-        isNavVisible ? "translateY(0)" : "-translate-y-full"
-      }`}
-    >
+  className={`bg-orange-100 fixed top-0 left-0 w-full z-50 transition-transform duration-300 transform ${
+    isNavVisible ? "translateY(0)" : "-translate-y-full"
+  } allow-interaction`}
+>
       <div className="flex justify-between p-3 max-w-6xl w-full mx-auto items-center">
         <Link href="/">
           <div
