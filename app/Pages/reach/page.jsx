@@ -43,8 +43,8 @@ const page = () => {
                 Chennai, Mumbai, Pune, Delhi, and Gulf cities operate to
                 Mangaluru. From Mangaluru, you can reach Kulkunda by road or
                 train.
+                
               </span>
-              <br></br>
             </p>
           </div>
           <div className="w-full md:w-1/3 p-1 rounded-lg">
