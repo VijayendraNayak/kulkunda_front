@@ -1,16 +1,8 @@
 "use client";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
-import RegisterImage from "/app/assets/image/temple.jpg";
 import { useRouter } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  registerStart,
-  registerSuccess,
-  registerFailure,
-} from "../../Redux/Features/counter/counterslice";
+import {  useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import Loader from "../../Components/Loader";
 
@@ -23,8 +15,6 @@ const Page = () => {
   const [otp, setOtp] = useState("false");
   const [verror, setVerror] = useState(false);
   const [tick, setTick] = useState(false);
-
-  const dispatch = useDispatch();
 
   const router = useRouter();
 
@@ -56,7 +46,7 @@ const Page = () => {
     }
     router.push('/Pages/login');
   };
-
+  
   const handlesendotp = async (e) => {
     e.preventDefault();
     // Assuming formdata is an object with a property 'phonenumber'
@@ -106,7 +96,6 @@ const Page = () => {
         const data = await res.json();
         if (data.status === "approved") {
           setTick(true);
-          dispatch(setPhoneNumber(phoneNumber))
         }
         setVotp(true);
         // Handle the response as needed

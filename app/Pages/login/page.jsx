@@ -141,7 +141,6 @@ const Login = () => {
               id="phonenumber"
               defaultValue={phoneNumber}
               onChange={handleChange}
-              disabled
 
             />
 
