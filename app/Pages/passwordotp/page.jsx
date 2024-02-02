@@ -136,7 +136,8 @@ const Page = () => {
           Forgot password
         </p>
         <form className="flex flex-col gap-4">
-          <div className="flex gap-10 ">
+        <div className="flex flex-col sm:flex-row gap-10">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
             <input
               type="text"
               placeholder="Phone number"
@@ -154,7 +155,7 @@ const Page = () => {
             )}
 
             <button
-              className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${
+              className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold  ${
                 tick ? "hidden" : "flex"
               }`}
               onClick={handlesendotp}
@@ -163,23 +164,26 @@ const Page = () => {
               Send OTP
             </button>
           </div>
-          <div className="flex gap-10">
-            <input
-              type="text"
-              placeholder="Enter the OTP"
-              className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
-              id="otp"
-              onChange={handleotpChange}
-            />
-            <button
-              className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${
-                tick ? "hidden" : "flex"
-              }`}
-              onClick={handleverifyotp}
-              type="button"
-            >
-              Verify OTP
-            </button>
+        </div>
+          <div className="flex flex-col sm:flex-row gap-10">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+              <input
+                type="text"
+                placeholder="Enter the OTP"
+                className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
+                id="otp"
+                onChange={handleotpChange}
+              />
+              <button
+                className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${
+                  tick ? "hidden" : "flex"
+                }`}
+                onClick={handleverifyotp}
+                type="button"
+              >
+                Verify OTP
+              </button>
+            </div>
           </div>
           <div className="relative">
             <input

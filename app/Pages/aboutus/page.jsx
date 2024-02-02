@@ -176,7 +176,7 @@ const page = () => {
         <div className="flex flex-col md:flex-row md:h-60 p-2">
           <div className="w-full md:w-1/2 rounded-lg">
             <Image
-              className="w-full h-full object-cover lg:rounded-tr-full lg:rounded-br-full rounded-xl border-1 lg:hover:scale-105"
+              className="w-full h-full object-cover lg:rounded-tr-full lg:rounded-br-full rounded-xl border-1 lg:hover:scale-105 mt-5"
               src={Temple5}
               alt="image here"
               height={800}
@@ -291,7 +291,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row w-full md:h-60 rounded-3xl p-2">
+        <div className="flex flex-col md:flex-row w-full md:h-auto rounded-3xl p-2">
           {/* Information on the Left */}
           <div className="w-full md:w-1/2 p-5 flex flex-col gap-4 lg:border-r border-black">
             <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
@@ -313,7 +313,7 @@ const page = () => {
               <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
                 ಪಾರಂಪರಿಕ ಪದ್ಧತಿ
               </span>
-              <p className="relative text-sm md:text-base lg:text-md text-wrap text-center">
+              <p className="text-sm md:text-base lg:text-md text-center">
                 ಒಂದು ಕಾಲದಲ್ಲಿ ರಾಜ್ಯದಾದ್ಯಂತ ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸಿ ಕುಕ್ಕೆ ಕ್ಷೇತ್ರ ಹಾಗೂ
                 ಬಸವೇಶ್ವರ ದೇವರ ಕೃಪಾಶಯದಲ್ಲಿ ಕೃಪಾಶಯದಲ್ಲಿ ಲಕ್ಷಗಟ್ಟಲೆ ಜಾನುವಾರುಗಳನ್ನು
                 ತಂದು ವ್ಯಾಪಾರ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳುತ್ತಿದ್ದ ಸ್ಥಳವಿದು. ಕಾರ್ತಿಕ
@@ -329,7 +329,7 @@ const page = () => {
             </div>
           </div>
 
-        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
+        <div className="flex flex-col md:flex-row gap-2 w-full md:h-auto rounded-3xl p-2">
           <div className="w-full md:w-full p-2 gap-2 flex flex-col lg:mt-10">
             <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
               ಐತಿಹಾಸಿಕ ಹಿನ್ನೆಲೆ
@@ -359,11 +359,11 @@ const page = () => {
         <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
           <div className="w-full md:w-1/2 p-1 rounded-lg">
             <Image
-              className="w-full h-full object-cover rounded-3xl lg:rounded-tr-full lg:rounded-br-full border-1 lg:hover:scale-105 mt-10"
+              className="w-full h-full object-cover rounded-xl lg:rounded-tr-full lg:rounded-br-full border-1 lg:hover:scale-105 mt-10"
               src={Temple5}
               alt="image here"
-              height={800}
-              width={700}
+              height={1200}
+              width={1100}
               priority={true}
             />
           </div>

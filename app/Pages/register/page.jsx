@@ -134,9 +134,9 @@ const Register = () => {
   };
 
   return (
-    <div className=" my-20 sm:p-10 p-5 flex items-center gap-8">
+    <div className=" my-20z sm:p-10 p-5 flex flex-col items-center gap-8 sm:flex-row">
       {loading && <Loader />}
-      <div className="flex-1 relative  hidden sm:flex ">
+      <div className="flex-1 relative sm:flex ">
         <Image
           src={RegisterImage}
           className="rounded-2xl"
@@ -159,46 +159,50 @@ const Register = () => {
             id="name"
             onChange={handleChange}
           />
-          <div className="flex gap-10 ">
-            <input
-              type="text"
-              placeholder="Phone number"
-              className={`border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60 ${
-                tick ? "border-green-500" : ""
-              }`}
-              id="phonenumber"
-              defaultValue={"+91 "}
-              onChange={handleChange}
-            />
-            {tick && (
-              <span className="text-green-500 ml-2 font-extrabold text-xl">
-                &#10003; verified
-              </span>
-            )}
+          <div className="flex flex-col sm:flex-row gap-10">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+              <input
+                type="text"
+                placeholder="Phone number"
+                className={`border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60 ${
+                  tick ? "border-green-500" : ""
+                }`}
+                id="phonenumber"
+                defaultValue={"+91 "}
+                onChange={handleChange}
+              />
+              {tick && (
+                <span className="text-green-500 ml-2 font-extrabold text-xl">
+                  &#10003; verified
+                </span>
+              )}
 
-            <button
-              className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
-              onClick={handlesendotp}
-              type="button"
-            >
-              Send OTP
-            </button>
+              <button
+                className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
+                onClick={handlesendotp}
+                type="button"
+              >
+                Send OTP
+              </button>
+            </div>
           </div>
-          <div className="flex gap-10">
-            <input
-              type="text"
-              placeholder="Enter the OTP"
-              className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
-              id="otp"
-              onChange={handleotpChange}
-            />
-            <button
-              className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
-              onClick={handleverifyotp}
-              type="button"
-            >
-              Verify OTP
-            </button>
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+              <input
+                type="text"
+                placeholder="Enter the OTP"
+                className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
+                id="otp"
+                onChange={handleotpChange}
+              />
+              <button
+                className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
+                onClick={handleverifyotp}
+                type="button"
+              >
+                Verify OTP
+              </button>
+            </div>
           </div>
           <input
             type="email"
