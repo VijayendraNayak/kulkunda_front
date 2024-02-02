@@ -29,6 +29,7 @@ const page = () => {
             By bus: Plenty of buses travel to and from Kukke Subrahmanya, connecting Bisle, Dharmasthala, Kadaba, Uppinangady, Mangaluru, and other parts of Karnataka. 
             Alight at Kulkunda junction and walk approximately 350 meters to reach the temple.
               </span>
+              <br></br>
               <span className="block">
                 By train: If arriving by train, travel to Subrahmanya Road,
                 accessible from Karwar, Mangaluru, Bengaluru, Hassan, Hubballi,
@@ -91,7 +92,7 @@ const page = () => {
               ಹತ್ತಿರದ ವಿಮಾನ ನಿಲ್ದಾಣವೆಂದರೆ 108 ಕಿಮೀ ದೂರದಲ್ಲಿರುವ ಮಂಗಳೂರು ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ. 
               ಬೆಂಗಳೂರು,ಹೈದರಾಬಾದ್,ಚೆನ್ನೈ,ಮುಂಬೈ,ಪುಣೆ,ದೆಹಲಿ ಮತ್ತು ಗಲ್ಫ್ ನಗರಗಳಿಂದ ಮಂಗಳೂರಿಗೆ ವಿಮಾನಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ. 
               ಮಂಗಳೂರಿನಿಂದ ಕುಲ್ಕುಂದವನ್ನು ರಸ್ತೆ ಅಥವಾ ರೈಲಿನ ಮೂಲಕ ತಲುಪಬಹುದು.
-
+              <br></br>
               </span>
             </p>
           </div>
