@@ -22,7 +22,7 @@ const page = () => {
         </p>
       </div>
         {/* Section 1 */}
-        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
+        <div className="flex flex-col md:flex-row gap-2 w-full md:h-auto rounded-3xl p-2">
           <div className="w-full h-full md:w-2/3 p-2 gap-2 flex flex-col">
             <p className="text-sm md:text-base lg:text-lg text-justify">
             <span className="block">
@@ -69,8 +69,8 @@ const page = () => {
           ಹೇಗೆ ಹೋಗಬಹುದು?
         </span>
       </div>
-        <div className="flex flex-col md:flex-row gap-2 w-full md:h-60 rounded-3xl p-2">
-          <div className="w-full md:w-2/3 p-2 gap-2 flex flex-col">
+        <div className="flex flex-col md:flex-row gap-2 w-full md:h-auto rounded-3xl p-2">
+          <div className="w-full md:w-2/3 p-2 gap-5 flex flex-col">
             <p className="text-sm md:text-base lg:text-lg text-justify break-words text-wrap">
             <span className="block">
             ಬಸ್ಸಿನ ಮೂಲಕ:
