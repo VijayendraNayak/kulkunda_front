@@ -81,7 +81,6 @@ const GalleryPage = () => {
     setLoading(true);
     openSlideshow(index);
     setLoading(false);
-
   };
 
   const handleImageLoad = (index) => {
@@ -93,8 +92,8 @@ const GalleryPage = () => {
   };
 
   return (
-    <div className="container mx-auto py-20 px-10">
-      <div className="font-semibold text-5xl text-black text-center pb-10">
+    <div className="container mx-auto py-20 px-20">
+      <div className="font-semibold text-5xl text-black text-center pt-5 sm:pt-2 pb-10">
         Gallery
       </div>
       {loading && <Loader />}
@@ -103,90 +102,102 @@ const GalleryPage = () => {
         {mediaData.map((media, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded-lg shadow-md aspect-w-1 aspect-h-1 hover:opacity-80"
+            className="relative overflow-hidden rounded-lg shadow-md border border-gray-300 hover:opacity-80 transition-all duration-300"
+            style={{ width: "100%", height: "300px" }} // Set fixed height, adjust width as needed
           >
             {media.avatar.map((image, imageIndex) => (
               <div
                 key={imageIndex}
-                className="relative w-full h-full"
-                style={{ cursor: "pointer" }}
+                className="relative w-full h-full overflow-hidden cursor-pointer group transition-all duration-300 transform hover:scale-105"
                 onClick={() => handleImageClick(index)}
               >
                 {loading && !imageLoaded[index] && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Loader />
                   </div>
                 )}
-                <Image
+                <img
                   src={image}
                   alt={`Image ${index + 1}-${imageIndex + 1}`}
-                  className="object-cover w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75"
-                  width={500}
-                  height={500}
-                  priority={true}
-                  onLoad={() => handleImageLoad(index)} // Close loader once image is loaded
+                  className="object-cover w-full h-full" // Use object-cover for image
+                  loading="lazy"
+                  onLoad={() => handleImageLoad(index)} // Close loader once the image is loaded
                 />
               </div>
             ))}
           </div>
         ))}
       </div>
-
+      
+      
       {slideshowOpen &&
-        selectedImageIndex !== null &&
-        mediaData[selectedImageIndex]?.avatar && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-            <div className="relative slideshow-container" ref={slideshowRef}>
-              <button
-                className="absolute top-2 right-2 text-orange-200 text-xl"
-                onClick={closeSlideshow}
-              >
-                <FaRegRectangleXmark />
-              </button>
-              {mediaData[selectedImageIndex].avatar.map((image, imageIndex) => (
-                <Image
-                  key={imageIndex}
-                  src={image}
-                  alt={`Image ${selectedImageIndex + 1}-${imageIndex + 1}`}
-                  className="mx-auto d-block rounded-lg border-2 border-orange-500 w-full max-h-full"
-                  width={600} // Adjust the width for desktop view
-                  height={600} // Adjust the height for desktop view
-                  priority={true}
-                />
-              ))}
-              <div
-                onClick={handlePrevPage}
-                className="z-10 absolute  bottom-1/2 left-4 text-2xl  md:left-8 font-semibold cursor-pointer text-orange-200"
-              >
-                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
-              </div>
-
-              {/* Right arrow */}
-              <div
-                onClick={handleNextPage}
-                className="z-10 absolute bottom-1/2 right-8 text-2xl  md:right-8 font-semibold cursor-pointer text-orange-200"
-              >
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-              </div>
-            </div>
-          </div>
-        )}
-
-      <div className="container mx-auto py-20 px-10">
-        <div className="font-semibold text-5xl text-black text-center pb-10">
-          Video
+  selectedImageIndex !== null &&
+  mediaData[selectedImageIndex]?.avatar && (
+    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex items-center justify-center">
+      <div
+        ref={slideshowRef}
+        className="relative slideshow-container mx-auto rounded-lg max-w-screen-lg w-full sm:w-1/2 md:w-1/2 lg:w-2/3 xl:w-1/2 sm:h-96"
+      >
+        <div className="relative w-full h-96 sm:h-96 md:h-96 lg:h-112 border border-4 p-0 rounded-lg border-orange-500">
+          <Image
+            src={mediaData[selectedImageIndex].avatar[0]}
+            alt={`Image ${selectedImageIndex + 1}`}
+            className="object-contain w-full h-full bg-black rounded-lg shadow-lg"
+            width={600}
+            height={400}
+            priority={true}
+          />
+          <button
+            className="absolute top-1 right-1 text-red-600 px-3 py-1 rounded-md cursor-pointer"
+            onClick={closeSlideshow}
+          >
+            <FaRegRectangleXmark />
+          </button>
         </div>
-        <div className="flex items-center justify-center">
-          <iframe
-            className="w-[1000px] h-[170px] md:h-[350px] lg:h-[600px] rounded-xl"
-            src="https://www.youtube.com/embed/2wf_JJPvOE0"
-            title="Example Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+        <div className="flex justify-between mt-4">
+          <button
+            onClick={handlePrevPage}
+            className="absolute top-1/2 left-6 text-orange-500 text-2xl focus:outline-none bg-transparent hover:scale-105 px-4 py-2 transform -translate-y-1/2"
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
+          <button
+            onClick={handleNextPage}
+            className="absolute top-1/2 right-6 text-orange-500 text-2xl focus:outline-none bg-transparent hover:scale-105 px-4 py-2 transform -translate-y-1/2"
+          >
+            <FontAwesomeIcon icon={faArrowRight} />
+          </button>
         </div>
       </div>
+    </div>
+  )}
+
+<div className="container mx-auto py-10 px-4 md:px-0 md:pt-10 flex flex-col-reverse md:flex-row items-center justify-center">
+  {/* Heading and Explanation Section */}
+  <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/2 mb-6 md:mb-0 sm:w-full order-2 md:order-1">
+    <div className="font-semibold text-4xl md:text-5xl text-black pb-4 md:pb-6">
+      Video on Kulkunda Shree Basaveshwara Temple
+    </div>
+    <p className="text-gray-600">
+      ಈ ದೇಗುಲದ ಬಸವನ ಹಣೆ ಮೇಲಿದೆ "ಶಿವಲಿಂಗ"..!! ಬಹು ಅಪರೂಪದ ಸಾನಿಧ್ಯ "ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯ" ಪಕ್ಕದಲ್ಲಿ..!!
+    </p>
+  </div>
+
+  {/* Video Section */}
+  <div className="w-full md:w-1/2 lg:w-2/3 xl:w-1/2 sm:h-[200px] md:h-[300px] rounded-xl overflow-hidden mb-10 sm:order-1 md:order-2">
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/2wf_JJPvOE0"
+      title="Example Video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
+
+
     </div>
   );
 };
