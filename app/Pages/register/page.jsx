@@ -164,7 +164,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="Phone number"
-                className={`border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60 ${
+                className={`border p-3 rounded-lg hover:shadow-lg focus:outline-none ${
                   tick ? "border-green-500" : ""
                 }`}
                 id="phonenumber"
@@ -191,7 +191,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="Enter the OTP"
-                className="border p-3 rounded-lg hover:shadow-lg focus:outline-none w-60"
+                className="border p-3 rounded-lg hover:shadow-lg focus:outline-none "
                 id="otp"
                 onChange={handleotpChange}
               />
