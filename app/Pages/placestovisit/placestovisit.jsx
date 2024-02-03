@@ -94,10 +94,14 @@ const PlacesToVisit = () => {
             14. Mallalli Falls: Located near Somwarpet in Coorg, Karnataka, Mallalli Falls is a majestic waterfall with a height of around 200 feet, formed by the Kumaradhara River. Best visited during the monsoon season, the falls offer a picturesque setting amidst lush greenery, attracting nature enthusiasts and trekkers exploring the surrounding landscapes in the Western Ghats. It is approximately 46 km away from Kulkunda.
           </p>
         </div>
-        {/* Add more places as needed */}
+        {/* Place 15 */}
+        <div className="flex flex-col w-full md:h-auto rounded-3xl p-2">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
+            15. Kumara Parvatha Trek: For adventure enthusiasts, the Kumara Parvatha trek is a must-try experience. Known as Pushpagiri, it is the fourth-highest peak in the Western Ghats and offers a challenging yet rewarding trekking trail. The trek takes you through dense forests, grasslands, and rocky terrains, providing breathtaking views of the surrounding landscapes. The base camp is in Kukke Subrahmanya, making it a thrilling adventure just 5 km away from Kulkunda Shree Basaveshwara Temple.
+          </p>
+        </div>
       </div>
     </div>
   );
 };
-
 export default PlacesToVisit;
