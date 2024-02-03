@@ -56,8 +56,7 @@ const UserHeader = ({ loading }) => {
       router.push("/Pages/aboutus");
     } else if (selectedValue === "howtoReach") {
       router.push("/Pages/reach");
-    }
-    else if (selectedValue === "placestovisit") {
+    } else if (selectedValue === "placestovisit") {
       router.push("/Pages/placestovisit");
     }
   };
@@ -236,7 +235,7 @@ const UserHeader = ({ loading }) => {
           {navbar ? " " : "☰"}
         </button>
         {navbar && (
-          <div className="w-full flex flex-col gap-4">
+          <div className="w-full flex flex-col gap-4" onClick={togglenavbar}>
             <Link href="/">
               <h1 className="font-bold text-sm">
                 <span className="text-orange-300 text-md">Kulkunda Shree</span>
@@ -304,6 +303,18 @@ const UserHeader = ({ loading }) => {
                   onClick={togglenavbar}
                 >
                   Advanced Seva bookings
+                </li>
+              </Link>
+              <Link href="/Pages/placestovisit">
+                <li
+                  className={`hover:underline text-orange-700 sm:hidden ${
+                    path === "/Pages/placestovisit"
+                      ? "bg-orange-400 p-2 rounded-lg text-white text-lg"
+                      : ""
+                  }`}
+                  onClick={togglenavbar}
+                >
+                  Nearby Places to Visit
                 </li>
               </Link>
               <Link href="/Pages/contactus">
