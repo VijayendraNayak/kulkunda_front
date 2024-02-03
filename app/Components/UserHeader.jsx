@@ -98,13 +98,14 @@ const UserHeader = ({ loading }) => {
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isSelected || state.isFocused ? "#ff7400" : "transparent",
-      color: state.isSelected ? "#fff" : "#FFA500", // Set text color to orange-500
+      backgroundColor:
+        state.isSelected || state.isFocused ? "#ff7400" : "transparent",
+      color: state.isSelected ? "#fff" : "#333",
       textDecoration: state.isFocused ? "underline" : "none", // Add underline on hover
       whiteSpace: "nowrap",
       "&:hover": {
         backgroundColor: state.isSelected ? "#ff7400" : "transparent",
-        color: state.isSelected ? "#fff" : "#FFA500", // Set text color to orange-500 for hover state
+        color: state.isSelected ? "#fff" : "#333",
       },
     }),
     menu: (provided) => ({
