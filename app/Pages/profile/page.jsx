@@ -109,22 +109,36 @@ const Profile = () => {
 
   const handlefileupload = async (file) => {
     try {
+      setLoader(true)
       const storage = getStorage(app);
       const filename = new Date().getTime() + file.name;
       const storageref = ref(storage, filename);
       const uploadTask = uploadBytesResumable(storageref, file);
-
-      uploadTask.on("state_changed", () => {
-        getDownloadURL(uploadTask.snapshot.ref).then((DownloadURL) => {
-          setFormdata({ ...formdata, avatar: DownloadURL });
-        });
+  
+      uploadTask.on("state_changed", {
+        complete: () => {
+          getDownloadURL(uploadTask.snapshot.ref)
+            .then((downloadURL) => {
+              setFormdata((prevData) => ({ ...prevData, avatar: downloadURL }));
+              setIsFormModified(true);
+              setLoader(false)
+            })
+            .catch((error) => {
+              console.error("Error getting download URL:", error);
+              setLoader(false)
+              // Handle error getting download URL
+            });
+        },
       });
     } catch (error) {
       console.error("Error uploading file:", error);
+      setLoader(false)
+      // Handle error uploading file
     } finally {
       setLoader(false);
     }
   };
+  
 
   const handleSubmit = async (e) => {
     try {
@@ -143,7 +157,6 @@ const Profile = () => {
         return;
       }
       dispatch(updateSuccess(data.user));
-      window.location.reload();
     } catch (error) {
       dispatch(updateFailure(error));
     }
@@ -210,7 +223,9 @@ const Profile = () => {
               </form>
             </div>
             <button
-              className="bg-green-500 hover:bg-green-700 text-white p-3 rounded-lg font-semibold text-xl"
+              className={`bg-green-500 ${
+                !isFormModified ? "bg-green-300" : "hover:bg-green-700"
+              } text-white p-3 rounded-lg font-semibold text-xl`}
               onClick={handleSubmit}
               disabled={!isFormModified}
             >
@@ -222,14 +237,14 @@ const Profile = () => {
             >
               <IoLogOutOutline /> Logout
             </button>
-            <Link
-              className="text-blue-500 font-semibold ml-auto cursor-pointer hover:scale-110 "
-              href="/Pages/changepass"
-            >
-              <span>Change password?</span>
-            </Link>
           </div>
         </div>
+        <Link
+          className="text-blue-500 font-semibold cursor-pointer hover:text-blue-700 flex justify-end "
+          href="/Pages/changepass"
+        >
+          <span>Change password?</span>
+        </Link>
         {error && (
           <p className="text-red-500 text-center font-semibold">{error}</p>
         )}
