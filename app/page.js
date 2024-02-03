@@ -1,6 +1,7 @@
 "use client"
 // Import necessary modules
 import React, { useState, useEffect, useRef } from 'react';
+import "../app/Components/Scrollbar.css";
 import Link from 'next/link';
 import ImageSlider from './Components/ImageSlider';
 import Image from 'next/image';
