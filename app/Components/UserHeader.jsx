@@ -77,7 +77,7 @@ const UserHeader = ({ loading }) => {
       background: "transparent", // Set background color
       border: "none",
       borderRadius: "4px",
-      width: "120px",
+      width: "125px",
       color: "#FFA500", // Add text color orange-500
       "&:hover": {
         background: "transparent", // Adjust hover background color
