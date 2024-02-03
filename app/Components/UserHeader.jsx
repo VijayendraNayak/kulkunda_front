@@ -57,6 +57,9 @@ const UserHeader = ({ loading }) => {
     } else if (selectedValue === "howtoReach") {
       router.push("/Pages/reach");
     }
+    else if (selectedValue === "placestovisit") {
+      router.push("/Pages/placestovisit");
+    }
   };
 
   const sevasOptions = [
@@ -69,6 +72,7 @@ const UserHeader = ({ loading }) => {
     { value: "", label: "About Us" },
     { value: "aboutTemple", label: "About Temple" },
     { value: "howtoReach", label: "How to Reach" },
+    { value: "placestovisit", label: "Places to Visit" },
   ];
 
   const customStyles = {
