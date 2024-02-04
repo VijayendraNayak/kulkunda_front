@@ -139,7 +139,7 @@ const Login = () => {
               placeholder="Phone number"
               className="border p-3 rounded-lg hover:shadow-lg bg-white"
               id="phonenumber"
-              defaultValue={phoneNumber}
+              defaultValue={phoneNumber?(phoneNumber):("+91 ")}
               onChange={handleChange}
 
             />
