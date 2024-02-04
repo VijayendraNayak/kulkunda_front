@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter } from 'next/font/google';
 import Footer from './Components/Footer';
 import Languageswitch from './Components/Languageswitch';
@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
           <HeaderSelector />
           {children}
           <Languageswitch />
+          <SpeedInsights />
           <Footer />
         </Providers>
       </body>
