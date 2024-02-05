@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <MetaTags />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://i.postimg.cc/wvg48sHy/Shree-Basaveshwara-Temple-1.png" />
 
         {/* Open Graph, Facebook, and Instagram meta tags */}
         <OpenGraphMetadata />
@@ -58,7 +58,7 @@ const OpenGraphMetadata = () => (
       property="og:description"
       content="Shree Basaveshwara Temple is a Hindu temple situated at Basavanamoola, Kulkunda. This temple is located 2kms away from Kukke Shree Subrahmanya Temple. Lord Shiva is worshipped here in the form of bull (Basava)."
     />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image" content="https://i.postimg.cc/wvg48sHy/Shree-Basaveshwara-Temple-1.png" />
     <meta property="og:url" content="https://basavanamoolatemple.in" />
     <meta name="og:locale" content="en_US" />
   </>
