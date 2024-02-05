@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <MetaTags />
 
         {/* Favicon */}
-        <link rel="icon" href="https://i.postimg.cc/wvg48sHy/Shree-Basaveshwara-Temple-1.png" />
+        <link rel="icon" href="https://i.postimg.cc/jSdZXJKZ/Shree-Basaveshwara-Temple-1-modified.png" />
 
         {/* Open Graph, Facebook, and Instagram meta tags */}
         <OpenGraphMetadata />
