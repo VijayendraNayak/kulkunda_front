@@ -24,7 +24,6 @@ const GalleryPage = () => {
         setLoading(true);
         const res = await fetch("/api/gallery/allimages");
         const data = await res.json();
-
         if (data.success === false) {
           console.error(data.message);
           setLoading(false);
