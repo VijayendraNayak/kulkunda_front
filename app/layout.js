@@ -13,6 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+
+
+
         {/* Metadata */}
         <MetaTags />
 
@@ -23,6 +26,17 @@ export default function RootLayout({ children }) {
         <OpenGraphMetadata />
         <FacebookMetadata />
         <InstagramMetadata />
+        <SpeedInsights />
+        <Analytics />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMR9ZW8J7F"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-PMR9ZW8J7F');
+          `,
+        }} />
       </head>
 
       <body className={inter.className}>
@@ -30,8 +44,6 @@ export default function RootLayout({ children }) {
           <HeaderSelector />
           {children}
           <Languageswitch />
-          <SpeedInsights />
-          <Analytics />
           <Footer />
         </Providers>
       </body>
