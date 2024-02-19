@@ -44,7 +44,7 @@ const Footer = () => {
 
       <div className="container mx-auto flex justify-center items-center"> {/* Centered the copyright text */}
         <div>
-          <p>© All rights reserved @ Iscoderz</p>
+          <p>Copyright ©2024 Kulkunda Shree Basaveshwara Temple. All Rights Reserved. | Powered By: ISCODERZ   </p>
         </div>
       </div>
     </footer>
